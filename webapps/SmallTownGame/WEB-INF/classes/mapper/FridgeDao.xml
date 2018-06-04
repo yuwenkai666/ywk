@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.FridgeDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Fridge">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="indexNum" jdbcType="INTEGER" property="indexNum" />
+    <result column="rice" jdbcType="INTEGER" property="rice" />
+    <result column="banana" jdbcType="INTEGER" property="banana" />
+    <result column="vegetable" jdbcType="INTEGER" property="vegetable" />
+    <result column="meat" jdbcType="INTEGER" property="meat" />
+    <result column="fish" jdbcType="INTEGER" property="fish" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, level, indexNum, rice, banana, vegetable, meat, fish
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from fridge
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from fridge
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Fridge">
+    insert into fridge (id, level, indexNum, 
+      rice, banana, vegetable, 
+      meat, fish)
+    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, #{indexNum,jdbcType=INTEGER}, 
+      #{rice,jdbcType=INTEGER}, #{banana,jdbcType=INTEGER}, #{vegetable,jdbcType=INTEGER}, 
+      #{meat,jdbcType=INTEGER}, #{fish,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Fridge">
+    insert into fridge
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="indexNum != null">
+        indexNum,
+      </if>
+      <if test="rice != null">
+        rice,
+      </if>
+      <if test="banana != null">
+        banana,
+      </if>
+      <if test="vegetable != null">
+        vegetable,
+      </if>
+      <if test="meat != null">
+        meat,
+      </if>
+      <if test="fish != null">
+        fish,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="indexNum != null">
+        #{indexNum,jdbcType=INTEGER},
+      </if>
+      <if test="rice != null">
+        #{rice,jdbcType=INTEGER},
+      </if>
+      <if test="banana != null">
+        #{banana,jdbcType=INTEGER},
+      </if>
+      <if test="vegetable != null">
+        #{vegetable,jdbcType=INTEGER},
+      </if>
+      <if test="meat != null">
+        #{meat,jdbcType=INTEGER},
+      </if>
+      <if test="fish != null">
+        #{fish,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Fridge">
+    update fridge
+    <set>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="indexNum != null">
+        indexNum = #{indexNum,jdbcType=INTEGER},
+      </if>
+      <if test="rice != null">
+        rice = #{rice,jdbcType=INTEGER},
+      </if>
+      <if test="banana != null">
+        banana = #{banana,jdbcType=INTEGER},
+      </if>
+      <if test="vegetable != null">
+        vegetable = #{vegetable,jdbcType=INTEGER},
+      </if>
+      <if test="meat != null">
+        meat = #{meat,jdbcType=INTEGER},
+      </if>
+      <if test="fish != null">
+        fish = #{fish,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Fridge">
+    update fridge
+    set level = #{level,jdbcType=INTEGER},
+      indexNum = #{indexNum,jdbcType=INTEGER},
+      rice = #{rice,jdbcType=INTEGER},
+      banana = #{banana,jdbcType=INTEGER},
+      vegetable = #{vegetable,jdbcType=INTEGER},
+      meat = #{meat,jdbcType=INTEGER},
+      fish = #{fish,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

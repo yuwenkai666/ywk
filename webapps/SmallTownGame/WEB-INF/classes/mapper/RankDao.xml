@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.RankDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Rank">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="rate_level" jdbcType="INTEGER" property="rateLevel" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="logo" jdbcType="VARCHAR" property="logo" />
+    <result column="start_level" jdbcType="INTEGER" property="startLevel" />
+    <result column="task" jdbcType="VARCHAR" property="task" />
+    <result column="need_gold" jdbcType="INTEGER" property="needgold" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, rate_level, name, logo, start_level, task, need_gold
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from rank
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from rank
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Rank">
+    insert into rank (id, rate_level, name, 
+      logo, start_level, task, 
+      need_gold)
+    values (#{id,jdbcType=INTEGER}, #{rateLevel,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{logo,jdbcType=VARCHAR}, #{startLevel,jdbcType=INTEGER}, #{task,jdbcType=VARCHAR}, 
+      #{needgold,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Rank">
+    insert into rank
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="rateLevel != null">
+        rate_level,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="logo != null">
+        logo,
+      </if>
+      <if test="startLevel != null">
+        start_level,
+      </if>
+      <if test="task != null">
+        task,
+      </if>
+      <if test="needgold != null">
+        need_gold,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="rateLevel != null">
+        #{rateLevel,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="logo != null">
+        #{logo,jdbcType=VARCHAR},
+      </if>
+      <if test="startLevel != null">
+        #{startLevel,jdbcType=INTEGER},
+      </if>
+      <if test="task != null">
+        #{task,jdbcType=VARCHAR},
+      </if>
+      <if test="needgold != null">
+        #{needgold,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Rank">
+    update rank
+    <set>
+      <if test="rateLevel != null">
+        rate_level = #{rateLevel,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="logo != null">
+        logo = #{logo,jdbcType=VARCHAR},
+      </if>
+      <if test="startLevel != null">
+        start_level = #{startLevel,jdbcType=INTEGER},
+      </if>
+      <if test="task != null">
+        task = #{task,jdbcType=VARCHAR},
+      </if>
+      <if test="needgold != null">
+        need_gold = #{needgold,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Rank">
+    update rank
+    set rate_level = #{rateLevel,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      logo = #{logo,jdbcType=VARCHAR},
+      start_level = #{startLevel,jdbcType=INTEGER},
+      task = #{task,jdbcType=VARCHAR},
+      need_gold = #{needgold,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

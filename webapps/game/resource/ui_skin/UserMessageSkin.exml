@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="UserMessageSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="248" height="122" x="19" y="7.28" source="hallUI.touxiang_1_png"/>
+	<e:Image id="enterGrade" height="105" x="280" y="15" source="hallUI.touxiang_5_png" width="105"/>
+	<e:Image width="125" height="26" x="126" y="24" source="hallUI.touxiang_2_png"/>
+	<e:Image width="125" height="26" x="126" y="57.5" source="hallUI.touxiang_2_png"/>
+	<e:Image width="125" height="26" x="126" y="91" source="hallUI.touxiang_2_png"/>
+	<e:Label id="userMessageName" text="Label" x="28" y="103.28" size="16" fontFamily="SimHei" anchorOffsetX="0" width="84" anchorOffsetY="0" height="16" textColor="0x000000"/>
+	<e:Image width="32" height="25" x="118" y="23.28" anchorOffsetX="0" anchorOffsetY="0" source="hallUI.currency8_png"/>
+	<e:Image id="userMessageLevelIcon" width="32" height="25" x="72" y="140.28" anchorOffsetX="32" source="hallUI.currency7_png" touchEnabled="false" visible="false"/>
+	<e:Label id="userMessageMoney" text="Label" x="129" y="25.28" size="22" anchorOffsetX="0" width="118" textAlign="center" textColor="0x004770"/>
+	<e:Image id="userMessageIcon" width="82" height="82" y="17.44" source="" x="29"/>
+	<e:Image id="userMessageIconKuang" width="128" height="128" y="54.76" source="Decode_json.Decorate_470000_png" anchorOffsetX="64" anchorOffsetY="64" x="70"/>
+	<e:Label id="userMessageRating" text="米其林一星" y="141.28" size="24" fontFamily="SimHei" bold="true" x="92" anchorOffsetX="0" textAlign="center" textColor="0xfffd65" strokeColor="0x005ead" stroke="2" height="24" touchEnabled="false" visible="false"/>
+	<e:Group id="showMaterials" width="263" height="70" x="19" y="169.28" visible="false">
+		<e:Rect width="263" height="70" x="0" y="0" ellipseWidth="20" fillAlpha="0.6"/>
+		<e:Group width="50" height="50" x="158.5" y="10.509999999999991" scaleX="1" scaleY="1">
+			<e:Image width="34" height="26" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="9" source="hallUI.currency4_png" top="0"/>
+			<e:Label id="userMessageMeat" text="Label" size="18" fontFamily="Arial" bottom="0" width="52" horizontalCenter="0" textAlign="center" height="18"/>
+		</e:Group>
+		<e:Group width="50" height="50" x="106.25" y="10.509999999999991" scaleX="1" scaleY="1">
+			<e:Image width="34" height="26" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="9" source="hallUI.currency3_png" top="0"/>
+			<e:Label id="userMessageVegetable" text="Label" size="18" fontFamily="Arial" textAlign="center" bottom="0" width="52" horizontalCenter="0" height="18"/>
+		</e:Group>
+		<e:Group width="50" height="50" x="210" y="10.509999999999991" scaleX="1" scaleY="1">
+			<e:Image width="34" height="26" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="9" source="hallUI.currency5_png" top="0"/>
+			<e:Label id="userMessageFish" text="Label" size="18" fontFamily="Arial" textAlign="center" bottom="0" width="52" horizontalCenter="0" height="18"/>
+		</e:Group>
+		<e:Group width="50" height="50" x="54.5" y="10.509999999999991" scaleX="1" scaleY="1">
+			<e:Image width="34" height="26" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="9" source="hallUI.currency2_png" top="0"/>
+			<e:Label id="userMessageBanana" text="Label" size="18" fontFamily="Arial" textAlign="center" bottom="0" width="52" horizontalCenter="0" height="18"/>
+		</e:Group>
+		<e:Group width="50" height="50" x="2.5" y="10.509999999999991" scaleX="1" scaleY="1">
+			<e:Image width="34" height="26" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="9" source="hallUI.currency1_png" top="0"/>
+			<e:Label id="userMessageWheat" text="Label" size="18" fontFamily="Arial" textAlign="center" bottom="0" width="52" horizontalCenter="0" height="18"/>
+		</e:Group>
+	</e:Group>
+	<e:Label id="userMessageHeart" text="Label" x="129" y="58" textAlign="center" scaleX="1" scaleY="1" size="22" anchorOffsetX="0" width="121" textColor="0x004770"/>
+	<e:Label id="userMessageDiamond" text="待开发" x="129" y="92" textAlign="center" scaleX="1" scaleY="1" textColor="0x004770" size="22" anchorOffsetX="0" width="121"/>
+	<e:Image width="34" height="26" x="116" y="56" scaleX="1" scaleY="1" source="hallUI.currency34_png"/>
+	<e:Image width="34" height="26" x="117" y="90" scaleX="1" scaleY="1" source="hallUI.currency9_png"/>
+	<e:Image width="36" height="36" x="23" y="68" source="hallUI.touxiang_4_png"/>
+	<e:Label id="userMessageLevel" text="122" x="22" y="68" size="16" bold="true" textColor="0xffffff" strokeColor="0x964300" stroke="2" anchorOffsetX="0" width="36" anchorOffsetY="0" height="36" verticalAlign="middle" textAlign="center"/>
+</e:Skin>

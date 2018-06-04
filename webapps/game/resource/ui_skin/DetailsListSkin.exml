@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DetailsListSkin" width="496" height="56" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="487" height="1" source="windowUI_json.Deta_zy_01_png" x="5" scaleX="1" scaleY="1" bottom="0"/>
+	<e:Group id="experienceGroup" width="496" height="56" x="0" y="0">
+		<e:Image width="32" height="25" x="17" verticalCenter="0" source="{data.IconImg}"/>
+		<e:Label text="{data.experienceTxt}" x="57" y="16" size="24" fontFamily="SimHei" bold="true" textColor="0x004c87" anchorOffsetX="0" width="285"/>
+		<e:Image id="complete" width="41" height="31" x="421" verticalCenter="0.5" source="{data.complete}"/>
+		<e:Label id="noComplete" text="{data.experienceNum}" size="20" fontFamily="SimHei" bold="true" textColor="0x004C87" anchorOffsetX="0" width="182.5" scaleX="1" scaleY="1" anchorOffsetY="0" height="21" verticalCenter="0.5" right="-1" textAlign="right"/>
+	</e:Group>
+	<e:Group id="powerGroup" width="496" height="56" x="0" y="0">
+		<e:Label text="{data.Num}" x="-2" size="30" fontFamily="SimHei" stroke="2" strokeColor="0x006aa3" anchorOffsetX="0" width="50" textAlign="center" verticalCenter="0" height="30"/>
+		<e:Label text="{data.powerTxt}" x="68" size="24" fontFamily="SimHei" bold="true" textColor="0x004c87" verticalCenter="0"/>
+		<e:Image id="complete0" width="41" height="31" x="397" y="13" scaleX="1" scaleY="1" source="{data.complete0}"/>
+		<e:Label id="noComplete0" text="{data.noPowerTxt}" y="19" size="20" fontFamily="SimHei" x="280" anchorOffsetX="0" width="209" anchorOffsetY="0" height="18" textAlign="right" stroke="2" strokeColor="0x004c87"/>
+	</e:Group>
+</e:Skin>

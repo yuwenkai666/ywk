@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuildingUpgradeInf" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="back" width="640" height="1320" x="0" y="0" fillAlpha="0.5"/>
+	<e:Group id="topGroup" width="619" height="487.19" x="10" y="77.53" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="top_back" width="587" height="464" source="InterfaceUI_json.fenxiang_09_png" horizontalCenter="0" y="28"/>
+		<e:Image width="488" height="1" source="hallUI.shengj_01_png" horizontalCenter="1.5" x="17" scaleX="1" scaleY="1" verticalCenter="-11.094999999999999"/>
+		<e:Image id="sureBtn" width="148" height="51" x="116" y="423.35" anchorOffsetX="0" anchorOffsetY="0" source="hallUI.shengj_02_png" scaleX="1" scaleY="1"/>
+		<e:Image id="cancelBtn" width="148" height="51" x="358" y="423.35" source="hallUI.shengj_03_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+		<e:Label id="upgradeTxt" x="80" y="103.35" anchorOffsetX="0" width="448" anchorOffsetY="0" height="48" fontFamily="SimHei" size="38" bold="true" textColor="0x7c2f00" text="升级农场大厅到3级" scaleX="1" scaleY="1" textAlign="center"/>
+		<e:Image id="goldimage" width="65.16" height="50" x="239.39" y="159.35" anchorOffsetX="-2.61" anchorOffsetY="-6" scaleX="1" scaleY="1" source="currency8_png"/>
+		<e:Label id="goldTxt" text="{data.gold}" x="302" y="169.35" textColor="0xee9700" size="38" fontFamily="SimHei" bold="true" width="250" scaleX="1" scaleY="1"/>
+		<e:Label id="nextNeedTxt" text="下级效果" x="222" y="245.35" anchorOffsetX="0" width="166" anchorOffsetY="0" height="38" fontFamily="SimHei" size="32" bold="true" textColor="0x7C2F00" textAlign="center" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group id="bottomGroup" width="645.45" height="328.52" x="-3.2" y="640.58" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="bottom_back" width="640" height="316" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="InterfaceUI_json.shengj_06_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="upgradeBtn" width="148" height="51" y="250.06" anchorOffsetX="0" anchorOffsetY="0" source="hallUI.shengj_04_png" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Label id="buildingNameTxt" text="{data.buildingName}" y="27" fontFamily="SimHei" bold="true" size="38" textAlign="center" width="500" scaleX="1" scaleY="1.05" height="47.62" anchorOffsetY="0" verticalAlign="middle" x="73"/>
+	</e:Group>
+	<e:Label id="closeTip" text="点击空白处关闭" y="585" size="26" fontFamily="SimHei" anchorOffsetX="0" anchorOffsetY="0" height="26" horizontalCenter="0" width="182" textColor="0xcbcbcb" touchEnabled="false"/>
+</e:Skin>

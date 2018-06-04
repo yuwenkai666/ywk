@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--1.定义定时任务要调用的bean类-->
+    <!-- <bean id="tableCleanTask" class="com.muzhi.task.TableCleanTask"/>
+
+    <bean id="statisticsTask" class="com.muzhi.task.StatisticsTask"/> -->
+
+    <!--2.定义定时任务要调用的对象和方法-->
+    <!-- <bean id="taskOne" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="tableCleanTask"></ref>
+        </property>
+        <property name="targetMethod">
+            <value>cleanTable</value>
+        </property>
+    </bean>
+
+    <bean id="taskTwo" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="statisticsTask"></ref>
+        </property>
+        <property name="targetMethod">
+            <value>getRealTimeStatistics</value>
+        </property>
+    </bean> -->
+
+    <!--3.定义触发时间-->
+    <!-- <bean id="doTimeOne" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="taskOne"></ref>
+        </property>
+        <property name="cronExpression">
+            <value>0 0 1 * * ?</value>
+        </property>
+    </bean>
+
+    <bean id="doTimeTwo" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="taskTwo"></ref>
+        </property>
+        <property name="cronExpression">
+            <value>0 0/30 * * * ?</value>
+        </property>
+    </bean> -->
+
+    <!--4.定时任务管理类， lazy_init='false'时容器启动就会执行调度程序-->
+    <!-- <bean id="startQuertz" lazy-init="false" autowire="no"
+          class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="doTimeOne"></ref>
+                <ref bean="doTimeTwo"></ref>
+            </list>
+        </property>
+    </bean> -->
+</beans>

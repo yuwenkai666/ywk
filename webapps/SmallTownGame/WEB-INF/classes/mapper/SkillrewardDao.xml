@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.SkillrewardDao">
+ 
+  <insert id="insert" parameterType="com.muzhi.model.SkillReward">
+    insert into skillreward (uid, tid)
+    values (#{uid,jdbcType=INTEGER}, #{tid,jdbcType=INTEGER})
+  </insert>
+  
+  <select id="isReceive"  resultType="com.muzhi.model.SkillReward">
+    select *
+    from skillreward
+    where uid = #{uid,jdbcType=INTEGER}
+    and tid = #{tid,jdbcType=INTEGER}
+  </select>
+ 
+</mapper>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.CookBenchDao">
+	<!-- <resultMap id="user" type="com.muzhi.model.User">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="gold" jdbcType="INTEGER" property="gold" />
+		<result column="love" jdbcType="INTEGER" property="love" />
+		<result column="exp" jdbcType="INTEGER" property="exp" />
+		<result column="level" jdbcType="INTEGER" property="level" />
+		<result column="intimacy" jdbcType="INTEGER" property="intimacy" />
+		<result column="diamond" jdbcType="INTEGER" property="diamond" />
+		<result column="strength" jdbcType="INTEGER" property="strength" />
+		<result column="isMaked" jdbcType="INTEGER" property="isMaked" />
+	</resultMap> -->
+
+	<!-- 根据uid，获取一条用户记录 -->
+	<select id="getCookBench" parameterType="java.lang.Integer"
+		resultType="com.muzhi.model.CookBench">
+		select *
+		from cookbench
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<insert id="insert" parameterType="com.muzhi.model.CookBench">
+		insert into cookbench(
+			<include refid="userParam"></include>
+		) values (
+			#{id}, #{level}, #{addition}
+		)
+	</insert>
+	
+	<!-- 更新一条用户记录 -->
+	<update id="updateCookBench" parameterType="com.muzhi.model.CookBench">
+		update cookbench set
+			<include refid="userValue"></include>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+
+	<!-- 用户表所有参数 -->
+	<sql id="userParam">
+		id,
+		level,
+		addition
+	</sql>
+	
+	<sql id="userValue">
+		id = #{id},
+		level = #{level},
+		addition = #{addition}
+	</sql>
+
+</mapper>

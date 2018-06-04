@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.PropDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Prop">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="prop_id" jdbcType="INTEGER" property="propId" />
+    <result column="number" jdbcType="INTEGER" property="number" />
+  </resultMap>
+ 
+  <insert id="insert" parameterType="com.muzhi.model.Prop">
+    insert into prop (id, prop_id,number)
+    values (#{id,jdbcType=INTEGER}, #{propId,jdbcType=INTEGER},#{number,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Prop">
+    update prop
+    set number = #{number,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+      and prop_id = #{propId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select id, prop_id, number
+    from prop
+    where id = #{id,jdbcType=INTEGER}
+      and prop_id = #{propId,jdbcType=INTEGER}
+  </select>
+  <select id="getPropByUid"  resultMap="BaseResultMap">
+    select id, prop_id, number
+    from prop
+    where id = #{id,jdbcType=INTEGER} 
+  </select>
+</mapper>

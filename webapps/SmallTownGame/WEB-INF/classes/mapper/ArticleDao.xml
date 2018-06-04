@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.ArticleDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Article">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="atricle_type" jdbcType="INTEGER" property="atricleType" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <insert id="insert" parameterType="com.muzhi.model.Article">
+    insert into article (id, article_id, atricle_type, 
+      status)
+    values (#{id,jdbcType=INTEGER}, #{articleId,jdbcType=INTEGER}, #{atricleType,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Article">
+    update article
+    set atricle_type = #{atricleType,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+      and article_id = #{articleId,jdbcType=INTEGER}
+  </update>
+  <update id="updateState" >
+    update article
+    set status = 0
+    where id = #{id,jdbcType=INTEGER}
+    and atricle_type = #{atricleType,jdbcType=INTEGER}
+    and status=1
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select id, article_id, atricle_type, status
+    from article
+    where id = #{id,jdbcType=INTEGER}
+      and article_id = #{articleId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByUser" resultMap="BaseResultMap">
+    select id, article_id, atricle_type, status
+    from article
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getUserArticle" resultMap="BaseResultMap">
+    select id, article_id, atricle_type, status
+    from article
+    where id = #{id,jdbcType=INTEGER}
+    and status=1
+  </select>
+</mapper>

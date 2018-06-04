@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.OrderDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Order" extends="OrderMap" autoMapping="true">
+    <result column="order_level" jdbcType="INTEGER" property="orderLevel" />
+    <result column="order_type" jdbcType="INTEGER" property="orderType" />
+    <result column="type_num" jdbcType="INTEGER" property="typeNum" />
+    <result column="request_num" jdbcType="INTEGER" property="requestNum" />
+    <result column="qualify_round" jdbcType="VARCHAR" property="qualifyRound" />
+    <result column="gold_reward" jdbcType="INTEGER" property="goldReward" />
+    <result column="curency_num" jdbcType="VARCHAR" property="curencyNum" />
+    <result column="currency_round" jdbcType="VARCHAR" property="currencyRound" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="uuid" jdbcType="VARCHAR" property="uuid" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+  <resultMap type="com.muzhi.model.OrderKey" id="OrderMap" autoMapping="true">
+  	<id column="id" jdbcType="INTEGER" property="id" />
+    <id column="order_id" jdbcType="INTEGER" property="orderId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, order_id, order_level, order_type, type_num, request_num, qualify_round, gold_reward, 
+    curency_num, currency_round, start_time, end_time, state, uuid, status
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.muzhi.model.Order" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from `order`
+    where id = #{id,jdbcType=INTEGER}
+      and order_id = #{orderId,jdbcType=INTEGER}
+      and timestampdiff(second, #{endTime,jdbcType=TIMESTAMP},end_time) > 0
+      and status = 1
+  </select>
+  <select id="selectOrder"  resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from `order` 
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectByObject" parameterType="com.muzhi.model.Order" resultMap="BaseResultMap">
+  	select 
+    <include refid="Base_Column_List" />
+    from `order`
+    where id = #{id} and timestampdiff(second, #{endTime,jdbcType=TIMESTAMP},end_time) > 0 and status = 1
+
+      
+    <!-- <where>
+      <if test="order_id != null">
+        order_id = #{orderId,jdbcType=INTEGER}
+      </if>
+      <if test="id != null">
+        id = #{id,jdbcType=INTEGER}
+      </if>
+      <if test="orderLevel != null">
+        order_level = #{orderLevel,jdbcType=INTEGER}
+      </if>
+      <if test="orderType != null">
+        order_type = #{orderType,jdbcType=INTEGER}
+      </if>
+      <if test="typeNum != null">
+        type_num = #{typeNum,jdbcType=INTEGER}
+      </if>
+      <if test="requestNum != null">
+        request_num = #{requestNum,jdbcType=INTEGER}
+      </if>
+      <if test="qualifyRound != null">
+        qualify_round = #{qualifyRound,jdbcType=VARCHAR}
+      </if>
+      <if test="goldReward != null">
+        gold_reward = #{goldReward,jdbcType=INTEGER}
+      </if>
+      <if test="curencyNum != null">
+        curency_num = #{curencyNum,jdbcType=VARCHAR}
+      </if>
+      <if test="currencyRound != null">
+        currency_round = #{currencyRound,jdbcType=VARCHAR}
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=INTEGER}
+      </if>
+      <if test="uuid != null">
+        uuid = #{uuid,jdbcType=VARCHAR}
+      </if>
+    </where> -->
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.muzhi.model.OrderKey">
+    delete from `order`
+    where id = #{id,jdbcType=INTEGER}
+      and order_id = #{orderId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertList" parameterType="java.util.List">
+  	insert into `order` (id, order_id, order_level, 
+      order_type, type_num, request_num, 
+      qualify_round, gold_reward, curency_num, 
+      currency_round, start_time, end_time, 
+      state, uuid, status)
+    values 
+    <foreach collection="recordList" item="item" separator=",">
+    	(#{item.id,jdbcType=INTEGER}, #{item.orderId,jdbcType=INTEGER}, #{item.orderLevel,jdbcType=INTEGER}, 
+      #{item.orderType,jdbcType=INTEGER}, #{item.typeNum,jdbcType=INTEGER}, #{item.requestNum,jdbcType=INTEGER}, 
+      #{item.qualifyRound,jdbcType=VARCHAR}, #{item.goldReward,jdbcType=INTEGER}, #{item.curencyNum,jdbcType=VARCHAR}, 
+      #{item.currencyRound,jdbcType=VARCHAR}, #{item.startTime,jdbcType=TIMESTAMP}, #{item.endTime,jdbcType=TIMESTAMP}, 
+      #{item.state,jdbcType=INTEGER}, #{item.uuid,jdbcType=VARCHAR}, #{item.status,jdbcType=INTEGER})
+    </foreach>
+  </insert>
+  
+  <insert id="insert" parameterType="com.muzhi.model.Order">
+    insert into order (id, order_id, order_level, 
+      order_type, type_num, request_num, 
+      qualify_round, gold_reward, curency_num, 
+      currency_round, start_time, end_time, 
+      state, uuid, status)
+    values (#{id,jdbcType=INTEGER}, #{orderId,jdbcType=INTEGER}, #{orderLevel,jdbcType=INTEGER}, 
+      #{orderType,jdbcType=INTEGER}, #{typeNum,jdbcType=INTEGER}, #{requestNum,jdbcType=INTEGER}, 
+      #{qualifyRound,jdbcType=VARCHAR}, #{goldReward,jdbcType=INTEGER}, #{curencyNum,jdbcType=VARCHAR}, 
+      #{currencyRound,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, 
+      #{state,jdbcType=INTEGER}, #{uuid,jdbcType=VARCHAR}, #{item.status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Order">
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="orderLevel != null">
+        order_level,
+      </if>
+      <if test="orderType != null">
+        order_type,
+      </if>
+      <if test="typeNum != null">
+        type_num,
+      </if>
+      <if test="requestNum != null">
+        request_num,
+      </if>
+      <if test="qualifyRound != null">
+        qualify_round,
+      </if>
+      <if test="goldReward != null">
+        gold_reward,
+      </if>
+      <if test="curencyNum != null">
+        curency_num,
+      </if>
+      <if test="currencyRound != null">
+        currency_round,
+      </if>
+      <if test="startTime != null">
+        start_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="uuid != null">
+        uuid,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="orderLevel != null">
+        #{orderLevel,jdbcType=INTEGER},
+      </if>
+      <if test="orderType != null">
+        #{orderType,jdbcType=INTEGER},
+      </if>
+      <if test="typeNum != null">
+        #{typeNum,jdbcType=INTEGER},
+      </if>
+      <if test="requestNum != null">
+        #{requestNum,jdbcType=INTEGER},
+      </if>
+      <if test="qualifyRound != null">
+        #{qualifyRound,jdbcType=VARCHAR},
+      </if>
+      <if test="goldReward != null">
+        #{goldReward,jdbcType=INTEGER},
+      </if>
+      <if test="curencyNum != null">
+        #{curencyNum,jdbcType=VARCHAR},
+      </if>
+      <if test="currencyRound != null">
+        #{currencyRound,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null">
+        #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null">
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Order">
+    update `order`
+    <set>
+      <if test="orderLevel != null">
+        order_level = #{orderLevel,jdbcType=INTEGER},
+      </if>
+      <if test="orderType != null">
+        order_type = #{orderType,jdbcType=INTEGER},
+      </if>
+      <if test="typeNum != null">
+        type_num = #{typeNum,jdbcType=INTEGER},
+      </if>
+      <if test="requestNum != null">
+        request_num = #{requestNum,jdbcType=INTEGER},
+      </if>
+      <if test="qualifyRound != null">
+        qualify_round = #{qualifyRound,jdbcType=VARCHAR},
+      </if>
+      <if test="goldReward != null">
+        gold_reward = #{goldReward,jdbcType=INTEGER},
+      </if>
+      <if test="curencyNum != null">
+        curency_num = #{curencyNum,jdbcType=VARCHAR},
+      </if>
+      <if test="currencyRound != null">
+        currency_round = #{currencyRound,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null">
+        uuid = #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+      and order_id = #{orderId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Order">
+    update `order`
+    set order_level = #{orderLevel,jdbcType=INTEGER},
+      order_type = #{orderType,jdbcType=INTEGER},
+      type_num = #{typeNum,jdbcType=INTEGER},
+      request_num = #{requestNum,jdbcType=INTEGER},
+      qualify_round = #{qualifyRound,jdbcType=VARCHAR},
+      gold_reward = #{goldReward,jdbcType=INTEGER},
+      curency_num = #{curencyNum,jdbcType=VARCHAR},
+      currency_round = #{currencyRound,jdbcType=VARCHAR},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=INTEGER},
+      uuid = #{uuid,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+      and order_id = #{orderId,jdbcType=INTEGER}
+      and status =1
+  </update>
+  <update id="updateList" parameterType="java.util.List">
+    <foreach collection="recordList" item="item" separator=";">
+    update `order` set
+    order_level = #{item.orderLevel,jdbcType=INTEGER},
+      order_type = #{item.orderType,jdbcType=INTEGER},
+      type_num = #{item.typeNum,jdbcType=INTEGER},
+      request_num = #{item.requestNum,jdbcType=INTEGER},
+      qualify_round = #{item.qualifyRound,jdbcType=VARCHAR},
+      gold_reward = #{item.goldReward,jdbcType=INTEGER},
+      curency_num = #{item.curencyNum,jdbcType=VARCHAR},
+      currency_round = #{item.currencyRound,jdbcType=VARCHAR},
+      start_time = #{item.startTime,jdbcType=TIMESTAMP},
+      end_time = #{item.endTime,jdbcType=TIMESTAMP},
+      state = #{item.state,jdbcType=INTEGER},
+      uuid = #{item.uuid,jdbcType=VARCHAR},
+      status = #{item.status,jdbcType=INTEGER}
+    where id = #{item.id,jdbcType=INTEGER}
+      and order_id = #{item.orderId,jdbcType=INTEGER}
+      </foreach>
+  </update>
+  
+  
+</mapper>

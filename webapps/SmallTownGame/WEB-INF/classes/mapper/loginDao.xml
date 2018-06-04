@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.LoginDao">
+	<insert id="insert" parameterType="com.muzhi.model.Login" useGeneratedKeys="true" keyProperty="id">
+		insert into login (username, passwd,registerTime)
+		values (#{username}, #{passwd},#{registerTime});
+	</insert>
+
+	<select id="selectOne" parameterType="com.muzhi.model.Login"
+		resultType="com.muzhi.model.Login">
+		select * from login
+		where username = #{username} and passwd = #{passwd}
+	</select>
+
+</mapper>

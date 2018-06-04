@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="testScollCity" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Scroller width="640" height="1008" y="0" x="0" bounces="false" throwSpeed="0.3">
+		<e:Group id="showBuilding" width="640" height="1008">
+			<e:Image source="town_bg_jpg" x="0" y="0" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

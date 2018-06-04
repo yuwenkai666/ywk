@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="StaffSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1208" x="0" y="0" fillAlpha="0.5" />
+	<e:Image width="590" height="880" source="windowUI_json.Staff_bg_png" scale9Grid="69,117,29,31" horizontalCenter="0"
+	         verticalCenter="-16" />
+	<e:Image width="487" height="1" source="windowUI_json.Deta_zy_01_png" y="487" scaleX="1" scaleY="1"
+	         horizontalCenter="0.5" />
+	<e:Image width="379" height="115" y="12" source="windowUI_json.Menu_title_png" horizontalCenter="0.5" />
+	<e:Image width="89" height="50" y="30" horizontalCenter="0.5" source="windowUI_json.Staff_title_png" />
+	<e:Image width="476" height="126" verticalCenter="-273" source="windowUI_json.Staff_bg_01_png" scale9Grid="38,44,16,0"
+	         horizontalCenter="0" />
+	<e:Image width="476" height="126" source="windowUI_json.Staff_bg_01_png" scale9Grid="38,44,16,0" verticalCenter="72"
+	         horizontalCenter="0" />
+	<e:Image id="closeBtn" width="162" height="63" y="844.21" source="windowUI_json.Menu_zy_13_png" horizontalCenter="0" />
+	<e:Image width="66" height="125" x="107" y="161" source="windowUI_json.chef_png" />
+	<e:Image width="103" height="115" x="77" y="508" source="windowUI_json.waiter_png" />
+	<e:Label text="厨力：" x="189" y="211" size="30" fontFamily="SimHei" textColor="0x00466b" />
+	<e:Label text="厨力不足会导致无法制作高等级的菜肴" x="189" y="256" size="20" fontFamily="SimHei" bold="true" textColor="0x00466b" />
+	<e:Label text="名气：" x="189" y="549" size="30" fontFamily="SimHei" textColor="0x00466B" />
+	<e:Label text="食客倾向到名气高的餐厅品尝的菜肴" x="189" y="594" size="20" fontFamily="SimHei" bold="true" textColor="0x00466B" />
+	<e:Label id="chefAddNum" text="+100" x="276" y="209" size="32" textColor="0x72ff7c" stroke="2" strokeColor="0x008e17" />
+	<e:Label id="waiterAddNum" text="+100" x="276" y="547" size="32" textColor="0x72FF7C" stroke="2" strokeColor="0x008E17" />
+	<e:Scroller width="510" height="155" y="310" horizontalCenter="0">
+		<e:Group width="510" height="155">
+			<e:List id="listChef" height="155" x="0" y="0">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="left" />
+				</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+	<e:Scroller width="510" height="155" y="655" horizontalCenter="0">
+		<e:Group width="510" height="155">
+			<e:List id="listWaiter" height="155" x="0" y="0">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="left" />
+				</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

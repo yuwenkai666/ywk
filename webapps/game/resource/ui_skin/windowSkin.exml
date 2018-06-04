@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="windowSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" />
+	<e:Image width="588" height="494" source="windowUI_json.Pop_bg_png" scale9Grid="124,157,17,34" horizontalCenter="0"
+	         verticalCenter="0" />
+	<e:Group id="one" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_01_png" />
+		<e:Label text="您的厨师角色找到了减少食材的方法" y="124" anchorOffsetX="0" width="508" textAlign="center" size="28"
+		         fontFamily="SimHei" bold="true" textColor="0xc04d00" horizontalCenter="1" />
+		<e:Image id="oneIcon" width="147" height="147" horizontalCenter="0" verticalCenter="0" />
+		<e:Image id="oneImg" width="58" height="44" x="232" y="333" />
+		<e:Label id="oneNum" text="-100" x="294" y="336" size="38" fontFamily="SimHei" bold="true" textColor="0x05df00" />
+		<e:Image id="oneSureBtn" width="170" height="65" y="407" source="windowUI_json.Pop_01_png" horizontalCenter="0" />
+	</e:Group>
+	<e:Group id="two" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_02_png" />
+		<e:Label text="您的厨厨师刚刚只做了高品质的菜品" y="124" anchorOffsetX="0" width="508" textAlign="center" size="28"
+		         fontFamily="SimHei" bold="true" textColor="0xC04D00" horizontalCenter="1" />
+		<e:Image id="twoFoodIcon" width="147" height="147" horizontalCenter="0.5" verticalCenter="-12.5" />
+		<e:Label id="twoFoodName" text="草莓蛋糕" y="318" size="28" fontFamily="SimHei" bold="true" textColor="0x05DF00"
+		         horizontalCenter="0.5" />
+		<e:Image id="twoSureBtn" width="170" height="65" y="407" source="windowUI_json.Pop_01_png" horizontalCenter="0" />
+		<e:Group id="starGroup" width="143" height="24" y="356" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1"
+		         horizontalCenter="0">
+			<e:Image id="star0" width="20" height="20" x="5" y="0" source="windowUI_json.Menu_zy_04_png" scaleX="1" scaleY="1" />
+			<e:Image id="star1" width="20" height="20" x="32" y="0" source="windowUI_json.Menu_zy_04_png" scaleX="1" scaleY="1" />
+			<e:Image id="star2" width="20" height="20" x="60" y="0" source="windowUI_json.Menu_zy_04_png" scaleX="1" scaleY="1" />
+			<e:Image id="star3" width="20" height="20" x="87" y="0" source="windowUI_json.Menu_zy_04_png" scaleX="1" scaleY="1" />
+			<e:Image id="star4" width="20" height="20" x="115" y="0" source="windowUI_json.Menu_zy_04_png" scaleX="1" scaleY="1"
+			         rotation="358.36" />
+		</e:Group>
+	</e:Group>
+	<e:Group id="three" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_03_png" />
+		<e:Label text="升级灶台和雇佣厨师可提升厨力" y="124" anchorOffsetX="0" width="508" textAlign="center" size="28" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" horizontalCenter="1" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="-51.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Label text="需求厨力：" x="136" y="228" size="38" fontFamily="SimHei" bold="true" textColor="0x004c87" />
+		<e:Label id="threeNeedNum" text="50000" x="316" y="228" size="38" fontFamily="SimHei" bold="true" textColor="0x05df00" />
+		<e:Label text="当前厨力：" x="136" y="300" size="38" fontFamily="SimHei" bold="true" textColor="0x004c87" />
+		<e:Label id="threeNum" text="500" x="316" y="300" size="38" fontFamily="SimHei" bold="true" textColor="0xff3e3e" />
+		<e:Image id="threeBtn" width="170" height="65" y="407" source="windowUI_json.Pop_03_png" x="84" />
+		<e:Image id="threeBtn2" width="170" height="65" y="407" source="windowUI_json.Pop_04_png" x="334" />
+	</e:Group>
+	<e:Group id="four" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_04_png" />
+		<e:Label text="通过去庄园中收获或者去交易中心购买可以获得食材" y="124" anchorOffsetX="0" width="508" textAlign="center" size="28"
+		         fontFamily="SimHei" bold="true" textColor="0xC04D00" horizontalCenter="1" lineSpacing="15" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="-34.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image id="fourSureBtn" width="170" height="65" y="407" horizontalCenter="0" source="windowUI_json.Pop_02_png" />
+		<e:Group id="currencyGroup" width="359" height="87" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="55.5"
+		         anchorOffsetX="0" horizontalCenter="0">
+			<e:Group width="61" height="24" x="22" y="15" scaleX="1" scaleY="1">
+				<e:Image id="currencyImage0" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"
+				         verticalCenter="0" left="0" source="{data.currencyImage1}" />
+				<e:Label id="currencyTxt0" size="22" fontFamily="SimHei" textAlign="left" anchorOffsetX="0" width="50"
+				         anchorOffsetY="0" height="22" text="{data.currencyTxt1}" x="37" verticalCenter="0" textColor="0x000000" />
+			</e:Group>
+			<e:Group width="61" height="24" x="237" y="15" scaleX="1" scaleY="1">
+				<e:Image id="currencyImage1" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"
+				         left="0" verticalCenter="0" source="{data.currencyImage2}" />
+				<e:Label id="currencyTxt1" size="22" fontFamily="SimHei" textColor="0x000000" textAlign="left" anchorOffsetX="0"
+				         width="50" anchorOffsetY="0" height="22" text="{data.currencyTxt2}" verticalCenter="0" x="37" />
+			</e:Group>
+			<e:Group width="61" height="24" x="22" y="60" scaleX="1" scaleY="1">
+				<e:Image id="currencyImage2" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"
+				         left="0" verticalCenter="0" source="{data.currencyImage3}" />
+				<e:Label id="currencyTxt2" size="22" fontFamily="SimHei" textColor="0x000000" textAlign="left" anchorOffsetX="0"
+				         width="50" anchorOffsetY="0" height="22" text="{data.currencyTxt3}" verticalCenter="0" x="37" />
+			</e:Group>
+			<e:Group width="61" height="24" x="237" y="59" scaleX="1" scaleY="1">
+				<e:Image id="currencyImage3" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"
+				         verticalCenter="0" left="0" source="{data.currencyImage4}" />
+				<e:Label id="currencyTxt3" size="22" fontFamily="SimHei" textColor="0x000000" textAlign="left" anchorOffsetX="0"
+				         width="50" anchorOffsetY="0" height="22" text="{data.currencyTxt4}" verticalCenter="0" x="37" />
+			</e:Group>
+		</e:Group>
+	</e:Group>
+	<e:Group id="five" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_05_png" />
+		<e:Label text="当前没有空余的厨师可以做这道菜，去雇佣厨师可继续完成菜品" y="124" anchorOffsetX="0" width="436" textAlign="center" size="26"
+		         fontFamily="SimHei" textColor="0xC04D00" lineSpacing="15" horizontalCenter="0" bold="true" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="-34.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image id="fiveSureBtn" width="170" height="65" y="406" source="windowUI_json.Pop_04_png" scaleX="1" scaleY="1"
+		         horizontalCenter="0" />
+		<e:Label text="已雇佣厨师：" y="284" size="38" fontFamily="SimHei" textColor="0x004c87" bold="true" x="144" />
+		<e:Label id="fiveNum" text="3/4" y="284" size="38" fontFamily="SimHei" anchorOffsetX="0" width="160" bold="true"
+		         x="374" textColor="0xff3e3e" />
+	</e:Group>
+	<e:Group id="six" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_06_png" />
+		<e:Label text="升级柜台可以提升菜品仓库的容量" y="136" anchorOffsetX="0" width="508" textAlign="center" size="28" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" horizontalCenter="1" lineSpacing="15" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="-21.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image id="sixSureBtn" width="170" height="65" y="407" horizontalCenter="0" source="windowUI_json.Pop_10_png" />
+		<e:Label text="当前库存：" y="276" size="38" fontFamily="SimHei" bold="true" textColor="0x004c87" x="126" />
+		<e:Label id="sixNum" text="99/99" y="276" size="38" fontFamily="SimHei" bold="true" textColor="0xff3e3e" x="325" />
+	</e:Group>
+	<e:Group id="seven" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_07_png" />
+		<e:Label text="谢谢老板，我会努力工作的！" y="203" anchorOffsetX="0" width="508" textAlign="center" size="28" fontFamily="SimHei"
+		         bold="true" lineSpacing="15" textColor="0xc04d00" height="28" horizontalCenter="0" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="1.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image id="sevenSureBtn" width="170" height="65" y="407" horizontalCenter="0" source="windowUI_json.Pop_01_png" />
+		<e:Label text="厨力提升：" y="276" size="38" fontFamily="SimHei" bold="true" textColor="0x004C87" x="161" />
+		<e:Label id="sevenPowerUp" text="21" y="276" size="38" fontFamily="SimHei" bold="true" x="360" textColor="0x00ba4f" />
+		<e:Label text="当前厨力：" y="324" size="38" fontFamily="SimHei" bold="true" textColor="0x004C87" x="161" />
+		<e:Label id="sevenPower" text="500" y="324" size="38" fontFamily="SimHei" bold="true" x="360" textColor="0xff9710" />
+		<e:Image id="sevenIcon" width="90" height="90" y="102" source="{data.Icon}" horizontalCenter="0" />
+	</e:Group>
+	<e:Group id="eight" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_11_png" />
+		<e:Label text="金钱虽然不是万能的，但没钱却是万万不能地…" y="136" anchorOffsetX="0" width="508" textAlign="center" size="28"
+		         fontFamily="SimHei" bold="true" textColor="0xC04D00" horizontalCenter="1" lineSpacing="15" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="-21.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image id="eightSureBtn" width="170" height="65" y="407" horizontalCenter="0" source="windowUI_json.Pop_01_png" />
+		<e:Label text="需求金币：" y="261" size="38" fontFamily="SimHei" bold="true" textColor="0x004C87" x="132" />
+		<e:Label id="eightNeedNum" text="5000" y="261" size="38" fontFamily="SimHei" bold="true" x="331" textColor="0x00ba4f" />
+		<e:Label text="当前金币：" y="312" size="38" fontFamily="SimHei" bold="true" textColor="0x004C87" x="132" />
+		<e:Label id="eightNum" text="500" y="312" size="38" fontFamily="SimHei" bold="true" textColor="0xFF3E3E" x="331" />
+	</e:Group>
+	<e:Group id="nine" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_08_png" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="2.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image id="nineSure" width="170" height="65" y="408" x="324" source="windowUI_json.Pop_07_png" />
+		<e:Image id="nineClose" width="170" height="65" y="408" x="82" source="windowUI_json.Pop_06_png" />
+		<e:Label text="员工等级：" y="270" size="30" fontFamily="SimHei" textColor="0x004C87" x="183" />
+		<e:Label id="nineLevel" text="21" y="270" size="30" fontFamily="SimHei" bold="true" x="343" textColor="0x00ba4f" />
+		<e:Label text="员工厨力：" y="304.5" size="30" fontFamily="SimHei" textColor="0x004C87" x="183" />
+		<e:Label id="ninePower" text="2100" y="304.5" size="30" fontFamily="SimHei" bold="true" x="343" textColor="0x00ba4f" />
+		<e:Label text="剩余时间：" y="339" size="30" fontFamily="SimHei" textColor="0x004C87" x="183" />
+		<e:Label id="nineTime" text="3小时" y="339" size="30" fontFamily="SimHei" bold="true" x="343" textColor="0xff9710" />
+		<e:Label text="老板，我为您任劳任怨，你忍心么？" y="202" anchorOffsetX="0" width="508" textAlign="center" size="28"
+		         fontFamily="SimHei" bold="true" lineSpacing="15" textColor="0xC04D00" height="28" scaleX="1" scaleY="1"
+		         horizontalCenter="0" />
+		<e:Image id="nineIcon" width="104" height="104" y="89" scaleX="1" scaleY="1" horizontalCenter="0" source="" />
+	</e:Group>
+	<e:Group id="ten" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_09_png" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="7.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image id="tenSureBtn" width="170" height="65" y="408" x="324" source="windowUI_json.Pop_08_png" />
+		<e:Image id="tenCloseBtn" width="170" height="65" y="408" source="windowUI_json.Pop_06_png" x="82" />
+		<e:Label text="员工等级：" y="273" size="30" fontFamily="SimHei" textColor="0x004C87" x="177" />
+		<e:Label id="tenLevel" text="21" y="273" size="30" fontFamily="SimHei" bold="true" textColor="0x00BA4F" x="337" />
+		<e:Label text="员工厨力：" y="307.5" size="30" fontFamily="SimHei" textColor="0x004C87" x="177" />
+		<e:Label id="tenPower" text="2100" y="307.5" size="30" fontFamily="SimHei" bold="true" textColor="0x00BA4F" x="337" />
+		<e:Label text="雇佣金币：" y="342" size="30" fontFamily="SimHei" textColor="0x004C87" x="177" />
+		<e:Label id="tenMoney" text="99999" y="342" size="30" fontFamily="SimHei" bold="true" textColor="0xFF9710" x="337" />
+		<e:Label text="老板，合约到期了，要继续合作吗？" y="213" anchorOffsetX="0" width="508" textAlign="center" size="28"
+		         fontFamily="SimHei" bold="true" lineSpacing="15" textColor="0xC04D00" height="28" scaleX="1" scaleY="1"
+		          horizontalCenter="0"/>
+		<e:Image id="tenIcon" width="104" height="104" y="97" source="{data.Icon}" scaleX="1" scaleY="1" horizontalCenter="0" />
+	</e:Group>
+	<e:Group id="eleven" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="266" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_10_png" />
+		<e:Label text="前往庄园可以提升餐厅等级" y="134" anchorOffsetX="0" width="508" textAlign="center" size="36" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" lineSpacing="15" horizontalCenter="0" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="-21.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image id="elevenSureBtn" width="170" height="65" y="407" horizontalCenter="0" source="windowUI_json.Pop_02_png" />
+		<e:Label text="需求等级：" y="266" size="38" fontFamily="SimHei" bold="true" textColor="0x004C87" x="149" />
+		<e:Label id="elevenNeedNum" text="22" y="266" size="38" fontFamily="SimHei" bold="true" x="347" textColor="0x05d500" />
+		<e:Label text="当前等级：" y="312" size="38" fontFamily="SimHei" bold="true" textColor="0x004C87" x="149" />
+		<e:Label id="elevenNum" text="21" y="312" size="38" fontFamily="SimHei" bold="true" textColor="0xFF3E3E" x="348" />
+	</e:Group>
+	<e:Group id="twelve" width="588" height="605" horizontalCenter="0" verticalCenter="20.5" anchorOffsetY="0"
+	         visible="false">
+		<e:Image width="588" height="564" source="windowUI_json.Pop_bg_png" scale9Grid="124,157,17,34" horizontalCenter="0"
+		         verticalCenter="16.5" />
+		<e:Image width="177" height="50" horizontalCenter="0.5" top="55" source="windowUI_json.Pop_title_12_png" />
+		<e:Label text="确定升级菜地到20级吗？" y="125" anchorOffsetX="0" width="508" textAlign="center" size="32" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" horizontalCenter="1" lineSpacing="15" />
+		<e:Label text="升级时间：22小时22分" y="169" anchorOffsetX="0" horizontalCenter="-1.5" width="513" textColor="0x004c87"
+		         fontFamily="SimHei" bold="true" size="26" textAlign="center" />
+		<e:Image width="482" height="188" y="203" source="windowUI_json.Pop_zy_01_png" scale9Grid="51,57,29,20"
+		         horizontalCenter="0" />
+		<e:Image width="37" height="28" x="77" y="219" source="hallUI.currency2_png" anchorOffsetX="0" anchorOffsetY="0" />
+		<e:Label text="小时产量： 1100" y="221" size="26" fontFamily="SimHei" bold="true" textColor="0x004C87" x="131" />
+		<e:Label text="+22" y="221" size="26" fontFamily="SimHei" bold="true" x="343" textColor="0x00ba4f" />
+		<e:Image width="36" height="35" x="77" y="264" source="windowUI_json.Menu_zy_10_png" anchorOffsetX="0"
+		         anchorOffsetY="0" />
+		<e:Label text="最大容量： 1100" y="273" size="26" fontFamily="SimHei" bold="true" textColor="0x004C87" x="132" />
+		<e:Label text="+21" y="273" size="26" fontFamily="SimHei" bold="true" x="343" textColor="0x00ba4f" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="123.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image width="58" height="44" x="194" y="440" source="hallUI.currency8_png" anchorOffsetX="0" anchorOffsetY="0" />
+		<e:Label text="999999" x="259" y="447.48" size="32" bold="true" textColor="0xff9710" />
+		<e:Image width="170" height="65" y="520.09" horizontalCenter="0" source="windowUI_json.Pop_09_png" />
+	</e:Group>
+	<e:Group id="thirteen" width="588" height="605" horizontalCenter="0" verticalCenter="20.5" anchorOffsetY="0"
+	         visible="false">
+		<e:Image width="588" height="564" source="windowUI_json.Pop_bg_png" scale9Grid="124,157,17,34" horizontalCenter="0"
+		         verticalCenter="16.5" />
+		<e:Image width="177" height="50" horizontalCenter="0.5" top="55" source="windowUI_json.Pop_title_12_png" />
+		<e:Label text="确定升级餐厅到20级吗？" y="125" anchorOffsetX="0" width="508" textAlign="center" size="32" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" horizontalCenter="1" lineSpacing="15" />
+		<e:Label text="升级时间：22小时22分" y="169" anchorOffsetX="0" horizontalCenter="-1.5" width="513" textColor="0x004C87"
+		         fontFamily="SimHei" bold="true" size="26" textAlign="center" />
+		<e:Image width="482" height="188" y="203" source="windowUI_json.Pop_zy_01_png" scale9Grid="51,57,29,20"
+		         horizontalCenter="0" />
+		<e:Label text="小时产量： 1100" y="219" size="26" fontFamily="SimHei" bold="true" textColor="0x004C87" x="83" />
+		<e:Label text="+22" y="220" size="26" fontFamily="SimHei" bold="true" x="303" textColor="0x00BA4F" />
+		<e:Label text="最大容量： 1100" y="260" size="26" fontFamily="SimHei" bold="true" textColor="0x004C87" x="83" />
+		<e:Label text="+21" y="260" size="26" fontFamily="SimHei" bold="true" textColor="0x00BA4F" x="303" />
+		<e:Label text="小时产量： 1100" y="300" size="26" fontFamily="SimHei" bold="true" textColor="0x004C87" x="83" />
+		<e:Label text="+22" y="300" size="26" fontFamily="SimHei" bold="true" x="303" textColor="0x00BA4F" />
+		<e:Label text="最大容量： 1100" y="340" size="26" fontFamily="SimHei" bold="true" textColor="0x004C87" x="83" />
+		<e:Label text="+21" y="340" size="26" fontFamily="SimHei" bold="true" textColor="0x00BA4F" x="303" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="123.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image width="58" height="44" x="194" y="440" source="hallUI.currency8_png" anchorOffsetX="0" anchorOffsetY="0" />
+		<e:Label text="999999" x="259" y="447.48" size="32" bold="true" textColor="0xFF9710" />
+		<e:Image width="170" height="65" y="520.09" horizontalCenter="0" source="windowUI_json.Pop_09_png" />
+	</e:Group>
+	<e:Group id="fourteen" width="588" height="605" horizontalCenter="0" verticalCenter="20.5" anchorOffsetY="0"
+	         visible="false">
+		<e:Image width="588" height="564" source="windowUI_json.Pop_bg_png" scale9Grid="124,157,17,34" horizontalCenter="0"
+		         verticalCenter="16.5" />
+		<e:Image width="177" height="50" horizontalCenter="0.5" top="55" source="windowUI_json.Pop_title_12_png" />
+		<e:Label text="确定升级美食中心到20级吗？" y="125" anchorOffsetX="0" width="508" textAlign="center" size="32" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" horizontalCenter="1" lineSpacing="15" />
+		<e:Label text="升级时间：22小时22分" y="169" anchorOffsetX="0" horizontalCenter="-1.5" width="513" textColor="0x004C87"
+		         fontFamily="SimHei" bold="true" size="26" textAlign="center" />
+		<e:Image width="482" height="188" y="203" source="windowUI_json.Pop_zy_01_png" scale9Grid="51,57,29,20"
+		         horizontalCenter="0" />
+		<e:Label text="制作等级：1100" y="219" size="26" fontFamily="SimHei" bold="true" textColor="0x004C87" x="83" />
+		<e:Label text="+22" y="220" size="26" fontFamily="SimHei" bold="true" x="287" textColor="0x00BA4F" />
+		<e:Label text="研究力：1100" y="260" size="26" fontFamily="SimHei" bold="true" textColor="0x004C87" x="83" />
+		<e:Label text="+21" y="260" size="26" fontFamily="SimHei" bold="true" textColor="0x00BA4F" x="259" />
+		<e:Image width="487" height="1" horizontalCenter="0.5" verticalCenter="123.5" source="windowUI_json.Deta_zy_01_png" />
+		<e:Image width="58" height="44" x="194" y="440" source="hallUI.currency8_png" anchorOffsetX="0" anchorOffsetY="0" />
+		<e:Label text="999999" x="259" y="447.48" size="32" bold="true" textColor="0xFF9710" />
+		<e:Image width="170" height="65" y="520.09" horizontalCenter="0" source="windowUI_json.Pop_09_png" />
+	</e:Group>
+	<e:Group id="fifteen" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_13_png" />
+		<e:Label text="厨师找到了更快制作这道菜的方法" y="124" anchorOffsetX="0" width="508" textAlign="center" size="28" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" horizontalCenter="1" />
+		<e:Image id="fifteenIcon" width="147" height="147" horizontalCenter="0.5" verticalCenter="-12.5" />
+		<e:Label id="fifteenNum" text="-10%" y="326" size="38" fontFamily="SimHei" bold="true" textColor="0x05DF00"
+		         height="38" x="276" />
+		<e:Image width="41" height="43" y="325" scaleX="1" scaleY="1" source="windowUI_json.Pop_zy_02_png" anchorOffsetX="45"
+		         x="274" />
+		<e:Image id="fifteenSureBtn" width="170" height="65" source="windowUI_json.Pop_01_png" scaleX="1" scaleY="1" x="209"
+		         horizontalCenter="0" bottom="22" />
+	</e:Group>
+	<e:Group id="sixteen" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="176" height="50" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_14_png" />
+		<e:Label text="越做越好，现在可以尝试下提价了" y="124" anchorOffsetX="0" width="508" textAlign="center" size="28" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" horizontalCenter="1" />
+		<e:Image id="sixteenFoodIcon" width="147" height="147" horizontalCenter="0.5" verticalCenter="-12.5" />
+		<e:Label id="sixteenNum" text="+30%" y="325" size="38" fontFamily="SimHei" bold="true" textColor="0x05DF00" x="284" />
+		<e:Image width="58" height="44" x="222" y="322" scaleX="1" scaleY="1" source="hallUI.currency8_png" />
+		<e:Image id="sixteenSureBtn" width="170" height="65" y="407" source="windowUI_json.Pop_01_png" horizontalCenter="0" />
+	</e:Group>
+	<e:Group id="seventeen" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="221" height="49" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_15_png" />
+		<e:Label text="恭喜你刚刚学会了一道新菜" y="124" anchorOffsetX="0" width="508" textAlign="center" size="28" fontFamily="SimHei"
+		         bold="true" textColor="0xC04D00" horizontalCenter="1" />
+		<e:Image id="seventeenFoodIcon" width="147" height="147" horizontalCenter="0.5" verticalCenter="-12.5" />
+		<e:Label id="seventeenFoodName" text="草莓蛋糕" y="327" size="28" fontFamily="SimHei" bold="true" horizontalCenter="0.5"
+		         textColor="0x000000" />
+		<e:Image id="seventeenSureBtn" width="170" height="65" y="407" source="windowUI_json.Pop_01_png" horizontalCenter="0" />
+	</e:Group>
+	<e:Group id="nineteen" width="588" height="494" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image width="177" height="49" horizontalCenter="0" top="20" source="windowUI_json.Pop_title_17_png" />
+		<e:Label text="恭喜你完成了一份订单，客户为了表示感谢送了一些礼物给我们" y="124" anchorOffsetX="0" width="451" textAlign="center" size="28"
+		         fontFamily="SimHei" bold="true" textColor="0xC04D00" horizontalCenter="0" lineSpacing="25" />
+		<e:Image id="nineteenSureBtn" width="170" height="65" y="407" source="windowUI_json.Pop_01_png" horizontalCenter="0" />
+		<e:Scroller id="nineteenScroll" height="55" width="371" anchorOffsetX="0" anchorOffsetY="0" y="275" scaleX="1"
+		            scaleY="1" horizontalCenter="0.5">
+			<e:Group id="nineteenGroup" height="55" x="1" y="1" touchThrough="true" width="371">
+				<e:List id="listNineteen" verticalCenter="0" height="55" horizontalCenter="0">
+					<e:layout>
+						<e:TileLayout horizontalGap="10" verticalGap="10" columnAlign="justifyUsingWidth" rowAlign="justifyUsingHeight"
+						              paddingTop="0" paddingRight="0" paddingLeft="0" paddingBottom="0" />
+					</e:layout>
+				</e:List>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+	<e:Image id="closeBtn" width="72" height="75" x="540" y="272" source="windowUI_json.Pop_close_png" />
+</e:Skin>

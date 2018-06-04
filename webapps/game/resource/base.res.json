@@ -1,0 +1,129 @@
+{
+	"groups": [
+		{
+			"keys": "hall_bg,hero_img,hero_json,hallUI,Food,config_json,Decode_json,InterfaceUI_json,Stunts_json,Stunts1_png,Stunts1_json,Stunts_png,hallcfg_new_json,daditu_bg_jpg,windowUI_json",
+			"name": "hall_resource"
+		},
+		{
+			"keys": "hallcfg_new_json,3_png,4_png,5_png,6_png,1_png,2_png,windowUI_json,version_json,hero_json",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/hall/hall_bg.jpg",
+			"type": "image",
+			"name": "hall_bg"
+		},
+		{
+			"url": "assets/role/hero.png",
+			"type": "image",
+			"name": "hero_img"
+		},
+		{
+			"url": "assets/role/hero.json",
+			"type": "json",
+			"name": "hero_json"
+		},
+		{
+			"url": "assets/hall/hallUI.json",
+			"type": "sheet",
+			"name": "hallUI",
+			"subkeys": "Talk_01_png,Talk_02_png,Talk_png,Trophy_01_png,Trophy_02_png,Trophy_03_png,Update_01_png,Update_02_png,Update_03_png,Update_04_png,Update_button_01_01_png,Update_button_01_png,Update_button_02_01_png,Update_button_02_02_png,Update_button_02_png,Update_button_03_png,Update_button_04_png,Update_button_05_png,Update_button_06_png,Update_button_07_png,anniu_1_png,anniu_2_png,anniu_3_png,anniu_4_png,anniu_5_png,anniu_6_png,anniu_7_png,articleShaden_png,body_3001_png,body_3002_png,body_3003_png,body_3004_png,body_3005_png,body_3006_png,body_3007_png,body_3008_png,body_3009_png,body_3010_png,body_3011_png,body_3012_png,body_3013_png,body_3014_png,caid_01_png,caid_02_png,caid_12_png,caid_13_png,caid_17_png,caid_18_png,caidan_0_png,caidan_1_png,caidan_2_png,caidan_3_png,caidan_4_png,caidan_5_png,caidan_6_png,caidan_8_png,caidan_8_zy_png,caidan_9_png,caidangTab1_1_png,caidangTab1_2_png,caidangTab2_1_png,caidangTab2_2_png,caidangTab3_1_png,caidangTab3_2_png,caidangTab4_1_png,caidangTab4_2_png,caidangTab5_1_png,caidangTab5_2_png,caidangTab6_1_png,caidangTab6_2_png,cangku_png,chairShadom_png,chef_01_png,chef_02_png,chef_png,currency1_png,currency2_png,currency34_png,currency3_png,currency4_png,currency5_png,currency6_png,currency7_png,currency8_png,currency9_png,daditu_01_png,daditu_02_png,daditu_03_png,daditu_04_png,daditu_05_png,daditu_06_png,daditu_07_png,daditu_08_png,daditu_09_png,daditu_10_png,daditu_11_png,daditu_12_png,daditu_13_png,daditu_15_png,daditu_16_png,daditu_17_png,duihuakuang_png,fanhui_png,flower_01_png,flower_02_png,friendTown_png,haoyou_1_png,haoyou_2_1_png,haoyou_2_png,haoyou_3_png,haoyou_4_png,haoyou_5_png,haoyou_6_png,haoyou_7_png,jianzhu_01_png,kuozhan_png,logo_png,mai_01_png,mai_02_png,mai_02_xz_png,mai_03_png,mai_03_xz_png,mai_04_png,mai_04_xz_png,mai_05_png,mai_05_xz_png,mai_06_png,mai_06_xz_png,mai_07_png,mai_08_png,mai_bg_png,roleShaden_png,shijian_01_png,shijian_02_png,tableShadom_png,taren_png,tips_png,tishi_png,touxiang_1_png,touxiang_2_png,touxiang_3_png,touxiang_4_png,touxiang_5_png,touxiang_6_png,townback_png,tx_1_png,tx_2_png,tx_3_png,tx_4_png,tx_5_png,tx_6_png,xiaozhen_png,ziyuan_1_png"
+		},
+		{
+			"url": "assets/food/Food.json",
+			"type": "sheet",
+			"name": "Food",
+			"subkeys": "food_101001_png,food_101002_png,food_101003_png,food_101004_png,food_101005_png,food_101006_png,food_101007_png,food_101008_png,food_101009_png,food_102001_png,food_102002_png,food_102003_png,food_102004_png,food_102005_png,food_102006_png,food_102007_png,food_102008_png,food_102009_png,food_102010_png,food_102011_png,food_102012_png,food_102013_png,food_102014_png,food_102015_png,food_103001_png,food_103002_png,food_103003_png,food_103004_png,food_103005_png,food_103006_png,food_103007_png,food_103008_png,food_103009_png,food_103010_png,food_104001_png,food_104002_png,food_104003_png,food_104004_png,food_104005_png,food_104006_png,food_104007_png,food_104008_png,food_104009_png,food_104010_png,food_105001_png,food_105002_png,food_105003_png,food_105004_png,food_105005_png,food_105006_png,food_105007_png,food_105008_png,food_105009_png,food_105010_png,food_106001_png,food_106002_png,food_106003_png,food_106004_png,food_106005_png,food_106006_png"
+		},
+		{
+			"url": "config/config.json",
+			"type": "json",
+			"name": "config_json"
+		},
+		{
+			"url": "assets/Decorate/Decode.json",
+			"type": "sheet",
+			"name": "Decode_json",
+			"subkeys": "Decorate_470000_png,Decorate_470001_png,Decorate_470002_png,Decorate_470003_png,Decorate_470004_png,Decorate_470005_png,Decorate_470006_png,Decorate_470007_png,Decorate_470008_png,Decorate_470009_png,bingxiang001_png,bingxiang002_png,bingxiang003_png,bingxiang004_png,bingxiang005_png,bingxiang006_png,bingxiang007_png,bingxiang008_png,bingxiang009_png,bingxiang010_png,dengju001_png,dengju002_png,dengju003_png,dengju004_png,dengju005_png,dengju006_png,dengju007_png,dengju008_png,dengju009_png,dengju010_png,dengju011_png,dengju012_png,dengju013_png,dengju014_png,dengju015_png,dengju016_png,dengju017_png,dengju018_png,dengju019_png,dengju020_png,dengju021_png,dengju022_png,dengju023_png,dengju024_png,dengju025_png,dengju026_png,dengju027_png,dengju028_png,haibao001_png,haibao002_png,haibao003_png,haibao004_png,haibao005_png,haibao006_png,haibao007_png,haibao008_png,haibao009_png,haibao010_png,haibao011_png,huogui001_png,huogui002_png,huogui003_png,huogui004_png,huogui005_png,huogui006_png,huogui007_png,huogui008_png,huogui009_png,huogui010_png,huogui011_png,huogui012_png,yizi001_png,yizi002_png,yizi003_png,yizi004_png,yizi005_png,yizi006_png,yizi007_png,yizi008_png,yizi009_png,yizi010_png,zaotai001_png,zaotai002_png,zaotai003_png,zaotai004_png,zaotai005_png,zaotai006_png,zaotai007_png,zaotai008_png,zaotai009_png,zaotai010_png,zaotai011_png,zaotai012_png,zaotai013_png,zaotai014_png,zaotai015_png,zaotai016_png,zaotai017_png,zaotai018_png,zaotai019_png,zaotai020_png,zhaopai001_png,zhaopai002_png,zhaopai003_png,zhaopai004_png,zhaopai005_png,zhaopai006_png,zhaopai007_png,zhaopai008_png,zhaopai009_png,zhaopai010_png,zhaopai011_png,zhaopai012_png,zhuozi001_png,zhuozi002_png,zhuozi003_png,zhuozi004_png,zhuozi005_png,zhuozi006_png,zhuozi007_png,zhuozi008_png,zhuozi009_png,zhuozi010_png"
+		},
+		{
+			"url": "assets/InterfaceUI/InterfaceUI.json",
+			"type": "sheet",
+			"name": "InterfaceUI_json",
+			"subkeys": "bgLight_png,chengjiu_01_png,chengjiu_02_png,chengjiu_03_png,chengjiu_04_png,closeBtn_png,daoluan_01_png,daoluan_02_png,daoluan_03_png,daoluan_04_png,daoluan_05_png,daoluan_13_png,daoluan_14_png,dongtai_01_png,dongtai_02_png,dongtai_04_png,dongtai_05_png,dongtai_06_png,dongtai_07_png,explainTitle_png,fenggexian_png,fenxiang_01_png,fenxiang_02_png,fenxiang_03_png,fenxiang_04_png,fenxiang_05_png,fenxiang_06_png,fenxiang_07_png,fenxiang_08_png,fenxiang_09_png,haoyou_1_png,haoyou_2_1_png,haoyou_2_png,haoyou_3_png,haoyou_4_png,haoyou_5_png,haoyou_6_png,haoyou_7_png,haoyou_9_png,inviteBtn_png,paihb_01_png,paihb_02_png,paihb_03_png,paihb_04_png,paihb_05_png,paihb_06_png,paihb_07_png,paihb_08_png,paihb_10_png,paihb_11_png,paihb_12_png,paihb_13_png,renwu_01_png,renwu_02_png,renwu_03_png,renwu_04_png,renwu_05_png,renwu_06_png,renwu_07_png,renwu_08_png,renwu_09_png,renwu_10_png,renwu_11_png,renwu_12_png,renwu_13_png,shengj_02_png,shengj_03_png,shengj_06_png,shiwu_02_png,tips_png,trouble1_png,trouble2_png,trouble3_png,trouble4_png,trouble5_png,trouble6_png,tuoyuan_png,yaoq_01_png,yaoq_02_png,yaoq_03_png,yaoq_06_png,yaoq_08_png,yindao_01_png,yindao_02_png,zhuangshi_01_png,zhuangshi_02_png,zhuangshi_03_png,zhuangshi_04_png,zhuangshi_06_png"
+		},
+		{
+			"url": "assets/stunt/Stunts.json",
+			"type": "json",
+			"name": "Stunts_json"
+		},
+		{
+			"url": "assets/stunt/Stunts1.png",
+			"type": "image",
+			"name": "Stunts1_png"
+		},
+		{
+			"url": "assets/stunt/Stunts1.json",
+			"type": "json",
+			"name": "Stunts1_json"
+		},
+		{
+			"url": "assets/stunt/Stunts.png",
+			"type": "image",
+			"name": "Stunts_png"
+		},
+		{
+			"url": "assets/hall/hallcfg_new.json",
+			"type": "json",
+			"name": "hallcfg_new_json"
+		},
+		{
+			"url": "assets/dinner/3.png",
+			"type": "image",
+			"name": "3_png"
+		},
+		{
+			"url": "assets/dinner/4.png",
+			"type": "image",
+			"name": "4_png"
+		},
+		{
+			"url": "assets/dinner/5.png",
+			"type": "image",
+			"name": "5_png"
+		},
+		{
+			"url": "assets/dinner/6.png",
+			"type": "image",
+			"name": "6_png"
+		},
+		{
+			"url": "assets/dinner/1.png",
+			"type": "image",
+			"name": "1_png"
+		},
+		{
+			"url": "assets/dinner/2.png",
+			"type": "image",
+			"name": "2_png"
+		},
+		{
+			"url": "assets/town/daditu_bg.jpg",
+			"type": "image",
+			"name": "daditu_bg_jpg"
+		},
+		{
+			"url": "assets/Window/windowUI.json",
+			"type": "sheet",
+			"name": "windowUI_json",
+			"subkeys": "Decorate_bg_01_png,Decorate_tab1_01_png,Decorate_tab1_02_png,Decorate_tab2_01_png,Decorate_tab2_02_png,Decorate_tab3_01_png,Decorate_tab3_02_png,Decorate_tab4_01_png,Decorate_tab4_02_png,Decorate_tab5_01_png,Decorate_tab5_02_png,Decorate_tab6_01_png,Decorate_tab6_02_png,Decorate_tab7_01_png,Decorate_tab7_02_png,Decorate_tab8_01_png,Decorate_tab8_02_png,Decorate_tab9_01_png,Decorate_tab9_02_png,Decorate_title_png,Decorate_zy_02_png,Decorate_zy_03_png,Decorate_zy_04_png,Decorate_zy_05_png,Deta_back_png,Deta_bg_png,Deta_tab1_01_png,Deta_tab1_02_png,Deta_tab2_01_png,Deta_tab2_02_png,Deta_tab3_01_png,Deta_tab3_02_png,Deta_zy_01_png,Deta_zy_02_png,Equip_bg_01_png,Equip_bg_02_png,Equip_title_png,Equip_zy_01_png,Equip_zy_02_png,Equip_zy_03_png,Equip_zy_04_png,Equip_zy_05_png,Equip_zy_06_png,Hire_bg_01_png,Hire_head_png,Hire_tab1_01_png,Hire_tab1_02_png,Hire_tab2_01_png,Hire_tab2_02_png,Hire_tab3_01_png,Hire_tab3_02_png,Hire_title_png,Hire_zy_01_png,Hire_zy_02_png,Hire_zy_03_png,Menu_bg_01_png,Menu_bg_png,Menu_tab1_01_png,Menu_tab1_02_png,Menu_tab2_01_png,Menu_tab2_02_png,Menu_tab3_01_png,Menu_tab3_02_png,Menu_tab4_01_png,Menu_tab4_02_png,Menu_tab5_01_png,Menu_tab5_02_png,Menu_title1_png,Menu_title_png,Menu_zy_01_png,Menu_zy_02_png,Menu_zy_03_png,Menu_zy_04_png,Menu_zy_05_png,Menu_zy_06_png,Menu_zy_07_png,Menu_zy_08_png,Menu_zy_09_png,Menu_zy_10_png,Menu_zy_11_png,Menu_zy_12_png,Menu_zy_13_png,Pop_01_png,Pop_02_png,Pop_03_png,Pop_04_png,Pop_05_png,Pop_06_png,Pop_07_png,Pop_08_png,Pop_09_png,Pop_10_png,Pop_11_png,Pop_12_png,Pop_bg_png,Pop_close_png,Pop_head_png,Pop_title_01_png,Pop_title_02_png,Pop_title_03_png,Pop_title_04_png,Pop_title_05_png,Pop_title_06_png,Pop_title_07_png,Pop_title_08_png,Pop_title_09_png,Pop_title_10_png,Pop_title_11_png,Pop_title_12_png,Pop_title_13_png,Pop_title_14_png,Pop_title_15_png,Pop_title_16_png,Pop_title_17_png,Pop_zy_01_png,Pop_zy_02_png,Staff_bg_01_png,Staff_bg_png,Staff_head_01_png,Staff_head_png,Staff_title_png,Staff_zy_01_png,Staff_zy_02_png,Update_button_07_png,Warehouse_bg_01_png,Warehouse_tab1_01_png,Warehouse_tab1_02_png,Warehouse_tab2_01_png,Warehouse_tab2_02_png,Warehouse_title_01_png,Warehouse_title_png,Warehouse_zy_01_png,Warehouse_zy_02_png,buildingm_01_png,buildingm_02_png,buildingm_03_png,buildingm_04_png,buildingm_05_png,buildingm_06_png,catalog_bg_01_png,catalog_bg_02_png,catalog_title_png,chef_png,foodm_01_png,foodm_02_png,foodm_03_png,foodm_04_png,foodm_05_png,foodm_06_png,foodm_07_png,foodm_08_png,level_01_png,level_02_png,level_03_png,level_04_png,level_05_png,order_bg_png,order_title_png,order_zy_01_png,order_zy_02_png,order_zy_03_png,order_zy_04_png,order_zy_05_01_png,order_zy_05_png,order_zy_06_png,order_zy_07_png,rate_bg_png,rate_lv_10_png,rate_lv_11_png,rate_lv_1_png,rate_lv_2_png,rate_lv_3_png,rate_lv_4_png,rate_lv_5_png,rate_lv_6_png,rate_lv_7_png,rate_lv_8_png,rate_lv_9_png,rate_title_png,rate_zy_01_png,rate_zy_02_png,rate_zy_03_png,rate_zy_04_png,rate_zy_05_png,rate_zy_06_png,research_title_png,research_zy_01_png,task10_02_png,task11_png,task1_png,task2_png,task3_02_png,task5_png,task6_png,task7_png,task8_01_png,task8_02_png,task8_03_png,task8_04_png,task8_05_png,task8_06_png,task8_07_png,task8_08_png,task8_09_png,task9_01_png,task9_02_png,waiter_png"
+		},
+		{
+			"url": "version.json",
+			"type": "json",
+			"name": "version_json"
+		}
+	]
+}

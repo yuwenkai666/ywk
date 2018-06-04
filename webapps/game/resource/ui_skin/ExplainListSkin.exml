@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ExplainListSkin" width="454" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label id="RuleTitle" text="{data.ruleTitle}" y="0" fontFamily="SimHei" size="32" height="35" left="0" textColor="0x00a217"/>
+	<e:Label id="RuleLabel" text="{data.ruleText}" width="454" size="28" textColor="0x7C2F00" fontFamily="SimHei" horizontalCenter="0" y="55"/>
+</e:Skin>

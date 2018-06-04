@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WarehouseListSkin" width="166" height="248" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="warehouseListClick" width="166" height="248" y="0" horizontalCenter="0">
+		<e:Image id="foodListBg" width="166" height="248" x="0" y="0" scaleX="1" scaleY="1" touchEnabled="false" source="windowUI_json.Warehouse_bg_01_png"/>
+		<e:Image id="foodImageBg" width="130" height="130" top="8" y="10" scaleX="1" scaleY="1" touchEnabled="false" horizontalCenter="0" source="{data.foodImageBg}"/>
+		<e:Image id="foodImage" width="130" height="130" top="8" source="{data.foodImage}" y="10" scaleX="1" scaleY="1" touchEnabled="false" horizontalCenter="0"/>
+		<e:Label y="160" size="22" anchorOffsetX="0" width="176" anchorOffsetY="0" height="20" text="{data.foodNameTxt}" textAlign="center" fontFamily="SimHei" textColor="0x953F00" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Group id="starGroup" width="143" height="24" y="132" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0.5" x="12" scaleX="1" scaleY="1" visible="false">
+			<e:Image id="star0" width="20" height="20" x="5" y="0" scaleX="1" scaleY="1" source="{data.star1}"/>
+			<e:Image id="star1" width="20" height="20" x="32" y="0" scaleX="1" scaleY="1" source="{data.star2}"/>
+			<e:Image id="star2" width="20" height="20" x="60" y="0" scaleX="1" scaleY="1" source="{data.star3}"/>
+			<e:Image id="star3" width="20" height="20" x="87" y="0" scaleX="1" scaleY="1" source="{data.star4}"/>
+			<e:Image id="star4" width="20" height="20" x="115" y="0" scaleX="1" scaleY="1" rotation="358.36" source="{data.star5}"/>
+		</e:Group>
+		<e:Label text="{data.saveNum}" y="201" size="24" stroke="2" strokeColor="0xba6500" right="13"/>
+		<e:Label y="6" size="24" stroke="2" strokeColor="0xBA6500" x="-60" textAlign="center" text="{data.levelNum}" width="170"/>
+	</e:Group>
+</e:Skin>

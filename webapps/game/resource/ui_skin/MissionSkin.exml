@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="missionSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="160072d30ce"/>
+	<e:Rect width="640" height="1400" x="0" y="0" strokeAlpha="0.5" fillAlpha="0.5"/>
+	<e:Image source="InterfaceUI_json.renwu_01_png" verticalCenter="0" horizontalCenter="0" scale9Grid="129,132,57,30" width="588" height="935"/>
+	<e:Image source="InterfaceUI_json.renwu_02_png" horizontalCenter="0" top="52"/>
+	<e:Image id="closeBtn" source="InterfaceUI_json.dongtai_02_png" x="553" y="19"/>
+	<e:Scroller width="888" height="698" y="175" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"> 
+		<e:Group anchorOffsetX="0" width="484" anchorOffsetY="0" height="698" >
+			<e:List id="listHeros" width="484" horizontalCenter="0" y="0">
+				<e:layout>
+					<e:VerticalLayout verticalAlign="top"/>
+				</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

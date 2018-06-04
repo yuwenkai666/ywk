@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.CookBookDao">
+		
+	<!-- 根据uid，获取一条用户记录 -->
+	<select id="getList" parameterType="com.muzhi.model.CookBook"
+		resultType="com.muzhi.model.CookBook">
+		select *
+		from cookbook
+		where id = #{id}
+	</select>
+		
+	<!-- 根据uid，获取一条用户记录 -->
+	<select id="getListByUserId" resultType="com.muzhi.model.CookBook">
+		select *
+		from cookbook
+		where id = #{id}
+	</select>
+	<!-- 获取已经研究完能制作的菜谱-->
+	<select id="getCanCookBook" resultType="com.muzhi.model.CookBook">
+		select *
+		from cookbook
+		where id = #{id}
+		and status=0
+	</select>
+	<!-- 更新一条用户记录 -->
+	<update id="updateCookBook" parameterType="com.muzhi.model.CookBook">
+		update cookbook set
+			<include refid="cookbookValue"></include>
+		where id = #{id,jdbcType=INTEGER}
+		and  foodId = #{foodId}
+	</update>
+	
+	<!-- 根据uid，cookbookid 获取一条用户记录 -->
+	<select id="getOneCookbook" resultType="com.muzhi.model.CookBook">
+		select *
+		from cookbook
+		where id = #{userId}
+		and foodId = #{bookId}
+	</select>
+	
+	<!-- 插入多条用户建筑记录 -->
+	<insert id="addList" parameterType="java.util.List">  
+	<!-- useGeneratedKeys="true" -->
+    <!-- <selectKey resultType="int" keyProperty="id" order="AFTER">  
+        SELECT  
+        LAST_INSERT_ID()  
+    </selectKey>   -->
+	    INSERT INTO `cookbook` (
+			<include refid="cookbookParam"></include>
+		)
+		VALUES 
+	    <foreach collection="cookbookList" item="item" index="index" separator="," >  
+	       (#{item.id},#{item.foodId},#{item.foodQualify},#{item.makeTime},#{item.metarial},#{item.strength},#{item.price},#{item.process},#{item.status},#{item.researchLevel})
+	    </foreach> 
+	    <!-- ON DUPLICATE KEY UPDATE -->
+	</insert>  
+	
+	<update id="updateByPrimaryKey" parameterType="com.muzhi.model.CookBook">
+	    update cookbook
+	    set foodQualify = #{foodQualify,jdbcType=INTEGER},
+	      makeTime = #{makeTime,jdbcType=INTEGER},
+	      metarial = #{metarial,jdbcType=VARCHAR},
+	      strength = #{strength,jdbcType=INTEGER},
+	      price = #{price,jdbcType=INTEGER},
+	      process = #{process,jdbcType=INTEGER},
+	      status = #{status,jdbcType=INTEGER},
+	      researchLevel = #{researchLevel,jdbcType=INTEGER}
+	     where id = #{id,jdbcType=INTEGER}
+	      and foodId = #{foodId,jdbcType=INTEGER}
+  	</update>
+
+	<!-- 用户表所有参数 -->
+	<sql id="cookbookParam">
+		id,
+		foodId,
+		foodQualify,
+		makeTime,
+		metarial,
+		strength,
+		price,
+		process,
+		status,
+		researchLevel
+	</sql>
+	<!-- 用户表所有参数 -->
+	<sql id="cookbookValue">
+		foodId= #{foodId},
+		foodQualify= #{foodQualify},
+		makeTime= #{makeTime},
+		metarial= #{metarial},
+		strength= #{strength},
+		price= #{price},
+		process= #{process},
+		status= #{status},
+		researchLevel= #{researchLevel}
+	</sql>
+
+</mapper>

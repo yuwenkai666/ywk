@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.OrderTaskDao">
+
+  <resultMap id="BaseResultMap" type="com.muzhi.model.OrderTask" autoMapping="true">
+    <id column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="tid" jdbcType="INTEGER" property="tid" />
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="order_food" jdbcType="VARCHAR" property="orderFood" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+  </resultMap>
+  
+  <insert id="insert" parameterType="com.muzhi.model.OrderTask">
+    insert into order_task (order_id ,tid, id, order_food, start_time, end_time,state)
+      values (#{orderId,jdbcType=INTEGER}, #{tid,jdbcType=INTEGER}, #{id,jdbcType=INTEGER}, #{orderFood,jdbcType=VARCHAR}, 
+      #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, #{state,jdbcType=INTEGER})
+  </insert>
+  
+  <update id="update" parameterType="com.muzhi.model.OrderTask">
+    update order_task
+    set tid = #{tid,jdbcType=INTEGER},
+        order_food = #{orderFood,jdbcType=VARCHAR},
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+        state = #{state,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+        and order_id = #{orderId,jdbcType=INTEGER}
+  </update>
+ <select id="selectByTime"  resultMap="BaseResultMap">
+  	select *
+    from order_task
+    where id = #{id} and timestampdiff(second, #{endTime,jdbcType=TIMESTAMP},end_time) > 0
+  </select>
+ <select id="selectByNoTime"  resultMap="BaseResultMap">
+  	select *
+    from order_task
+    where id = #{id}
+  </select>
+ <select id="selectOneByTime"  resultMap="BaseResultMap">
+  	  select * from order_task
+      where id = #{id,jdbcType=INTEGER}
+      and order_id = #{orderId,jdbcType=INTEGER}
+      and timestampdiff(second, #{endTime,jdbcType=TIMESTAMP},end_time) > 0
+  </select>
+</mapper>

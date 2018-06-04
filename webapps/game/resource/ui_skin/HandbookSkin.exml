@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HandbookSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Rect width="640" height="1400" x="0" y="0" strokeAlpha="0.5" fillAlpha="0.8" />
+    <e:Image width="590" height="906" anchorOffsetY="0" source="windowUI_json.Menu_bg_png" scale9Grid="71,154,25,13"
+             horizontalCenter="0" verticalCenter="0" />
+    <e:Image width="379" height="115" y="12" source="windowUI_json.Menu_title_png" horizontalCenter="0.5" />
+    <e:Image width="174" height="50" y="30" horizontalCenter="0.5" source="windowUI_json.catalog_title_png" />
+    <e:Image id="handbookSelect1" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab1_01_png" x="82" />
+    <e:Image id="handbookSelect2" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab2_01_png" x="178" />
+    <e:Image id="handbookSelect3" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab3_01_png" x="274" />
+    <e:Image id="handbookSelect4" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab4_01_png" x="370" />
+    <e:Image id="handbookSelect5" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab5_01_png" x="466" />
+    <e:Image id="closeRect" width="162" height="63" y="873.21" source="windowUI_json.Menu_zy_13_png"
+             horizontalCenter="0" />
+    <e:Label id="currentStrength" text="已收集 20/1000" y="834" size="26" fontFamily="SimHei" bold="true"
+             textColor="0xFF6639" anchorOffsetX="0" width="555" horizontalCenter="0" textAlign="center" />
+    <e:Scroller id="handbookScroll" height="575" width="512" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0.5"
+                horizontalCenter="0" scrollPolicyH="off">
+        <e:Group id="handbookGroup" height="575" x="-1.33" y="2.67" touchThrough="true" width="512">
+            <e:List id="listHandbook" y="0" horizontalCenter="0">
+                <e:layout>
+                    <e:TileLayout horizontalGap="10" verticalGap="10" columnAlign="justifyUsingWidth"
+                                  rowAlign="justifyUsingHeight" paddingTop="30" paddingRight="30" paddingLeft="30"
+                                  paddingBottom="10" requestedColumnCount="3" />
+                    <!--<e:VerticalLayout horizontalAlign="contentJustify" />
+                    -->
+                </e:layout>
+            </e:List>
+        </e:Group>
+    </e:Scroller>
+</e:Skin>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.FoodDao">
+	<!-- <resultMap id="fridge" type="com.muzhi.model.Fridge">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="level" jdbcType="INTEGER" property="gold" />
+		<result column="indexNum" jdbcType="INTEGER" property="love" />
+		<result column="rice" jdbcType="INTEGER" property="exp" />
+		<result column="banana" jdbcType="INTEGER" property="level" />
+		<result column="vegetable" jdbcType="INTEGER" property="intimacy" />
+		<result column="meat" jdbcType="INTEGER" property="diamond" />
+		<result column="fish" jdbcType="INTEGER" property="strength" />
+	</resultMap> -->
+		
+	<!-- 根据uid，获取一条用户记录 -->
+	<select id="getList" parameterType="com.muzhi.model.Food"
+		resultType="com.muzhi.model.Food">
+		select *
+		from food
+	</select>
+	<!-- 根据uid，获取一条用户记录 -->
+	<select id="getFood" resultType="com.muzhi.model.Food">
+		select *
+		from food
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<!-- 插入多条用户建筑记录 -->
+	<insert id="addList" parameterType="java.util.List">  
+	<!-- useGeneratedKeys="true" -->
+    <!-- <selectKey resultType="int" keyProperty="id" order="AFTER">  
+        SELECT  
+        LAST_INSERT_ID()  
+    </selectKey>   -->
+	    INSERT INTO food (
+			<include refid="foodParam"></include>
+		)
+		VALUES 
+	    <foreach collection="list" item="item" index="index" separator="," >  
+	       (#{item.id},#{item.foodID},#{item.foodQualify},#{item.num})
+	    </foreach> 
+	</insert>  
+	
+    <!--获取已存储的数量  -->
+    <select id="getTotalCount" resultType="java.lang.Integer">
+		select sum(num) from food  where id = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<!-- 更新存储食物的数量 -->
+	<update id="updateFood" parameterType="com.muzhi.model.Food">
+		update food set
+		num = #{num}
+		where id = #{id,jdbcType=INTEGER}
+		and foodID=#{foodID,jdbcType=INTEGER}
+		and foodQualify=#{foodQualify,jdbcType=INTEGER}
+	</update>
+	
+	<!--根据userID foodID 品质等级获取唯一的数据  -->
+	<select id="getOneFood" resultType="com.muzhi.model.Food">
+		select *
+		from food
+		where id = #{id,jdbcType=INTEGER}
+		and foodID=#{foodID,jdbcType=INTEGER}
+		and foodQualify=#{foodQualify,jdbcType=INTEGER}
+	</select>
+	
+	<!--获取可以推销的库存  -->
+	<select id="getSellFood" resultType="com.muzhi.model.Food">
+		select *
+		from food 
+		where id = #{id,jdbcType=INTEGER}
+		and (foodID!=#{foodID,jdbcType=INTEGER}
+		or foodQualify!=#{foodQualify,jdbcType=INTEGER})
+        and num!=0
+		ORDER BY  foodQualify DESC, num DESC
+	</select>
+	<!--获取可以完成订单的库存  -->
+	<select id="getOrderFood" resultType="com.muzhi.model.Food">
+		select *
+		from food
+		where id = #{id,jdbcType=INTEGER}
+		and foodID=#{foodID,jdbcType=INTEGER}
+		and foodQualify>=#{foodQualify,jdbcType=INTEGER}
+		ORDER BY  foodQualify
+	</select>
+	
+	<!-- 用户表所有参数 -->
+	<sql id="foodParam">
+		id,
+		foodID,
+		foodQualify,
+		num
+	</sql>
+	
+	<sql id="itemValue">
+		level = #{level},
+		indexNum = #{indexNum},
+		rice = #{rice},
+		banana = #{banana},
+		vegetable = #{vegetable},
+		meat = #{meat},
+		fish = #{fish}
+	</sql>
+
+	<!-- 更新一条用户记录 -->
+	<!-- <update id="updateFridge" parameterType="com.muzhi.model.Fridge">
+		update fridge set
+			<include refid="userValue"></include>
+		where id = #{id,jdbcType=INTEGER}
+	</update> -->
+
+</mapper>

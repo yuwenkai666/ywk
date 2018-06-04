@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="OrderSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" />
+    <e:Image width="590" height="880" source="windowUI_json.order_bg_png" scale9Grid="65,64,18,21" horizontalCenter="0"
+             verticalCenter="0" />
+    <e:Rect width="509" height="663" y="176" ellipseWidth="80"  fillColor="0x82bbda" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0.5"/>
+    <e:Image width="379" height="115" y="25" source="windowUI_json.Menu_title_png" horizontalCenter="0.5" />
+    <e:Image width="88" height="49" y="43" horizontalCenter="1" source="windowUI_json.order_title_png" />
+    <e:Label id="leftTime" text="Label" size="26" fontFamily="SimHei" bold="true" textColor="0xff6639"  horizontalCenter="0" y="130"/>
+    <e:Group id="refreshBtn" width="160" height="63" x="127" y="852" anchorOffsetX="0" anchorOffsetY="0">
+        <e:Image width="160" height="63" x="0" y="0" source="windowUI_json.order_zy_03_png" scaleX="1" scaleY="1" />
+        <e:Label id="refreshNum" text="0" x="108" y="15" size="24" stroke="2" scaleX="1" scaleY="1"  textColor="0x763a00" strokeColor="0xffffff"/>
+			<e:Image id="refreshIcon" width="36" height="27" x="67" y="13" source=""/>
+			<e:Label id="refreshTxt" text="" x="82" y="15" size="24" fontFamily="SimHei" bold="true" textColor="0x763200" stroke="2" strokeColor="0xffffff"/>
+    </e:Group>
+    <e:Scroller id="orderScroll" height="620" width="482" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0"
+                scrollPolicyH="off" horizontalCenter="0">
+        <e:Group id="orderGroup" height="620" x="-1.33" y="-2" touchThrough="true" width="482">
+            <e:List id="listOrder" width="482" horizontalCenter="0">
+							<e:layout>
+								<e:VerticalLayout/>
+							</e:layout>
+            </e:List>
+        </e:Group>
+    </e:Scroller>
+    <e:Image id="closeRect" width="162" height="63" y="852" source="windowUI_json.Menu_zy_13_png"
+              x="358"/>
+</e:Skin>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="paihbList" width="462" height="116" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="462" height="112" x="0" y="0" source="InterfaceUI_json.paihb_02_png"/>
+	<e:Label x="-13" y="41" anchorOffsetX="0" textColor="0x007dc5" text="{data.rank}" textAlign="center" width="146" height="30" size="36" bold="true"/>
+	<e:Image width="51" height="68" x="33" y="22" source="{data.line}"/>
+	<e:Image width="82" height="82" x="113" verticalCenter="-2" source="{data.icon}"/>
+	<e:Label x="204" y="23" size="24" fontFamily="SimHei" textColor="0x8b3100" textAlign="left" text="{data.name}" width="161" height="28" anchorOffsetX="0"/>
+	<e:List id="listShows" height="44" y="62" right="14"/>
+</e:Skin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CityHallDesc" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="topGroup" width="558" height="123" y="354" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Image id="image1" width="60" height="60" x="125" y="9" scaleX="1" scaleY="1" anchorOffsetY="0"/>
+		<e:Image id="image2" width="60" height="60" x="370" y="8" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" source="hallUI.shengj_07_png"/>
+		<e:Label id="text1" text="Label" x="76" y="77" anchorOffsetX="0" width="159" textAlign="center" textColor="0x9000e3" size="27" scaleX="1" scaleY="1"/>
+		<e:Label id="text2" text="Label" x="293.5" y="78.5" width="215" textAlign="center" textColor="0x9000e3" size="27" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="34"/>
+	</e:Group>
+	<e:Group width="629" height="95" x="7" y="758" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="cimage1" width="60" height="60" x="67" y="20" scaleX="1" scaleY="1"/>
+		<e:Image id="cimage2" width="60" height="60" x="319" y="22" scaleX="1" scaleY="1" source="hallUI.shengj_07_png"/>
+		<e:Label id="ctext1" text="Label" x="133" y="38.00000000000006" textColor="0xAB5000" anchorOffsetX="0" width="185" size="27" scaleX="1" scaleY="1"/>
+		<e:Label id="ctext2" text="Label" x="382" y="39" textColor="0xAB5000" anchorOffsetX="0" width="241" size="27" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

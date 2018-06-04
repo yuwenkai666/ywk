@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WarehouseSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="containerShow" width="640" height="1008" x="0" y="0" visible="false">
+		<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" scaleX="1" scaleY="1"/>
+		<e:Image width="590" height="906" anchorOffsetY="0" source="windowUI_json.Menu_bg_png" scale9Grid="71,154,25,13" horizontalCenter="0" verticalCenter="0" x="25" y="51" scaleX="1" scaleY="1"/>
+		<e:Image id="menuSelect1" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab4_01_png" x="82" scaleX="1" scaleY="1"/>
+		<e:Image id="menuSelect2" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab1_01_png" x="178" scaleX="1" scaleY="1"/>
+		<e:Image id="menuSelect3" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab3_01_png" x="274" scaleX="1" scaleY="1"/>
+		<e:Image id="menuSelect4" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab2_01_png" x="370" scaleX="1" scaleY="1"/>
+		<e:Image id="menuSelect5" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab5_01_png" x="466" scaleX="1" scaleY="1"/>
+		<e:Scroller id="containerScroll" height="575" width="512" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0.5" horizontalCenter="0" scrollPolicyH="off" x="64" y="217" scaleX="1" scaleY="1">
+			<e:Group id="containerGroup" height="575" x="-1.33" y="2.67" touchThrough="true" width="512">
+			<e:List id="listcontainer" y="0" horizontalCenter="0">
+				<e:layout>
+				<e:TileLayout horizontalGap="10" verticalGap="10" columnAlign="left" rowAlign="justifyUsingHeight" paddingTop="10" paddingRight="30" paddingLeft="30" paddingBottom="10" requestedColumnCount="3"/>
+				</e:layout>
+			</e:List>
+			</e:Group>
+		</e:Scroller>
+		<e:Image id="closeRect" width="162" height="63" y="877.21" source="windowUI_json.Menu_zy_13_png" horizontalCenter="0" x="239" scaleX="1" scaleY="1"/>
+		<e:Image width="379" height="115" y="12" source="windowUI_json.Menu_title_png" horizontalCenter="0.5" x="131" scaleX="1" scaleY="1"/>
+		<e:Label id="saveTxt" text="Label" y="835" textColor="0xff6639" anchorOffsetX="0" width="553" horizontalCenter="0" textAlign="center" fontFamily="SimHei" size="26" bold="true" x="44" scaleX="1" scaleY="1"/>
+		<e:Image id="title" width="87" height="50" y="25" horizontalCenter="0.5" x="277" scaleX="1" scaleY="1" source="windowUI_json.Warehouse_title_01_png"/>
+	</e:Group>
+	<e:Group id="enterGroup" width="640" height="1008" x="0" y="0">
+		<e:Rect id="closeBtn" width="640" height="1400" x="0" y="0" fillAlpha="0.5" scaleX="1" scaleY="1"/>
+		<e:Image id="warehouseBtn" width="492" height="270" y="464.58" source="windowUI_json.Warehouse_zy_02_png" horizontalCenter="0" x="74" scaleX="1" scaleY="1"/>
+		<e:Image id="containerBtn" width="494" height="270" y="156.69" source="windowUI_json.Warehouse_zy_01_png" horizontalCenter="0" x="73" scaleX="1" scaleY="1"/>
+		<e:Label text="点击空白处关闭" y="796.7" size="26" fontFamily="SimHei" textColor="0xcbcbcb" horizontalCenter="0" x="229.00000000000003" scaleX="1" scaleY="1" touchEnabled="false"/>
+		<e:Label id="containerNum" text="0/0" y="181" size="28" stroke="2" strokeColor="0x964000" horizontalCenter="128.5" width="250" height="28" textAlign="center"/>
+		<e:Label id="warehouseNum" text="" y="487" size="28" stroke="2" strokeColor="0x964000" width="250" height="28" textAlign="center" x="323"/>
+	</e:Group>
+	<e:Group id="warehouseShow" width="640" height="1008" x="0" y="0" visible="false">
+		<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" scaleX="1" scaleY="1"/>
+		<e:Image width="590" height="906" anchorOffsetY="0" source="windowUI_json.Menu_bg_png" scale9Grid="71,154,25,13" horizontalCenter="0" verticalCenter="0" x="25" y="51" scaleX="1" scaleY="1"/>
+		<e:Image id="menuSelect6" width="92" height="52" scaleX="1" scaleY="1" source="windowUI_json.Warehouse_tab1_01_png" y="133.34" x="82"/>
+		<e:Image id="menuSelect7" width="92" height="52" scaleX="1" scaleY="1" source="windowUI_json.Warehouse_tab2_02_png" y="133.34" x="178"/>
+		<e:Scroller id="warehouseScroll" height="575" width="512" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0.5" horizontalCenter="0" scrollPolicyH="off" x="64" y="217" scaleX="1" scaleY="1">
+		<e:Group id="warehouseGroup" height="575" x="-1.33" y="2.67" touchThrough="true" width="512">
+			<e:List id="listWarehouse" y="0" horizontalCenter="0">
+			<e:layout>
+				<e:TileLayout horizontalGap="10" verticalGap="10" columnAlign="left" rowAlign="justifyUsingHeight" paddingTop="10" paddingRight="30" paddingLeft="30" paddingBottom="10" requestedColumnCount="3"/>
+			</e:layout>
+			</e:List>
+		</e:Group>
+		</e:Scroller>
+		<e:Image id="closeRect0" width="162" height="63" y="877.21" source="windowUI_json.Menu_zy_13_png" horizontalCenter="0" x="239" scaleX="1" scaleY="1"/>
+		<e:Image width="379" height="115" y="12" source="windowUI_json.Menu_title_png" horizontalCenter="0.5" x="131" scaleX="1" scaleY="1"/>
+		<e:Image width="87" height="50" y="30" horizontalCenter="0.5" source="windowUI_json.Warehouse_title_png" x="277" scaleX="1" scaleY="1"/>
+		<e:Label id="saveTxt0" text="Label" y="835" textColor="0xFF6639" anchorOffsetX="0" width="553" horizontalCenter="0" textAlign="center" fontFamily="SimHei" size="26" bold="true" x="44" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

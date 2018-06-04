@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:redis="http://www.springframework.org/schema/redis" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/redis 
+	http://www.springframework.org/schema/redis/spring-redis.xsd">
+
+	<!-- 连接池配置 -->
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="${redis.maxTotal}" />
+		<property name="minIdle" value="${redis.minIdle}" />
+		<property name="maxWaitMillis" value="${redis.maxWaitMillis}" />
+		<property name="maxIdle" value="${redis.maxIdle}" /><!-- 连接池中最大空闲的连接数 -->
+		<property name="testOnBorrow" value="${redis.testOnBorrow}" />
+		<property name="testOnReturn" value="true" />
+		<property name="testWhileIdle" value="true" />
+	</bean>
+
+	<!-- 配置工厂 有密码就要配置 -->
+	<bean id="jedisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+		p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.password}"
+		p:pool-config-ref="jedisPoolConfig">
+	</bean>
+
+	<!-- Serializer genericJackson2JsonRedisSerializer为对象序列化 spring4.0新增 采用json序列化 -->
+	<bean id="stringRedisSerializer"
+		class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+	<!-- <bean id="genericJackson2JsonRedisSerializer" class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/> -->
+	<bean id="genericJackson2JsonRedisSerializer" class="com.muzhi.redis.GenericJackson2JsonRedisSerializer" />
+
+
+	<!-- redis模板 string object 单机 -->
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+		p:connection-factory-ref="jedisConnectionFactory"
+		p:key-serializer-ref="stringRedisSerializer" p:value-serializer-ref="genericJackson2JsonRedisSerializer" />
+
+	<!-- redis操作类 -->
+	<bean id="springRedis" class="com.muzhi.redis.SpringRedisServiceImpl">
+		<property name="redisTemplate" ref="redisTemplate" />
+	</bean>
+	
+	
+    <!--键值过期通知事件  -->
+	<bean id="messageListener"
+		class="org.springframework.data.redis.listener.adapter.MessageListenerAdapter">
+		<constructor-arg>
+			<bean class="com.muzhi.redis.KeyExpirationListener" />
+		</constructor-arg>
+	</bean>
+	<bean id="redisContainer"
+		class="org.springframework.data.redis.listener.RedisMessageListenerContainer">
+		<property name="connectionFactory" ref="jedisConnectionFactory" />
+		<property name="messageListeners">
+			<map>
+				<entry key-ref="messageListener">
+					<bean class="org.springframework.data.redis.listener.PatternTopic">
+						<constructor-arg value="__keyevent@*__:expired"/>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

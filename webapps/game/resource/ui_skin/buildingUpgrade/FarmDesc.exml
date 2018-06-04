@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FarmDesc" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="topGroup" width="576" height="131" x="32" y="364" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="image1" width="40" height="40" x="83" y="0" scaleX="1" scaleY="1"/>
+		<e:Image id="image2" width="40" height="40" x="257" y="0" scaleX="1" scaleY="1"/>
+		<e:Image id="image3" width="40" height="40" x="446" y="0" scaleX="1" scaleY="1"/>
+		<e:Label id="text1" text="Label" x="18" y="58" anchorOffsetX="0" width="166" textAlign="center" textColor="0x9000e3" size="27" scaleX="1" scaleY="1"/>
+		<e:Label id="text2" text="Label" x="188.5" y="58" width="182" textAlign="center" textColor="0x9000e3" anchorOffsetX="0" size="27" scaleX="1" scaleY="1"/>
+		<e:Label id="text3" text="Label" x="375.5" y="58" width="186" textAlign="center" textColor="0x9000e3" anchorOffsetX="0" size="27" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group id="bottomGroup" width="621" height="118" x="44" y="755" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="cimage1" width="40" height="40" x="56.5" y="7" scaleX="1" scaleY="1"/>
+		<e:Image id="cimage2" width="40" height="40" x="318.5" y="7" scaleX="1" scaleY="1"/>
+		<e:Image id="cimage3" width="40" height="40" x="57.5" y="66" scaleX="1" scaleY="1"/>
+		<e:Label id="ctext1" text="Label" x="101.5" y="14" anchorOffsetX="0" width="209" textColor="0xab5000" size="27" scaleX="1" scaleY="1"/>
+		<e:Label id="ctext2" text="Label" x="363.5" y="14" anchorOffsetX="0" width="230" textColor="0xab5000" size="27" scaleX="1" scaleY="1"/>
+		<e:Label id="ctext3" text="Label" x="101.5" y="73" anchorOffsetX="0" width="283" textColor="0xab5000" size="27" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

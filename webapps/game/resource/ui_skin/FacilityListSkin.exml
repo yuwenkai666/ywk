@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FacilityListSkin" width="514" height="168" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="514" height="168" x="1" y="-1" source="windowUI_json.Equip_bg_01_png" scale9Grid="43,74,22,1"/>
+	<e:Image id="facilityIcon" x="55.35" y="63.35" source="{data.facilityIcon}" width="92" height="82"/>
+	<e:Label x="23" y="19" size="28" fontFamily="SimHei" bold="true" anchorOffsetX="0" width="149" height="28" textColor="0xa54a00" text="{data.facilityName}"/>
+	<e:Label y="23" size="22" fontFamily="SimHei" bold="true" stroke="2" strokeColor="0xa54a00" anchorOffsetX="0" width="127" text="{data.facilityLevel}" anchorOffsetY="0" height="23" textAlign="center" x="194"/>
+	<e:Group height="26" y="20" anchorOffsetX="0" anchorOffsetY="0" right="14">
+		<e:Label text="{data.money}" scaleX="1" scaleY="1" size="26" stroke="2" strokeColor="0xa54a00" verticalCenter="0" height="26" textAlign="right" right="0"/>
+		<e:Image width="45" height="33" source="hallUI.currency8_png" anchorOffsetX="50" scaleX="1" scaleY="1" verticalCenter="0"/>
+	</e:Group>
+	<e:Image id="updataBtn" width="92" height="73" x="396" y="73" source="windowUI_json.Equip_zy_01_png"/>
+	<e:Image width="192" height="18" y="94" source="windowUI_json.Equip_bg_02_png" x="161"/>
+	<e:Group height="33" y="61" anchorOffsetY="0" horizontalCenter="0">
+		<e:Label y="5" size="20" fontFamily="SimHei" textColor="0x954A01" anchorOffsetX="0" height="20" scaleX="1" scaleY="1" text="{data.NumTxt}" right="110" textAlign="left" x="-37"/>
+		<e:Label text="{data.Num}" y="5" size="20" fontFamily="SimHei" textColor="0x954a01" scaleX="1" scaleY="1" textAlign="left" left="266" x="95"/>
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+	<e:Group height="33" y="117" anchorOffsetY="0" horizontalCenter="0">
+		<e:Label y="53" size="20" fontFamily="SimHei" textColor="0x954a01" textAlign="left" text="{data.afterNumTxt}" scaleX="1" scaleY="1" right="250" x="84"/>
+		<e:Label y="53" size="20" fontFamily="SimHei" text="{data.afterNum}" textAlign="left" textColor="0xf70909" scaleX="1" scaleY="1" left="267" x="267"/>
+		<e:layout>
+		<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

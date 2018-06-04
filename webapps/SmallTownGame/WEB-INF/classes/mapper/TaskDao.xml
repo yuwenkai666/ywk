@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.TaskDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Task" extends="taskKey">
+    <result column="describe" jdbcType="VARCHAR" property="describe" />
+    <result column="condition" jdbcType="INTEGER" property="condition" />
+    <result column="parament" jdbcType="VARCHAR" property="parament" />
+    <result column="user_num" jdbcType="INTEGER" property="userNum" />
+  </resultMap>
+  
+  <resultMap type="com.muzhi.model.TaskKey" id="taskKey">
+  	<id column="id" jdbcType="INTEGER" property="id" />
+    <id column="tid" jdbcType="INTEGER" property="tid" />
+    <id column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, tid, status, `describe`, `condition`, parament, user_num
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.muzhi.model.TaskKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from task
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+      and status = #{status,jdbcType=INTEGER}
+  </select>
+  <select id="selectList" parameterType="com.muzhi.model.Task" resultMap="BaseResultMap">
+	select
+	<include refid="Base_Column_List"/>
+	from task
+	<where>
+	  <if test="id != null">
+	    and id = #{id, jdbcType=INTEGER}
+	  </if>
+	  <if test="tid != null">
+	    and tid = #{tid, jdbcType=INTEGER}
+	  </if>
+	  <if test="status != null">
+	    and status = #{status, jdbcType=INTEGER}
+	  </if>
+	  <if test="describe != null">
+        and `describe` = #{describe,jdbcType=VARCHAR}
+      </if>
+      <if test="condition != null">
+        and `condition` = #{condition,jdbcType=INTEGER}
+      </if>
+      <if test="parament != null">
+        and parament = #{parament,jdbcType=VARCHAR}
+      </if>
+      <if test="userNum != null">
+        and user_num = #{userNum,jdbcType=INTEGER}
+      </if>
+	</where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.muzhi.model.TaskKey">
+    delete from task
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+      and status = #{status,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertList" parameterType="java.util.List">
+	  insert into task (id, tid, status, 
+      	`describe`, `condition`, parament, 
+      	user_num)
+      values 
+      <foreach collection="recordList" item="item" separator=",">
+      	(#{item.id,jdbcType=INTEGER}, #{item.tid,jdbcType=INTEGER}, #{item.status,jdbcType=INTEGER}, 
+      #{item.describe,jdbcType=VARCHAR}, #{item.condition,jdbcType=INTEGER}, #{item.parament,jdbcType=VARCHAR}, 
+      #{item.userNum,jdbcType=INTEGER})
+      </foreach>
+  </insert>
+  <insert id="insert" parameterType="com.muzhi.model.Task">
+    insert into task (id, tid, status, 
+      `describe`, `condition`, parament, 
+      user_num)
+    values (#{id,jdbcType=INTEGER}, #{tid,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
+      #{describe,jdbcType=VARCHAR}, #{condition,jdbcType=INTEGER}, #{parament,jdbcType=VARCHAR}, 
+      #{userNum,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Task">
+    insert into task
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tid != null">
+        tid,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="describe != null">
+        `describe`,
+      </if>
+      <if test="condition != null">
+        `condition`,
+      </if>
+      <if test="parament != null">
+        parament,
+      </if>
+      <if test="userNum != null">
+        user_num,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null">
+        #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="describe != null">
+        #{describe,jdbcType=VARCHAR},
+      </if>
+      <if test="condition != null">
+        #{condition,jdbcType=INTEGER},
+      </if>
+      <if test="parament != null">
+        #{parament,jdbcType=VARCHAR},
+      </if>
+      <if test="userNum != null">
+        #{userNum,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Task">
+    update task
+    <set>
+      <if test="describe != null">
+        `describe` = #{describe,jdbcType=VARCHAR},
+      </if>
+      <if test="condition != null">
+        `condition` = #{condition,jdbcType=INTEGER},
+      </if>
+      <if test="parament != null">
+        parament = #{parament,jdbcType=VARCHAR},
+      </if>
+      <if test="userNum != null">
+        user_num = #{userNum,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+      and status = #{status,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Task">
+    update task
+    set `describe` = #{describe,jdbcType=VARCHAR},
+      `condition` = #{condition,jdbcType=INTEGER},
+      parament = #{parament,jdbcType=VARCHAR},
+      user_num = #{userNum,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+      and status = #{status,jdbcType=INTEGER}
+  </update>
+  <update id="updateList" parameterType="java.util.List">
+  	<foreach collection="recordList" separator=";" item="item">
+  	update task 
+	  	set `describe` = #{item.describe, jdbcType=VARCHAR},
+	  	 `condition` = #{item.condition, jdbcType=INTEGER},
+	  	 `parament` = #{item.parament, jdbcType=VARCHAR},
+	  	 `user_num` = #{item.userNum, jdbcType=INTEGER},
+	  	 `id` = #{item.id, jdbcType=INTEGER},
+	  	 `tid` = #{item.tid, jdbcType=INTEGER},
+	  	 `status` = #{item.status, jdbcType=INTEGER}
+  	where id = #{item.id, jdbcType=INTEGER} 
+  		AND tid = #{item.tid, jdbcType=INTEGER}
+  		AND status = #{item.status, jdbcType=INTEGER} 
+  	</foreach>
+  </update>
+  <update id="updateSelective" parameterType="com.muzhi.model.Task">
+    update task
+    <set>
+      <if test="status != null">
+      	`status` = #{status, jdbcType=INTEGER},
+      </if>
+      <if test="describe != null">
+        `describe` = #{describe,jdbcType=VARCHAR},
+      </if>
+      <if test="condition != null">
+        `condition` = #{condition,jdbcType=INTEGER},
+      </if>
+      <if test="parament != null">
+        parament = #{parament,jdbcType=VARCHAR},
+      </if>
+      <if test="userNum != null">
+        user_num = #{userNum,jdbcType=INTEGER},
+      </if>
+    </set>
+    <where>
+    	<if test="id">
+    		and id = #{id, jdbcType=INTEGER} 
+    	</if>
+    	<!-- <if test="tid">
+    		and tid = #{tid, jdbcType=INTEGER}
+    	</if>
+    	<if test="status != null">
+      	    and `status` = #{status, jdbcType=INTEGER}
+     	</if> -->
+    </where>
+  </update>
+</mapper>

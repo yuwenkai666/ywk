@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.LoginRecordDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.LoginRecord">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="registerTime" />
+    <result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
+    <result column="logout_time" jdbcType="TIMESTAMP" property="logoutTime" />
+    <result column="login_ip" jdbcType="VARCHAR" property="loginIp" />
+    <result column="phone_model" jdbcType="VARCHAR" property="phoneModel" />
+    <result column="empower" jdbcType="INTEGER" property="empower" />
+    <result column="forum" jdbcType="INTEGER" property="forum" />
+    <result column="online_time" jdbcType="BIGINT" property="onlineTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_login_record
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.LoginRecord">
+    insert into t_login_record (id, user_id, register_time, 
+      login_time, logout_time, login_ip, 
+      phone_model, empower, forum, 
+      online_time)
+    values (#{id,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{registerTime,jdbcType=TIMESTAMP}, 
+      #{loginTime,jdbcType=TIMESTAMP}, #{logoutTime,jdbcType=TIMESTAMP}, #{loginIp,jdbcType=VARCHAR}, 
+      #{phoneModel,jdbcType=VARCHAR}, #{empower,jdbcType=INTEGER}, #{forum,jdbcType=INTEGER}, 
+      #{onlineTime,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.LoginRecord">
+    update t_login_record
+    set user_id = #{userId,jdbcType=INTEGER},
+      register_time = #{registerTime,jdbcType=TIMESTAMP},
+      login_time = #{loginTime,jdbcType=TIMESTAMP},
+      logout_time = #{logoutTime,jdbcType=TIMESTAMP},
+      login_ip = #{loginIp,jdbcType=VARCHAR},
+      phone_model = #{phoneModel,jdbcType=VARCHAR},
+      empower = #{empower,jdbcType=INTEGER},
+      forum = #{forum,jdbcType=INTEGER},
+      online_time = #{onlineTime,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, user_id, register_time, login_time, logout_time, login_ip, phone_model, 
+    empower, forum, online_time
+    from t_login_record
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_id, register_time, login_time, logout_time, login_ip, phone_model, 
+    empower, forum, online_time
+    from t_login_record
+  </select>
+</mapper>

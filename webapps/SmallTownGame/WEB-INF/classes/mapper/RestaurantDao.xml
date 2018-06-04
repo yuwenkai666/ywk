@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.RestaurantDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Restaurant">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="customNum" jdbcType="INTEGER" property="customNum" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="area" jdbcType="INTEGER" property="area" />
+    <result column="loveLimit" jdbcType="INTEGER" property="loveLimit" />
+    <result column="maxAsher" jdbcType="INTEGER" property="maxAsher" />
+    <result column="maxChef" jdbcType="INTEGER" property="maxChef" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, customNum, level, area, loveLimit, maxAsher, maxChef
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from restaurant
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <insert id="insert" parameterType="com.muzhi.model.Restaurant">
+    insert into restaurant (id, customNum, level, 
+      area, loveLimit, maxAsher, 
+      maxChef)
+    values (#{id,jdbcType=INTEGER}, #{customNum,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, 
+      #{area,jdbcType=INTEGER}, #{loveLimit,jdbcType=INTEGER}, #{maxAsher,jdbcType=INTEGER}, 
+      #{maxChef,jdbcType=INTEGER})
+  </insert>
+  
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Restaurant">
+    update restaurant
+    set customNum = #{customNum,jdbcType=INTEGER},
+      level = #{level,jdbcType=INTEGER},
+      area = #{area,jdbcType=INTEGER},
+      loveLimit = #{loveLimit,jdbcType=INTEGER},
+      maxAsher = #{maxAsher,jdbcType=INTEGER},
+      maxChef = #{maxChef,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from restaurant
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insertSelective" parameterType="com.muzhi.model.Restaurant">
+    insert into restaurant
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customNum != null">
+        customNum,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="area != null">
+        area,
+      </if>
+      <if test="loveLimit != null">
+        loveLimit,
+      </if>
+      <if test="maxAsher != null">
+        maxAsher,
+      </if>
+      <if test="maxChef != null">
+        maxChef,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="customNum != null">
+        #{customNum,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=INTEGER},
+      </if>
+      <if test="loveLimit != null">
+        #{loveLimit,jdbcType=INTEGER},
+      </if>
+      <if test="maxAsher != null">
+        #{maxAsher,jdbcType=INTEGER},
+      </if>
+      <if test="maxChef != null">
+        #{maxChef,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Restaurant">
+    update restaurant
+    <set>
+      <if test="customNum != null">
+        customNum = #{customNum,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="area != null">
+        area = #{area,jdbcType=INTEGER},
+      </if>
+      <if test="loveLimit != null">
+        loveLimit = #{loveLimit,jdbcType=INTEGER},
+      </if>
+      <if test="maxAsher != null">
+        maxAsher = #{maxAsher,jdbcType=INTEGER},
+      </if>
+      <if test="maxChef != null">
+        maxChef = #{maxChef,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+</mapper>

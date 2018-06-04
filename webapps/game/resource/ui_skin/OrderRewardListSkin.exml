@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="OrderRewardListSkin" width="60" height="52" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="57" height="44" x="0" y="0" source="{data.rewardImg}"/>
+	<e:Label text="{data.rewardNum}" size="24" stroke="2" height="24" y="28" right="0" textAlign="right"/>
+</e:Skin>

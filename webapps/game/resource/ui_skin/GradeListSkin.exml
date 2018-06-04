@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GradeListSkin" width="463" height="116" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="463" height="126" x="0" y="-3" source="windowUI_json.rate_bg_png" scale9Grid="34,47,23,0"/>
+	<e:Image width="88" height="88" x="23" source="windowUI_json.rate_zy_05_png" y="16"/>
+	<e:Image width="84" height="84" source="{data.gradeIcon}" x="25" y="18"/>
+	<e:Label text="{data.gradeName}" x="125" y="18" size="24" fontFamily="SimHei" bold="true" textColor="0x006c8c" width="237" anchorOffsetX="0"/>
+	<e:Label text="{data.gradeNum}" x="125" y="75" size="22" textColor="0xdb6700" bold="true"/>
+	<e:Image id="geadeSureBtn" horizontalCenter="173" verticalCenter="7.5" source="{data.geadeSureBtn}"/>
+</e:Skin>

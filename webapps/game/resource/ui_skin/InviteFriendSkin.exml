@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="inviteFriendSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5"/>
+	<e:Image horizontalCenter="0" verticalCenter="0" source="InterfaceUI_json.dongtai_01_png" scale9Grid="163,92,16,24" width="586" height="800"/>
+	<e:Image width="139" height="34" y="123" horizontalCenter="0.5" source="InterfaceUI_json.yaoq_06_png"/>
+	<e:Image id="closeBtn" source="InterfaceUI_json.dongtai_02_png" x="553" y="89"/>
+	<e:Image id="inviteAllBtn" width="148" height="51" y="830" horizontalCenter="0" source="InterfaceUI_json.yaoq_03_png"/>
+	<e:Label id="titleTxt" text="邀请其他玩家帮助升级" y="198" size="32" textColor="0x7c2f00" fontFamily="SimHei" horizontalCenter="0"/>
+	<e:Scroller width="660" height="524" y="256" anchorOffsetY="0" horizontalCenter="0">
+		<e:Group width="458" height="524">
+			<e:List id="listInvite" y="0" width="458" horizontalCenter="0">
+            <e:layout>
+					<e:VerticalLayout verticalAlign="top"/>
+				</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

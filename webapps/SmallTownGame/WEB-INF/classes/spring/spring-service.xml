@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop" 
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	   http://www.springframework.org/schema/context 
+	   http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	   http://www.springframework.org/schema/aop 
+	   http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	   http://www.springframework.org/schema/util 
+	   http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+
+    <!-- 扫描包加载Service以及redis.service实现类 -->
+    <context:component-scan base-package="com.muzhi.service,com.muzhi.task,com.muzhi.redis.service"></context:component-scan>
+      <!-- 启用spring对AspectJ注解的支持 -->
+    <aop:aspectj-autoproxy/>  
+    
+    <bean id="ManagerService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">  
+        <property name="serviceUrl" value="rmi://localhost:1099/ManagerService" />  
+        <property name="serviceInterface" value="com.muzhi.service.ManagerService" /> 
+        <!-- 解决服务器重启这边连接失败问题 -->
+        <property name="refreshStubOnConnectFailure" value="true"/>
+        <property name="lookupStubOnStartup" value="false"/> 
+    </bean>  
+    
+</beans>

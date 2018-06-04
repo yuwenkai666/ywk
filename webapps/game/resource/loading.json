@@ -1,0 +1,21 @@
+{
+	"groups": [
+		{
+			"keys": "base,jiazaitu_jpg",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "jiazaitu_jpg",
+			"type": "image",
+			"url": "base/jiazaitu.jpg"
+		},
+		{
+			"name": "base",
+			"subkeys": "jiazai_01_png,jiazai_02_png,jiazai_03_png,jiazai_04_png,loginBg_png,loginBtn_png,mh1_png,mh2_png,mh3_png,mh4_png,mh5_png,mh6_png,mh7_png,mh8_png,mh9_png,mh10_png,loadpic_png",
+			"type": "sheet",
+			"url": "base/loading.json"
+		}
+	]
+}

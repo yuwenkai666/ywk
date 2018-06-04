@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MenuSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" />
+	<e:Image width="590" height="906" anchorOffsetY="0" source="windowUI_json.Menu_bg_png" scale9Grid="71,154,25,13"
+	         horizontalCenter="0" verticalCenter="0" />
+	<e:Scroller id="cookScroll" height="595" width="640" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"
+	            verticalCenter="-9.5">
+		<e:Group id="cookGroup" height="593" x="0" y="-18" touchThrough="true" width="640" anchorOffsetY="0">
+			<e:List id="listMenu" y="21" width="520" horizontalCenter="0">
+				<e:layout>
+					<e:VerticalLayout verticalAlign="top" />
+				</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+	<e:Image id="menuSelect1" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab4_01_png" x="82"/>
+	<e:Image id="menuSelect2" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab1_01_png" x="178" />
+	<e:Image id="menuSelect3" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab3_01_png" x="274"/>
+	<e:Image id="menuSelect4" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab2_01_png" x="370" />
+	<e:Image id="menuSelect5" width="92" height="52" y="133.34" source="windowUI_json.Menu_tab5_01_png" x="466" />
+	<e:Image id="closeRect" width="162" height="63" y="873.21" source="windowUI_json.Menu_zy_13_png" horizontalCenter="0" />
+	<e:Image width="379" height="115" y="12" source="windowUI_json.Menu_title_png" horizontalCenter="0.5" />
+	<e:Image width="175" height="50" y="30" horizontalCenter="0.5"  source="windowUI_json.research_title_png"/>
+	<e:Label id="currentStrength" text="研究力：20/2000" y="834" size="26" fontFamily="SimHei" bold="true"
+	         textColor="0xff6639"  horizontalCenter="0" textAlign="center" width="500"/>
+</e:Skin>

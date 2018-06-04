@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.FarmDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Farm">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="tid" jdbcType="INTEGER" property="tid" />
+    <result column="buildId" jdbcType="INTEGER" property="buildId" />
+    <result column="output" jdbcType="INTEGER" property="output" />
+    <result column="maxCapacity" jdbcType="INTEGER" property="maxCapacity" />
+    <result column="rice" jdbcType="INTEGER" property="rice" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, level, tid, buildId, output, maxCapacity, rice
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from farm
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from farm
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Farm">
+    insert into farm (id, level, tid, 
+      buildId, output, maxCapacity, 
+      rice)
+    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, #{tid,jdbcType=INTEGER}, 
+      #{buildId,jdbcType=INTEGER}, #{output,jdbcType=INTEGER}, #{maxCapacity,jdbcType=INTEGER}, 
+      #{rice,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Farm">
+    insert into farm
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="tid != null">
+        tid,
+      </if>
+      <if test="buildId != null">
+        buildId,
+      </if>
+      <if test="output != null">
+        output,
+      </if>
+      <if test="maxCapacity != null">
+        maxCapacity,
+      </if>
+      <if test="rice != null">
+        rice,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null">
+        #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="buildId != null">
+        #{buildId,jdbcType=INTEGER},
+      </if>
+      <if test="output != null">
+        #{output,jdbcType=INTEGER},
+      </if>
+      <if test="maxCapacity != null">
+        #{maxCapacity,jdbcType=INTEGER},
+      </if>
+      <if test="rice != null">
+        #{rice,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Farm">
+    update farm
+    <set>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null">
+        tid = #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="buildId != null">
+        buildId = #{buildId,jdbcType=INTEGER},
+      </if>
+      <if test="output != null">
+        output = #{output,jdbcType=INTEGER},
+      </if>
+      <if test="maxCapacity != null">
+        maxCapacity = #{maxCapacity,jdbcType=INTEGER},
+      </if>
+      <if test="rice != null">
+        rice = #{rice,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Farm">
+    update farm
+    set level = #{level,jdbcType=INTEGER},
+      tid = #{tid,jdbcType=INTEGER},
+      buildId = #{buildId,jdbcType=INTEGER},
+      output = #{output,jdbcType=INTEGER},
+      maxCapacity = #{maxCapacity,jdbcType=INTEGER},
+      rice = #{rice,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <!-- 
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from farm
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Farm">
+    insert into farm (id, level, tid, 
+      buildId, output, maxCapacity, 
+      rice)
+    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, #{tid,jdbcType=INTEGER}, 
+      #{buildid,jdbcType=INTEGER}, #{output,jdbcType=INTEGER}, #{maxcapacity,jdbcType=INTEGER}, 
+      #{rice,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Farm">
+    insert into farm
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="tid != null">
+        tid,
+      </if>
+      <if test="buildid != null">
+        buildId,
+      </if>
+      <if test="output != null">
+        output,
+      </if>
+      <if test="maxcapacity != null">
+        maxCapacity,
+      </if>
+      <if test="rice != null">
+        rice,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null">
+        #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="buildid != null">
+        #{buildid,jdbcType=INTEGER},
+      </if>
+      <if test="output != null">
+        #{output,jdbcType=INTEGER},
+      </if>
+      <if test="maxcapacity != null">
+        #{maxcapacity,jdbcType=INTEGER},
+      </if>
+      <if test="rice != null">
+        #{rice,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Farm">
+    update farm
+    <set>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null">
+        tid = #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="buildid != null">
+        buildId = #{buildid,jdbcType=INTEGER},
+      </if>
+      <if test="output != null">
+        output = #{output,jdbcType=INTEGER},
+      </if>
+      <if test="maxcapacity != null">
+        maxCapacity = #{maxcapacity,jdbcType=INTEGER},
+      </if>
+      <if test="rice != null">
+        rice = #{rice,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Farm">
+    update farm
+    set level = #{level,jdbcType=INTEGER},
+      tid = #{tid,jdbcType=INTEGER},
+      buildId = #{buildid,jdbcType=INTEGER},
+      output = #{output,jdbcType=INTEGER},
+      maxCapacity = #{maxcapacity,jdbcType=INTEGER},
+      rice = #{rice,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+   -->
+</mapper>

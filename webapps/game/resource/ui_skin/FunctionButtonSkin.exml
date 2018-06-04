@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FunctionButtonSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="16219a976e8"/>
+	<e:Image id="cityChangeBtn" width="105" height="105" x="399.15" y="15" source="hallUI.xiaozhen_png"/>
+	<e:Image id="hideRightBtns" source="hallUI.kuozhan_png" anchorOffsetX="52.5" anchorOffsetY="52.5" y="61" horizontalCenter="254.5"/>
+	<e:Group id="rightBtns" width="112" height="526" x="519" y="122.85" anchorOffsetY="0" anchorOffsetX="0" visible="false">
+		<e:Image width="104" height="43" x="2.6399999999999864" y="68.68" source="hallUI.caidan_6_png" scaleX="1" scaleY="1"/>
+		<e:Label id="decorateNum" text="12345" x="35.49000000000001" y="80.51" size="20" height="20" anchorOffsetX="0" width="65" fontFamily="SimHei" textColor="0xff6028" textAlign="center" bold="true" scaleX="1" scaleY="1"/>
+		<e:Image width="104" height="43" x="2.6399999999999864" y="173.88" source="hallUI.caidan_5_png" scaleX="1" scaleY="1"/>
+		<e:Label id="publicityNum" text="12345" x="35.49000000000001" y="185.87" size="20" height="20" anchorOffsetX="0" width="65" fontFamily="SimHei" textColor="0xFF6028" textAlign="center" bold="true" scaleX="1" scaleY="1"/>
+		<e:Image id="decorateBtn" width="66" height="81" y="1.18" source="hallUI.caidan_1_png" scaleX="1" scaleY="1" x="25"/>
+		<e:Image id="publicityBtn" width="66" height="81" y="105.86000000000007" source="hallUI.caidan_2_png" scaleX="1" scaleY="1" x="25"/>
+		<e:Image id="rankBtn" width="66" height="81" y="208.39000000000004" source="hallUI.caidan_3_png" scaleX="1" scaleY="1" x="25"/>
+		<e:Image id="downloadBtn" width="66" height="81" y="295.98" source="hallUI.caidan_4_png" scaleX="1" scaleY="1" x="25"/>
+		<e:Image id="mobileBtn" width="66" height="81" y="383.39" source="hallUI.caidan_9_png" scaleX="1" scaleY="1" x="25"/>
+	</e:Group>
+	<e:Group id="recommendBtn" width="95" height="119" x="10.31" y="261.36" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Image width="66" height="66" scaleX="1" scaleY="1" source="hallUI.caidan_8_zy_png" x="15" y="18"/>
+		<e:Image width="69" height="83" scaleX="1" scaleY="1" source="hallUI.caidan_8_png" x="13" y="18"/>
+	</e:Group>
+</e:Skin>

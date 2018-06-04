@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.ResearchDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Research">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="tid" jdbcType="INTEGER" property="tid" />
+    <result column="foodId" jdbcType="INTEGER" property="foodId" />
+    <result column="foodName" jdbcType="VARCHAR" property="foodName" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="reward" jdbcType="VARCHAR" property="reward" />
+    <result column="strengh" jdbcType="INTEGER" property="strengh" />
+    <result column="time" jdbcType="INTEGER" property="time" />
+    <result column="usePower" jdbcType="INTEGER" property="usePower" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, tid, foodId, foodName, level, reward, strengh, time, usePower
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.muzhi.model.ResearchKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from research
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.muzhi.model.ResearchKey">
+    delete from research
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Research">
+    insert into research (id, tid, foodId, 
+      foodName, level, reward, 
+      strengh, time, usePower
+      )
+    values (#{id,jdbcType=INTEGER}, #{tid,jdbcType=INTEGER}, #{foodId,jdbcType=INTEGER}, 
+      #{foodName,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{reward,jdbcType=VARCHAR}, 
+      #{strengh,jdbcType=INTEGER}, #{time,jdbcType=INTEGER}, #{usePower,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Research">
+    insert into research
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tid != null">
+        tid,
+      </if>
+      <if test="foodId != null">
+        foodId,
+      </if>
+      <if test="foodName != null">
+        foodName,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="reward != null">
+        reward,
+      </if>
+      <if test="strengh != null">
+        strengh,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="usePower != null">
+        usePower,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null">
+        #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="foodId != null">
+        #{foodId,jdbcType=INTEGER},
+      </if>
+      <if test="foodName != null">
+        #{foodName,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="reward != null">
+        #{reward,jdbcType=VARCHAR},
+      </if>
+      <if test="strengh != null">
+        #{strengh,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=INTEGER},
+      </if>
+      <if test="usePower != null">
+        #{usePower,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Research">
+    update research
+    <set>
+      <if test="foodId != null">
+        foodId = #{foodId,jdbcType=INTEGER},
+      </if>
+      <if test="foodName != null">
+        foodName = #{foodName,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="reward != null">
+        reward = #{reward,jdbcType=VARCHAR},
+      </if>
+      <if test="strengh != null">
+        strengh = #{strengh,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=INTEGER},
+      </if>
+      <if test="usePower != null">
+        usePower = #{usePower,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Research">
+    update research
+    set foodId = #{foodId,jdbcType=INTEGER},
+      foodName = #{foodName,jdbcType=VARCHAR},
+      level = #{level,jdbcType=INTEGER},
+      reward = #{reward,jdbcType=VARCHAR},
+      strengh = #{strengh,jdbcType=INTEGER},
+      time = #{time,jdbcType=INTEGER},
+      usePower = #{usePower,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+  </update>
+  <!-- <sql id="Base_Column_List">
+    id, tid, foodId, foodName, level, reward, strengh, time, usePower
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.muzhi.model.ResearchKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from research
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.muzhi.model.ResearchKey">
+    delete from research
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Research">
+    insert into research (id, tid, foodId, 
+      foodName, level, reward, 
+      strengh, time, usePower
+      )
+    values (#{id,jdbcType=INTEGER}, #{tid,jdbcType=INTEGER}, #{foodid,jdbcType=INTEGER}, 
+      #{foodname,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{reward,jdbcType=VARCHAR}, 
+      #{strengh,jdbcType=INTEGER}, #{time,jdbcType=INTEGER}, #{usepower,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Research">
+    insert into research
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tid != null">
+        tid,
+      </if>
+      <if test="foodid != null">
+        foodId,
+      </if>
+      <if test="foodname != null">
+        foodName,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="reward != null">
+        reward,
+      </if>
+      <if test="strengh != null">
+        strengh,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="usepower != null">
+        usePower,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null">
+        #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="foodid != null">
+        #{foodid,jdbcType=INTEGER},
+      </if>
+      <if test="foodname != null">
+        #{foodname,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="reward != null">
+        #{reward,jdbcType=VARCHAR},
+      </if>
+      <if test="strengh != null">
+        #{strengh,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=INTEGER},
+      </if>
+      <if test="usepower != null">
+        #{usepower,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Research">
+    update research
+    <set>
+      <if test="foodid != null">
+        foodId = #{foodid,jdbcType=INTEGER},
+      </if>
+      <if test="foodname != null">
+        foodName = #{foodname,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="reward != null">
+        reward = #{reward,jdbcType=VARCHAR},
+      </if>
+      <if test="strengh != null">
+        strengh = #{strengh,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=INTEGER},
+      </if>
+      <if test="usepower != null">
+        usePower = #{usepower,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Research">
+    update research
+    set foodId = #{foodid,jdbcType=INTEGER},
+      foodName = #{foodname,jdbcType=VARCHAR},
+      level = #{level,jdbcType=INTEGER},
+      reward = #{reward,jdbcType=VARCHAR},
+      strengh = #{strengh,jdbcType=INTEGER},
+      time = #{time,jdbcType=INTEGER},
+      usePower = #{usepower,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+      and tid = #{tid,jdbcType=INTEGER}
+  </update>
+  <sql id="Base_Column_List">
+    uid, id, foodId, foodName, level, reward, strengh, time, usePower
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.muzhi.model.ResearchKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from research
+    where uid = #{uid,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.muzhi.model.ResearchKey">
+    delete from research
+    where uid = #{uid,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Research">
+    insert into research (uid, id, foodId, 
+      foodName, level, reward, 
+      strengh, time, usePower
+      )
+    values (#{uid,jdbcType=INTEGER}, #{id,jdbcType=INTEGER}, #{foodid,jdbcType=INTEGER}, 
+      #{foodname,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{reward,jdbcType=VARCHAR}, 
+      #{strengh,jdbcType=INTEGER}, #{time,jdbcType=INTEGER}, #{usepower,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Research">
+    insert into research
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="id != null">
+        id,
+      </if>
+      <if test="foodid != null">
+        foodId,
+      </if>
+      <if test="foodname != null">
+        foodName,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="reward != null">
+        reward,
+      </if>
+      <if test="strengh != null">
+        strengh,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="usepower != null">
+        usePower,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="foodid != null">
+        #{foodid,jdbcType=INTEGER},
+      </if>
+      <if test="foodname != null">
+        #{foodname,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="reward != null">
+        #{reward,jdbcType=VARCHAR},
+      </if>
+      <if test="strengh != null">
+        #{strengh,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=INTEGER},
+      </if>
+      <if test="usepower != null">
+        #{usepower,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Research">
+    update research
+    <set>
+      <if test="foodid != null">
+        foodId = #{foodid,jdbcType=INTEGER},
+      </if>
+      <if test="foodname != null">
+        foodName = #{foodname,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="reward != null">
+        reward = #{reward,jdbcType=VARCHAR},
+      </if>
+      <if test="strengh != null">
+        strengh = #{strengh,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=INTEGER},
+      </if>
+      <if test="usepower != null">
+        usePower = #{usepower,jdbcType=INTEGER},
+      </if>
+    </set>
+    where uid = #{uid,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Research">
+    update research
+    set foodId = #{foodid,jdbcType=INTEGER},
+      foodName = #{foodname,jdbcType=VARCHAR},
+      level = #{level,jdbcType=INTEGER},
+      reward = #{reward,jdbcType=VARCHAR},
+      strengh = #{strengh,jdbcType=INTEGER},
+      time = #{time,jdbcType=INTEGER},
+      usePower = #{usepower,jdbcType=INTEGER}
+    where uid = #{uid,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </update>
+  <sql id="Base_Column_List">
+    uid, id, foodId, foodName, level, reward, strengh, time, usePower
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.muzhi.model.ResearchKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from research
+    where uid = #{uid,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.muzhi.model.ResearchKey">
+    delete from research
+    where uid = #{uid,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Research">
+    insert into research (uid, id, foodId, 
+      foodName, level, reward, 
+      strengh, time, usePower
+      )
+    values (#{uid,jdbcType=INTEGER}, #{id,jdbcType=INTEGER}, #{foodid,jdbcType=INTEGER}, 
+      #{foodname,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{reward,jdbcType=VARCHAR}, 
+      #{strengh,jdbcType=INTEGER}, #{time,jdbcType=INTEGER}, #{usepower,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Research">
+    insert into research
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="id != null">
+        id,
+      </if>
+      <if test="foodid != null">
+        foodId,
+      </if>
+      <if test="foodname != null">
+        foodName,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="reward != null">
+        reward,
+      </if>
+      <if test="strengh != null">
+        strengh,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="usepower != null">
+        usePower,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="foodid != null">
+        #{foodid,jdbcType=INTEGER},
+      </if>
+      <if test="foodname != null">
+        #{foodname,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="reward != null">
+        #{reward,jdbcType=VARCHAR},
+      </if>
+      <if test="strengh != null">
+        #{strengh,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=INTEGER},
+      </if>
+      <if test="usepower != null">
+        #{usepower,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Research">
+    update research
+    <set>
+      <if test="foodid != null">
+        foodId = #{foodid,jdbcType=INTEGER},
+      </if>
+      <if test="foodname != null">
+        foodName = #{foodname,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="reward != null">
+        reward = #{reward,jdbcType=VARCHAR},
+      </if>
+      <if test="strengh != null">
+        strengh = #{strengh,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=INTEGER},
+      </if>
+      <if test="usepower != null">
+        usePower = #{usepower,jdbcType=INTEGER},
+      </if>
+    </set>
+    where uid = #{uid,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Research">
+    update research
+    set foodId = #{foodid,jdbcType=INTEGER},
+      foodName = #{foodname,jdbcType=VARCHAR},
+      level = #{level,jdbcType=INTEGER},
+      reward = #{reward,jdbcType=VARCHAR},
+      strengh = #{strengh,jdbcType=INTEGER},
+      time = #{time,jdbcType=INTEGER},
+      usePower = #{usepower,jdbcType=INTEGER}
+    where uid = #{uid,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </update> -->
+</mapper>

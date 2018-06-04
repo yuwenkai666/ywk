@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="explain" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" />
+	<e:Image horizontalCenter="0" verticalCenter="0" source="InterfaceUI_json.dongtai_01_png" scale9Grid="163,92,16,24" width="586" height="800"/>
+	<e:Image id="RuleBackBtn" source="InterfaceUI_json.dongtai_02_png" x="553" y="89" />
+	<e:Image source="InterfaceUI_json.explainTitle_png" y="121" width="69" height="34" horizontalCenter="16.5" />
+	<e:Scroller width="680" height="555.76" y="210.12" anchorOffsetY="0" horizontalCenter="0">
+		<e:Group width="454" height="580">
+			<e:List id="listRule" width="454" y="0" horizontalCenter="0" x="112.99999999999999" scaleX="1" scaleY="1">
+				<e:layout>
+				<e:VerticalLayout verticalAlign="top"/>
+				</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

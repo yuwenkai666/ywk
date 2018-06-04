@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.MakeFoodInfoDao">
+
+	<!-- 根据uid，获取所有的用户记录 -->
+	<select id="getMakeFoodInfo" parameterType="java.lang.Integer"
+		resultType="com.muzhi.model.MakeFoodInfo">
+		select *
+		from makefoodinfo
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+
+	<!-- 根据uid，index获取单条的用户记录 -->
+	<select id="getOneMakeFoodInfo" 
+		resultType="com.muzhi.model.MakeFoodInfo">
+		select *
+		from makefoodinfo
+		where id = #{id,jdbcType=INTEGER}
+		and `index`=#{index,jdbcType=INTEGER}
+	</select>
+
+	<!-- 更新一条用户记录 -->
+	<update id="updateMakeFoodInfo" parameterType="com.muzhi.model.MakeFoodInfo">
+		update makefoodinfo set
+		<include refid="makeFoodInfoValue"></include>
+		where id = #{id,jdbcType=INTEGER}
+		and `index`=#{index,jdbcType=INTEGER}
+	</update>
+
+	<!-- 删除一条用户记录 -->
+	<delete id="deleteMakeFoodInfo">
+		delete from makefoodinfo
+		where id = #{id,jdbcType=INTEGER}
+		and `index`=#{index,jdbcType=INTEGER}
+	</delete>
+	
+    <!--插入一条记录  -->
+	<insert id="insertMakeFoodInfo" parameterType="com.muzhi.model.MakeFoodInfo">
+		insert into makefoodinfo (
+		<include refid="makeFoodInfoParam"></include>
+		)
+		values
+		(#{id},#{status},#{index},#{foodId},#{foodQualify})
+		<!-- ON DUPLICATE KEY UPDATE -->
+	</insert>
+	
+	<!-- 获取已有的记录数 -->
+	<select id="getCount" resultType="java.lang.Integer">
+		select count(*) from makefoodinfo
+	</select>
+	
+	<!-- 获取空闲的厨师位 -->
+	<select id="getFree" parameterType="java.lang.Integer"
+	resultType="com.muzhi.model.MakeFoodInfo">
+		select * from makefoodinfo
+		where id = #{id,jdbcType=INTEGER}
+		and status =0
+		order by `index`
+	</select>
+	
+	<!-- 倒计时结束改变做菜的状态为完成 -->
+	<update id="updateState" >
+		update makefoodinfo set
+		status =#{state,jdbcType=INTEGER}
+		where id = #{id,jdbcType=INTEGER}
+		and `index`=#{index,jdbcType=INTEGER}
+	</update>
+	
+	<!-- 解决一个bug定时器停止做菜状态永远为1  在服务器重启的时候将做菜状态为1的直接设置为2-->
+	<update id="soloveBug" >
+		update makefoodinfo set
+		status =2
+		where status = 1
+	</update>
+
+	<!-- 用户表所有参数 -->
+	<sql id="makeFoodInfoParam">
+		id,
+		status,
+		`index`,
+		foodId,
+		foodQualify
+	</sql>
+
+	<sql id="makeFoodInfoValue">
+		status = #{status},
+		`index` = #{index},
+		foodId = #{foodId},
+		foodQualify = #{foodQualify}
+	</sql>
+
+</mapper>

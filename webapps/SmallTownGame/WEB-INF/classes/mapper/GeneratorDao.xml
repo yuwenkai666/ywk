@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.GeneratorDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Generator">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="rice_time" jdbcType="BIGINT" property="riceTime" />
+    <result column="banana_time" jdbcType="BIGINT" property="bananaTime" />
+    <result column="vegetable_time" jdbcType="BIGINT" property="vegetableTime" />
+    <result column="meat_time" jdbcType="BIGINT" property="meatTime" />
+    <result column="fish_time" jdbcType="BIGINT" property="fishTime" />
+    
+    <result column="rice_start_time" jdbcType="BIGINT" property="riceStartTime" />
+    <result column="banana_start_time" jdbcType="BIGINT" property="bananaStartTime" />
+    <result column="vegetable_start_time" jdbcType="BIGINT" property="vegetableStartTime" />
+    <result column="meat_start_time" jdbcType="BIGINT" property="meatStartTime" />
+    <result column="fish_start_time" jdbcType="BIGINT" property="fishStartTime" />
+    
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, rice_time, banana_time, vegetable_time, meat_time, fish_time
+    	, rice_start_time, banana_start_time, vegetable_start_time, meat_start_time, fish_start_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from generator
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from generator
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Generator">
+    insert into generator (id, rice_time, banana_time, vegetable_time, meat_time, fish_time
+    	, rice_start_time, banana_start_time, vegetable_start_time, meat_start_time, fish_start_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{riceTime,jdbcType=BIGINT}, #{bananaTime,jdbcType=BIGINT}, 
+      #{vegetableTime,jdbcType=BIGINT}, #{meatTime,jdbcType=BIGINT}, #{fishTime,jdbcType=BIGINT}, 
+      #{riceStartTime,jdbcType=BIGINT}, #{bananaStartTime,jdbcType=BIGINT}, 
+      #{vegetableStartTime,jdbcType=BIGINT}, #{meatStartTime,jdbcType=BIGINT}, #{fishStartTime,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.Generator">
+    insert into generator
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="riceTime != null">
+        rice_time,
+      </if>
+      <if test="bananaTime != null">
+        banana_time,
+      </if>
+      <if test="vegetableTime != null">
+        vegetable_time,
+      </if>
+      <if test="meatTime != null">
+        meat_time,
+      </if>
+      <if test="fishTime != null">
+        fish_time,
+      </if>
+      
+      <if test="riceTime != null">
+        rice_start_time,
+      </if>
+      <if test="bananaTime != null">
+        banana_start_time,
+      </if>
+      <if test="vegetableTime != null">
+        vegetable_start_time,
+      </if>
+      <if test="meatTime != null">
+        meat_start_time,
+      </if>
+      <if test="fishTime != null">
+        fish_start_time,
+      </if>
+      
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="riceTime != null">
+        #{riceTime,jdbcType=BIGINT},
+      </if>
+      <if test="bananaTime != null">
+        #{bananaTime,jdbcType=BIGINT},
+      </if>
+      <if test="vegetableTime != null">
+        #{vegetableTime,jdbcType=BIGINT},
+      </if>
+      <if test="meatTime != null">
+        #{meatTime,jdbcType=BIGINT},
+      </if>
+      <if test="fishTime != null">
+        #{fishTime,jdbcType=BIGINT},
+      </if>
+      
+      <if test="riceStartTime != null">
+        #{riceStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="bananaStartTime != null">
+        #{bananaStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="vegetableStartTime != null">
+        #{vegetableStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="meatStartTime != null">
+        #{meatStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="fishStartTime != null">
+        #{fishStartTime,jdbcType=BIGINT},
+      </if>
+      
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.Generator">
+    update generator
+    <set>
+      <if test="riceTime != null">
+        rice_time = #{riceTime,jdbcType=BIGINT},
+      </if>
+      <if test="bananaTime != null">
+        banana_time = #{bananaTime,jdbcType=BIGINT},
+      </if>
+      <if test="vegetableTime != null">
+        vegetable_time = #{vegetableTime,jdbcType=BIGINT},
+      </if>
+      <if test="meatTime != null">
+        meat_time = #{meatTime,jdbcType=BIGINT},
+      </if>
+      <if test="fishTime != null">
+        fish_time = #{fishTime,jdbcType=BIGINT},
+      </if>
+      
+      <if test="riceStartTime != null">
+        #{riceStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="bananaStartTime != null">
+        #{bananaStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="vegetableStartTime != null">
+        #{vegetableStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="meatStartTime != null">
+        #{meatStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="fishStartTime != null">
+        #{fishStartTime,jdbcType=BIGINT},
+      </if>
+      
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Generator">
+    update generator
+    set rice_time = #{riceTime,jdbcType=BIGINT},
+      banana_time = #{bananaTime,jdbcType=BIGINT},
+      vegetable_time = #{vegetableTime,jdbcType=BIGINT},
+      meat_time = #{meatTime,jdbcType=BIGINT},
+      fish_time = #{fishTime,jdbcType=BIGINT},
+      
+      rice_start_time = #{riceStartTime,jdbcType=BIGINT},
+      banana_start_time = #{bananaStartTime,jdbcType=BIGINT},
+      vegetable_start_time = #{vegetableStartTime,jdbcType=BIGINT},
+      meat_start_time = #{meatStartTime,jdbcType=BIGINT},
+      fish_start_time = #{fishStartTime,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

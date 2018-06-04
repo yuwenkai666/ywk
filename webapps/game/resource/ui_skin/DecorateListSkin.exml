@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="zhuangshiList" width="438" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="146">
+	<e:Group id="isOpen" width="438" height="146" x="0" y="0">
+		<e:Image width="438" height="146" y="0" source="windowUI_json.Decorate_bg_01_png" x="-4" scaleX="1" scaleY="1" scale9Grid="38,61,19,0"/>
+		<e:Image source="{data.decorateIcon}" scaleX="1" scaleY="1" horizontalCenter="-156" verticalCenter="15" maxHeight="88" maxWidth="88"/>
+		<e:Label text="{data.decorateName}" size="22" fontFamily="SimHei" textColor="0x793000" y="17" textAlign="left" width="208" height="22" x="11" scaleX="1" scaleY="1"/>
+		<e:Image id="decorateSureBtn" source="{data.decorateSureBtn}" scaleX="1" scaleY="1" horizontalCenter="151.5" verticalCenter="20.5"/>
+		<e:Group height="33" y="10" anchorOffsetX="0" anchorOffsetY="0" right="21">
+			<e:Image width="46" height="34" scaleX="1" scaleY="1" anchorOffsetX="46" verticalCenter="0.5" source="{data.num4Img}"/>
+			<e:Label size="26" textAlign="right" scaleX="1" scaleY="1" height="26" bold="true" verticalCenter="0" textColor="0xffffff" stroke="2" strokeColor="0xe06400" right="0" text="{data.num4}"/>
+		</e:Group>
+		<e:Group id="needdatagroup" anchorOffsetX="0" anchorOffsetY="0" y="49" horizontalCenter="-22.5">
+			<e:Group height="33" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="22.5">
+				<e:Image width="40" height="30" scaleX="1" scaleY="1" anchorOffsetX="20" verticalCenter="0.5" source="{data.num1Img}"/>
+				<e:Label size="24" scaleX="1" scaleY="1" height="26" bold="true" verticalCenter="0" strokeColor="0xE06400" textColor="0xe06400" text="{data.num1}" anchorOffsetX="-20"/>
+			</e:Group>
+			<e:Group height="33" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="-18.5">
+				<e:Image width="40" height="30" scaleX="1" scaleY="1" anchorOffsetX="20" verticalCenter="0.5" source="{data.num2Img}"/>
+				<e:Label size="24" scaleX="1" scaleY="1" height="26" bold="true" verticalCenter="0" strokeColor="0xE06400" textColor="0xe06400" text="{data.num2}" anchorOffsetX="-20"/>
+			</e:Group>
+			<e:Group height="33" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0">
+				<e:Image width="40" height="30" scaleX="1" scaleY="1" anchorOffsetX="20" verticalCenter="0.5" source="{data.num3Img}"/>
+				<e:Label size="24" scaleX="1" scaleY="1" height="26" bold="true" verticalCenter="0" strokeColor="0xE06400" textColor="0xE06400" anchorOffsetX="-20" text="{data.num3}"/>
+			</e:Group>
+		</e:Group>
+		<e:Label size="22" scaleX="1" scaleY="1" height="26" strokeColor="0xE06400" textColor="0xE06400" anchorOffsetX="-20" y="15" right="19" text="{data.tipTxt}" bold="true"/>
+	</e:Group>
+</e:Skin>

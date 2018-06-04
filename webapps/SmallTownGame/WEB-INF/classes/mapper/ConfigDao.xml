@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.ConfigDao">
+	
+	<select id="getConfigFood" resultType="com.muzhi.model.configbean.ConfigFood">
+		select 
+		<include refid="foodParam"></include>
+		from config_food
+	</select>
+	
+	<select id="getConfigSkill" resultType="com.muzhi.model.configbean.ConfigSkill">
+		select 
+		<include refid="skillParam"></include>
+		from config_skill
+	</select>
+	
+	<select id="getConfigStrength" resultType="com.muzhi.model.configbean.ConfigStrength">
+		select 
+		<include refid="strengthParam"></include>
+		from config_strength
+	</select>
+	 
+	<select id="getConfigRole" resultType="com.muzhi.model.configbean.ConfigRole">
+		select
+		<include refid="roleParam"/>
+		from config_role
+	</select>
+	
+	<select id="getConfigRestaurant" resultType="com.muzhi.model.configbean.ConfigRestaurant">
+		select
+		<include refid="restaurantParam"/>
+		from config_restaurant
+	</select>
+	
+	<select id="getConfigManor" resultType="com.muzhi.model.configbean.ConfigManor">
+		select
+		<include refid="manorParam"/>
+		from config_manor
+	</select>
+	
+	<select id="getConfigResearch" resultType="com.muzhi.model.configbean.ConfigResearch">
+		select
+		<include refid="researchParam"/>
+		from config_research
+	</select>
+
+	<select id="getConfigResources" resultType="com.muzhi.model.configbean.ConfigResources">
+		select
+		<include refid="resourcesParam"/>
+		from config_resources
+	</select>
+	
+	<select id="getConfigFacilities" resultType="com.muzhi.model.configbean.ConfigFacilities">
+		select
+		<include refid="facilitiesParam"/>
+		from config_facilities
+	</select>
+	<select id="getConfigCookcenter" resultType="com.muzhi.model.configbean.ConfigCookcenter">
+		select *
+		from config_cookcenter
+	</select>
+	<select id="getConfigArticle" resultType="com.muzhi.model.configbean.ConfigArticle">
+		select *
+		from config_article
+	</select>
+	<select id="getConfigOrder" resultType="com.muzhi.model.configbean.ConfigOrder">
+		select *
+		from config_order
+	</select>
+	<select id="getConfigRate" resultType="com.muzhi.model.configbean.ConfigRate">
+		select *
+		from config_rate
+	</select>
+	<select id="getConfigTask" resultType="com.muzhi.model.configbean.ConfigTask">
+		select *
+		from config_task
+	</select>
+	<select id="getConfigAdvancedProp" resultType="com.muzhi.model.configbean.ConfigAdvancedProp">
+		select *
+		from config_advancedprop
+	</select>
+	<select id="getConfigLove" resultType="com.muzhi.model.configbean.ConfigLove">
+		select *
+		from config_love
+	</select>
+	
+	<sql id="resourcesParam">
+		id,
+		buildId,
+		`level`,
+		output,
+		maxCapacity
+	</sql>
+	
+	<!-- 用户表所有参数 -->
+	<sql id="researchParam">
+		id,
+		foodId,
+		foodName,
+		`level`,
+		reward,
+		strengh,
+		time,
+		usePower
+	</sql>
+	
+	<!-- 用户表所有参数 -->
+	<sql id="manorParam">
+		id,
+		buildId,
+		`level`,
+		needGold,
+		time
+	</sql>
+	
+	<!-- 用户表所有参数 -->
+	<sql id="foodParam">
+		foodId,
+		foodName,
+		foodLogo,
+		foodLevel,
+		foodType,
+		foodQualify,
+		makeTime,
+		metarial,
+		strength,
+		price
+	</sql>
+	
+	<sql id="skillParam">
+		id,
+		foodId,
+		temp,
+		request,
+		rewardType,
+		reward
+	</sql>
+	
+	<sql id="strengthParam">
+		id,
+		foodId,
+		strength,
+		crit,
+		addition
+
+	</sql>
+	
+	<sql id="roleParam">
+		`describe`, 
+		roleid, 
+		Resources, 
+		Resources2, 
+		type, 
+		weight, 
+		increase, 
+		rounds, 
+		Remarks, 
+    	dialogue, 
+    	reward
+	</sql>
+	
+	<sql id="restaurantParam">
+		`level`,
+		area,
+		lovelimit,
+		maxChef,
+		maxEmploy
+	</sql>
+	
+	<sql id="facilitiesParam">
+		id,
+		facilitiesId,
+		`level`,
+		attribute,
+		needGold,
+		needLevel
+	</sql>
+</mapper>

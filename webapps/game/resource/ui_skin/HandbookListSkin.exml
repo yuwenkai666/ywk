@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HandbookListSkin" width="164" height="164" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="164" height="164" x="0" y="0" source="{data.iconBg}"/>
+	<e:Image width="130" height="130" x="17" y="7" source="{data.icon}"/>
+	<e:Label x="-30" y="6" size="24" stroke="3" strokeColor="0xba4a00" textAlign="center" text="{data.num}" anchorOffsetX="0" width="108" height="24"/>
+	<e:Label text="{data.name}" x="0" y="126" size="22" fontFamily="SimHei" bold="true" textColor="0xba4a00" width="164" textAlign="center"/>
+</e:Skin>

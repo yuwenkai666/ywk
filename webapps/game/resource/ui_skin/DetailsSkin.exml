@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DetailsSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Rect width="640" height="1400" x="0" y="0" strokeAlpha="0.5" fillAlpha="0.8" />
+    <e:Image width="590" height="668" source="windowUI_json.Deta_bg_png" horizontalCenter="0" verticalCenter="13"
+             scale9Grid="73,265,444,19" />
+    <e:Image id="detailsSelect1" width="110" height="47" y="378" source="windowUI_json.Deta_tab1_01_png" x="138" />
+    <e:Image id="detailsSelect2" width="110" height="47" y="378" source="windowUI_json.Deta_tab2_01_png"
+             horizontalCenter="0" x="274" />
+    <e:Image id="detailsSelect3" width="110" height="47" y="378" source="windowUI_json.Deta_tab3_01_png" x="391" />
+    <e:Label id="DishesTxt" text="菜名XXXX" y="318.06" size="36" fontFamily="SimHei" bold="true" textColor="0xd07500"
+             anchorOffsetX="0" width="469" textAlign="center" horizontalCenter="0.5" />
+    <e:Image id="DishesIcon" width="154" height="154" y="158.85" horizontalCenter="1" />
+    <e:Group id="newsGroup" width="510" height="327" y="429" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+        <e:Label id="levelTxt" text="等级：10" y="45" fontFamily="SimHei" bold="true" size="26" textColor="0x004C87" x="54"
+                 anchorOffsetX="0" width="200" textAlign="left" scaleX="1" scaleY="1" />
+        <e:Label id="makeNumTxt" text="已制作：200" y="45" fontFamily="SimHei" bold="true" size="26" textColor="0x004C87"
+                 x="319" anchorOffsetX="0" width="200" scaleX="1" scaleY="1" />
+        <e:Label id="qualityTxt" text="品质：10" y="88" fontFamily="SimHei" bold="true" size="26" textColor="0x004C87"
+                 x="54" anchorOffsetX="0" width="200" textAlign="left" scaleX="1" scaleY="1" />
+        <e:Label id="saveNumTxt" text="库存：200" y="90" fontFamily="SimHei" bold="true" size="26" textColor="0x004C87"
+                 x="319" anchorOffsetX="0" width="200" scaleX="1" scaleY="1" />
+        <e:Label id="typeTxt" text="类型：中餐" y="135" fontFamily="SimHei" bold="true" size="26" textColor="0x004C87" x="54"
+                 anchorOffsetX="0" width="200" textAlign="left" scaleX="1" scaleY="1" />
+        <e:Label text="属性" y="6" fontFamily="SimHei" textColor="0xffffff" stroke="2" strokeColor="0x004c87"
+                 horizontalCenter="0" x="222" scaleX="1" scaleY="1" />
+        <e:Image width="487" height="1" horizontalCenter="0.5" source="windowUI_json.Deta_zy_01_png" x="10" y="173"
+                 scaleX="1" scaleY="1" />
+        <e:Label text="食材需求" y="193" fontFamily="SimHei" textColor="0xFFFFFF" stroke="2"
+                 strokeColor="0x004C87" horizontalCenter="0.5" x="192" scaleX="1" scaleY="1" />
+        <e:Group id="currencyGroup" width="393" height="87" y="231" anchorOffsetY="0" anchorOffsetX="0"
+                 horizontalCenter="0.5" x="57" scaleX="1" scaleY="1">
+            <e:Group width="61" height="24" x="22" y="15" scaleX="1" scaleY="1">
+                <e:Image id="currencyImage1" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"
+                         scaleY="1" verticalCenter="0" left="0" source="{data.currencyImage1}" />
+                <e:Label id="currencyTxt1" size="22" fontFamily="SimHei" textAlign="left" anchorOffsetX="0" width="50"
+                         anchorOffsetY="0" height="22" text="{data.currencyTxt1}" x="37" verticalCenter="0" bold="true"
+                         textColor="0x004c87" />
+            </e:Group>
+            <e:Group width="61" height="24" x="260" y="15" scaleX="1" scaleY="1">
+                <e:Image id="currencyImage2" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"
+                         scaleY="1" left="0" verticalCenter="0" source="{data.currencyImage2}" />
+                <e:Label id="currencyTxt2" size="22" fontFamily="SimHei" textAlign="left" anchorOffsetX="0" width="50"
+                         anchorOffsetY="0" height="22" text="{data.currencyTxt2}" verticalCenter="0" x="37" bold="true"
+                         textColor="0x004c87" />
+            </e:Group>
+            <e:Group width="61" height="24" x="22" y="60" scaleX="1" scaleY="1">
+                <e:Image id="currencyImage3" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"
+                         scaleY="1" left="0" verticalCenter="0" source="{data.currencyImage3}" />
+                <e:Label id="currencyTxt3" size="22" fontFamily="SimHei" textAlign="left" anchorOffsetX="0" width="50"
+                         anchorOffsetY="0" height="22" text="{data.currencyTxt3}" verticalCenter="0" x="37" bold="true"
+                         textColor="0x004c87" />
+            </e:Group>
+            <e:Group width="61" height="24" x="260" y="59" scaleX="1" scaleY="1">
+                <e:Image id="currencyImage4" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1"
+                         scaleY="1" verticalCenter="0" left="0" source="{data.currencyImage4}" />
+                <e:Label id="currencyTxt4" size="22" fontFamily="SimHei" textAlign="left" anchorOffsetX="0" width="50"
+                         anchorOffsetY="0" height="22" text="{data.currencyTxt4}" verticalCenter="0" x="37" bold="true"
+                         textColor="0x004c87" />
+            </e:Group>
+        </e:Group>
+    </e:Group>
+    <e:Scroller id="scrollerGroup" width="500" height="300" y="441" anchorOffsetX="0" anchorOffsetY="0"
+                horizontalCenter="0.5">
+        <e:Group width="500" height="300">
+            <e:List id="listDetails" width="496" y="0" horizontalCenter="0">
+                <e:layout>
+                    <e:VerticalLayout verticalAlign="top" />
+                </e:layout>
+            </e:List>
+        </e:Group>
+    </e:Scroller>
+    <e:Image id="closeBtn" width="162" height="63" y="764" horizontalCenter="0" source="windowUI_json.Deta_back_png" />
+</e:Skin>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="OrderListSkin" width="482" height="204" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="482" height="204" x="0" y="0" source="windowUI_json.order_zy_02_png" scaleX="1" scaleY="1" scale9Grid="157,109,12,0"/>
+	<e:Label x="-66" y="14" size="22" stroke="2" strokeColor="0x8E2800" textAlign="center" bold="true" text="{data.orderLevel}" width="181" scaleX="1" scaleY="1"/>
+	<e:Image width="115" height="115" y="25.67" x="34.67" scaleX="1" scaleY="1" source="{data.orderIconBg}"/>
+	<e:Image width="104" height="104" y="31.67" source="{data.orderIcon}" x="40.67" scaleX="1" scaleY="1"/>
+	<e:Image id="sureBtn" source="{data.isComplete}" scaleX="1" scaleY="1" horizontalCenter="179.5" verticalCenter="0"/>
+	<e:Group id="rewardGroup" height="34.67" y="167" anchorOffsetX="0" anchorOffsetY="0" width="203.67" horizontalCenter="0">
+		<e:Image width="35" height="26" x="19" y="3" source="{data.Img1}" scaleX="1" scaleY="1"/>
+		<e:Label text="{data.num1}" x="54.5" y="14.5" size="16" textColor="0x7e2c00" scaleX="1" scaleY="1" bold="true"/>
+		<e:Image width="35" height="26" x="82.25" y="3" source="{data.Img2}" scaleX="1" scaleY="1"/>
+		<e:Label x="117" y="14.5" size="16" textColor="0x7E2C00" text="{data.num2}" scaleX="1" scaleY="1" bold="true"/>
+		<e:Image width="35" height="26" x="146.5" y="3" source="{data.Img3}" scaleX="1" scaleY="1"/>
+		<e:Label x="181" y="14.5" size="16" textColor="0x7E2C00" text="{data.num3}" scaleX="1" scaleY="1" bold="true"/>
+		<e:Image width="35" height="26" x="210.25" y="3" source="{data.Img4}" scaleX="1" scaleY="1" visible="false"/>
+		<e:Label x="245" y="14.5" size="16" textColor="0x7E2C00" text="{data.num4}" scaleX="1" scaleY="1" bold="true" visible="false"/>
+		<e:Image width="35" height="26" x="273.5" y="3" source="{data.Img5}" scaleX="1" scaleY="1" visible="false"/>
+		<e:Label x="308" y="14" size="16" textColor="0x7E2C00" text="{data.num5}" scaleX="1" scaleY="1" bold="true" visible="false"/>
+	</e:Group>
+	<e:Group id="one" width="97" height="70" x="172" y="26.33" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image width="52" height="52" source="{data.onefoodIcon}" horizontalCenter="-13.5" top="2"/>
+		<e:Image width="12" height="12" x="3" y="52.15" source="{data.oneStar1}"/>
+		<e:Image width="12" height="12" x="15.25" y="52.15" source="{data.oneStar2}"/>
+		<e:Image width="12" height="12" x="27.5" y="52.15" source="{data.oneStar3}"/>
+		<e:Image width="12" height="12" x="40.25" y="52.15" source="{data.oneStar4}"/>
+		<e:Image width="12" height="12" x="52.5" y="52.15" source="{data.oneStar5}"/>
+		<e:Label x="65.5" size="20" bold="true" textColor="0xb95b00" verticalCenter="0" text="{data.oneNum}"/>
+		<e:Image width="33" height="24.95" x="61" y="19.55" source="{data.oneIsComplete}" anchorOffsetX="0" anchorOffsetY="0"/>
+	</e:Group>
+	<e:Group id="two" width="97" height="70" x="278" y="26.33" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image width="52" height="52" top="2" horizontalCenter="-13.5" source="{data.twofoodIcon}"/>
+		<e:Image width="12" height="12" x="3" y="52.15" source="{data.twoStar1}"/>
+		<e:Image width="12" height="12" x="15.25" y="52.15" source="{data.twoStar2}"/>
+		<e:Image width="12" height="12" x="27.5" y="52.15" source="{data.twoStar3}"/>
+		<e:Image width="12" height="12" x="40.25" y="52.15" source="{data.twoStar4}"/>
+		<e:Image width="12" height="12" x="52.5" y="52.15" source="{data.twoStar5}"/>
+		<e:Label x="65.5" size="20" verticalCenter="0" bold="true" textColor="0xB95B00" text="{data.twoNum}"/>
+		<e:Image width="33" height="24.95" x="61" y="19.55" anchorOffsetX="0" anchorOffsetY="0" source="{data.twoIsComplete}"/>
+	</e:Group>
+	<e:Group id="three" width="97" height="70" x="172" y="96" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image width="52" height="52" top="2" horizontalCenter="-13.5" source="{data.threefoodIcon}"/>
+		<e:Image width="12" height="12" x="3" y="52.15" source="{data.threeStar1}"/>
+		<e:Image width="12" height="12" x="15.25" y="52.15" source="{data.threeStar2}"/>
+		<e:Image width="12" height="12" x="27.5" y="52.15" source="{data.threeStar3}"/>
+		<e:Image width="12" height="12" x="40.25" y="52.15" source="{data.threeStar4}"/>
+		<e:Image width="12" height="12" x="52.5" y="52.15" source="{data.threeStar5}"/>
+		<e:Label x="65.5" size="20" verticalCenter="0" bold="true" textColor="0xB95B00" text="{data.threeNum}"/>
+		<e:Image width="33" height="24.95" x="61" y="19.55" anchorOffsetX="0" anchorOffsetY="0" source="{data.threeIsComplete}"/>
+	</e:Group>
+	<e:Group id="four" width="97" height="70" x="278" y="96" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image width="52" height="52" top="2" horizontalCenter="-13.5" source="{data.fourfoodIcon}"/>
+		<e:Image width="12" height="12" x="3" y="52.15" source="{data.fourStar1}"/>
+		<e:Image width="12" height="12" x="15.25" y="52.15" source="{data.fourStar2}"/>
+		<e:Image width="12" height="12" x="27.5" y="52.15" source="{data.fourStar3}"/>
+		<e:Image width="12" height="12" x="40.25" y="52.15" source="{data.fourStar4}"/>
+		<e:Image width="12" height="12" x="52.5" y="52.15" source="{data.fourStar5}"/>
+		<e:Label x="65.5" size="20" verticalCenter="0" bold="true" textColor="0xB95B00" text="{data.fourNum}"/>
+		<e:Image width="33" height="24.95" x="61" y="19.55" anchorOffsetX="0" anchorOffsetY="0" source="{data.fourIsComplete}"/>
+	</e:Group>
+	<e:Group id="five" width="97" height="70" x="369.5" y="7" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<e:Image width="52" height="52" top="2" horizontalCenter="-13.5" source="{data.fivefoodIcon}"/>
+		<e:Image width="12" height="12" x="3" y="55.5" source="{data.fiveStar1}"/>
+		<e:Image width="12" height="12" x="15.25" y="55.5" source="{data.fiveStar2}"/>
+		<e:Image width="12" height="12" x="27.5" y="55.5" source="{data.fiveStar3}"/>
+		<e:Image width="12" height="12" x="40.25" y="55.5" source="{data.fiveStar4}"/>
+		<e:Image width="12" height="12" x="52.5" y="55.5" source="{data.fiveStar5}"/>
+		<e:Label x="65.5" size="20" verticalCenter="0" bold="true" textColor="0xB95B00" text="{data.fiveNum}"/>
+		<e:Image width="33" height="24.95" x="61" y="19.55" anchorOffsetX="0" anchorOffsetY="0" source="{data.fiveIsComplete}"/>
+	</e:Group>
+	<e:Image width="207" height="21" y="7" source="windowUI_json.order_zy_01_png" horizontalCenter="35.5"/>
+	<e:Label text="奖励：" x="29.69" y="174" size="20" fontFamily="SimHei" textColor="0x7e2c00" bold="true"/>
+</e:Skin>

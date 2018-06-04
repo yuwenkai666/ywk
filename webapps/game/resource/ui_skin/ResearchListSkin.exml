@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MenuListSkin" width="520" height="170" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="foodListBg" width="514" height="168" x="7" y="7" scaleX="1" scaleY="1" touchEnabled="false" source="windowUI_json.Equip_bg_01_png" scale9Grid="42,85,34,0"/>
+	<e:Group id="newsGroup" width="200" height="200" x="6" y="-25">
+		<e:Image id="foodImageBg" width="163" height="160" x="21" y="0" scaleX="1" scaleY="1" touchEnabled="false" source="{data.foodImageBg}"/>
+		<e:Image id="foodImage" width="148" height="148" source="{data.foodImage}" x="29" y="6" scaleX="1" scaleY="1" touchEnabled="false"/>
+		<e:Label id="foodName" y="145" size="22" anchorOffsetX="0" width="176" anchorOffsetY="0" height="20" text="{data.foodNameTxt}" textAlign="center" fontFamily="SimHei" textColor="0x953f00" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Image id="newsBtn" width="32" height="32" x="154" y="50" source="windowUI_json.Menu_zy_01_png" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Image width="40" height="40" x="-1" y="7" source="windowUI_json.Menu_zy_02_png"/>
+	<e:Label id="foodLevel" text="{data.foodLevel}" x="-1" y="7" size="22" textColor="0xffffff" width="40" height="40" verticalAlign="middle" textAlign="center"/>
+	<e:Group id="starGroup" width="143" height="24" x="38" y="142" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Image id="star1" width="20" height="20" x="5" y="0" scaleX="1" scaleY="1" source="{data.star1}"/>
+		<e:Image id="star2" width="20" height="20" x="32" y="0" scaleX="1" scaleY="1" source="{data.star2}"/>
+		<e:Image id="star3" width="20" height="20" x="60" y="0" scaleX="1" scaleY="1" source="{data.star3}"/>
+		<e:Image id="star4" width="20" height="20" x="87" y="0" scaleX="1" scaleY="1" source="{data.star4}"/>
+		<e:Image id="star5" width="20" height="20" x="115" y="0" scaleX="1" scaleY="1" rotation="358.36" source="{data.star5}"/>
+	</e:Group>
+	<e:Label text="{data.researchLevel}" x="215" y="31" size="20" fontFamily="SimHei" bold="true" stroke="2" strokeColor="0x8f4000"/>
+	<e:Label id="completeTxt" text="已研究到满级" x="386" y="30" size="20" fontFamily="SimHei" bold="true" textColor="0xC75900"/>
+	<e:Group id="addLevelGroup" width="115" height="37" x="392" y="25" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Label text="研究后" x="5" y="5" size="20" fontFamily="SimHei" bold="true" textColor="0xC75900" scaleX="1" scaleY="1"/>
+		<e:Label text="+1" x="93" y="5" size="20" fontFamily="SimHei" bold="true" textColor="0xC75900" scaleX="1" scaleY="1"/>
+		<e:Image width="20" height="20" x="69" y="5" source="windowUI_json.Menu_zy_04_png" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group id="researchListGroup" width="332" height="98" x="184" y="63" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group id="currencyGroup" width="200" height="87" x="13" y="-1" anchorOffsetY="0" scaleX="1" scaleY="1">
+		<e:Group width="61" height="24" x="22" y="15" scaleX="1" scaleY="1">
+			<e:Image id="currencyImage1" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="0" left="0" source="{data.currencyImage1}"/>
+			<e:Label id="currencyTxt1" size="22" fontFamily="SimHei" textColor="0x000000" textAlign="left" anchorOffsetX="0" width="50" anchorOffsetY="0" height="22" text="{data.currencyTxt1}" x="37" verticalCenter="0"/>
+		</e:Group>
+		<e:Group width="61" height="24" x="99" y="15" scaleX="1" scaleY="1">
+			<e:Image id="currencyImage2" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" left="0" verticalCenter="0" source="{data.currencyImage2}"/>
+			<e:Label id="currencyTxt2" size="22" fontFamily="SimHei" textColor="0x000000" textAlign="left" anchorOffsetX="0" width="50" anchorOffsetY="0" height="22" text="{data.currencyTxt2}" verticalCenter="0" x="37"/>
+		</e:Group>
+		<e:Group width="61" height="24" x="22" y="60" scaleX="1" scaleY="1">
+			<e:Image id="currencyImage3" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" left="0" verticalCenter="0" source="{data.currencyImage3}"/>
+			<e:Label id="currencyTxt3" size="22" fontFamily="SimHei" textColor="0x000000" textAlign="left" anchorOffsetX="0" width="50" anchorOffsetY="0" height="22" text="{data.currencyTxt3}" verticalCenter="0" x="37"/>
+		</e:Group>
+		<e:Group width="61" height="24" x="99" y="59" scaleX="1" scaleY="1">
+			<e:Image id="currencyImage4" width="32" height="25" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="0" left="0" source="{data.currencyImage4}"/>
+			<e:Label id="currencyTxt4" size="22" fontFamily="SimHei" textColor="0x000000" textAlign="left" anchorOffsetX="0" width="50" anchorOffsetY="0" height="22" text="{data.currencyTxt4}" verticalCenter="0" x="37"/>
+		</e:Group>
+		</e:Group>
+		<e:Group id="noEnoughGroup" width="200" height="87" y="3" anchorOffsetY="0" x="13" scaleX="1" scaleY="1">
+		<e:Image width="33" height="26" x="32" y="12" source="windowUI_json.Menu_zy_09_png"/>
+		<e:Label text="厨力不足" y="13" size="24" fontFamily="SimHei" bold="true" textColor="0xFF2C2C" horizontalCenter="17"/>
+		<e:Label text="{data.needPower}" y="47" size="24" fontFamily="SimHei" bold="true" textColor="0xFF2C2C" horizontalCenter="0.5" anchorOffsetX="0" width="199" textAlign="center" height="24"/>
+		</e:Group>
+		<e:Image id="studyBtn" width="92" height="73" x="223" y="11" source="windowUI_json.Menu_zy_12_png" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Image id="researchMax" width="161" height="73" x="280" y="78" source="windowUI_json.research_zy_01_png"/>
+</e:Skin>

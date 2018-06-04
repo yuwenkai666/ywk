@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="trickSureSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5"/>
+	<e:Image width="496" height="260" horizontalCenter="0" verticalCenter="-185" source="InterfaceUI_json.daoluan_13_png"/>
+	<e:Label text="提示" y="202" fontFamily="SimHei" size="28" textColor="0xa16200" horizontalCenter="0" bold="true"/>
+	<e:Image id="cleanBtn" width="148" height="51" y="488" source="InterfaceUI_json.daoluan_14_png" horizontalCenter="0"/>
+	<e:Label text="点击清除按钮，清除屏幕上的捣乱痕迹。" x="139" y="268" size="28" fontFamily="SimHei" textColor="0x9a1200" anchorOffsetX="0" width="363" anchorOffsetY="0" height="95"/>
+</e:Skin>

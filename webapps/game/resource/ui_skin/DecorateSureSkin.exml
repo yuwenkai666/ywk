@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DecorateSureSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5"/>
+	<e:Image width="586" height="464" x="29" y="260.24" source="InterfaceUI_json.fenxiang_09_png"/>
+	<e:Image id="closeBtn" width="148" height="51" x="372" y="657.24" source="InterfaceUI_json.shengj_03_png"/>
+	<e:Image id="sureBtn" width="148" height="51" x="120" y="657.24" source="InterfaceUI_json.shengj_02_png"/>
+	<e:Image id="decorateSureIcon" width="120" height="120" source="InterfaceUI_json.zhuangshi_05_png" horizontalCenter="0" verticalCenter="-26"/>
+	<e:Label id="decorateSureTitle" text="" y="336.24" size="44" fontFamily="SimHei" textColor="0x7c2f00" height="44" textAlign="center" horizontalCenter="14.5"/>
+	<e:Label id="decorateSureName" text="" y="576.24" size="32" fontFamily="SimHei" textColor="0x9000e3" height="32" textAlign="center" horizontalCenter="9.5"/>
+</e:Skin>

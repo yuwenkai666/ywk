@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="achievementSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Rect width="640" height="1400" x="0" y="0" strokeAlpha="0.5" fillAlpha="0.5" />
+    <e:Image source="InterfaceUI_json.renwu_01_png" verticalCenter="0" horizontalCenter="0"  scale9Grid="129,132,57,30" width="588" height="935"/>
+    <e:Image source="chengjiu_01_png" y="48.36" width="247" height="59" horizontalCenter="0.5" />
+    <e:Image id="closeBtn" source="InterfaceUI_json.dongtai_02_png" x="553" y="23.36" />
+    <e:Scroller width="888" height="698" y="173.36" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+        <e:Group anchorOffsetX="0" width="484" anchorOffsetY="0" height="698" y="1">
+            <e:List id="listAchievement" horizontalCenter="0">
+                <e:layout>
+                    <e:VerticalLayout verticalAlign="top" />
+                </e:layout>
+            </e:List>
+        </e:Group>
+    </e:Scroller>
+</e:Skin>

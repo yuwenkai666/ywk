@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Domination" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="back" width="640" height="1320" x="0" y="-200" fillAlpha="0.5"/>
+	
+	<e:Group id="bottomGroup" width="645" height="427" x="-3" y="581.33" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="bottom_back" width="640" height="376.03" source="InterfaceUI_json.fenxiang_09_png" horizontalCenter="0.5" y="40.97" anchorOffsetY="0"/>
+		<e:Image width="640" height="165" x="3" y="-85.09" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="hallUI.juanxian_01_png"/>
+		<e:Image id="image3" width="37" height="28" x="358" verticalCenter="11.5" source="hallUI.currency8_png"/>
+		<e:Image id="image0" width="37" height="28" x="533" source="hallUI.currency8_png" y="151"/>
+		<e:Label id="topDonationTxt" text="0" y="261.5" fontFamily="SimHei" bold="true" size="26" horizontalCenter="261" textAlign="left" width="93" x="78" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="30" textColor="0x7C2F00"/>
+		<e:Label id="text4" text="捐献金额" y="210.5" fontFamily="SimHei" bold="true" size="30" horizontalCenter="-107" textAlign="center" width="143" x="78" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="30" textColor="0x7C2F00"/>
+		<e:Label id="valueTxt" text="0" y="153" fontFamily="SimHei" bold="true" size="26" textAlign="left" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="26" textColor="0x4ae100" x="432"/>
+		<e:Label id="text5" text="1" y="261.5" fontFamily="SimHei" bold="true" size="26" horizontalCenter="-267" textAlign="center" width="33" x="68" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="30" textColor="0x7C2F00"/>
+		<e:Label id="rankTxt" text="20" y="154" fontFamily="SimHei" bold="true" size="26" horizontalCenter="-113.5" textAlign="center" width="40" x="78" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="30" textColor="0xff0000"/>
+		<e:Label id="text2" text="名" y="154" fontFamily="SimHei" bold="true" size="26" horizontalCenter="-64.5" textAlign="left" width="40" x="68" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="30" textColor="0x7C2F00"/>
+		<e:Label id="text3" y="154" fontFamily="SimHei" bold="true" size="26" horizontalCenter="65" textAlign="center" width="83" x="58" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="30" textColor="0x7c2f00" text="已捐赠"/>
+		<e:Image id="sureBtn" width="148" height="51" x="117.5" y="361.15" source="hallUI.juanxian_05_png"/>
+		<e:Image id="cancelBtn" width="148" height="51" x="347" y="359.15" source="hallUI.juanxian_06_png"/>
+		<e:Label id="currentDonationTxt" text="1" x="285" y="211" anchorOffsetX="0" textColor="0xee9700"/>
+		<e:Group id="processGroup" width="418" height="49" x="99" y="232" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image id="process_back" width="410" height="22" x="0" y="14" source="hallUI.juanxian_02_png" scaleX="1" scaleY="1"/>
+			<e:Image id="process_run" width="408" height="20" x="1" y="15" source="hallUI.juanxian_03_png" scaleX="1" scaleY="1"/>
+			<e:Image id="process_position" width="38" height="41" x="0" y="25" source="hallUI.juanxian_04_png" scaleX="1" scaleY="1" anchorOffsetY="20" anchorOffsetX="20"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

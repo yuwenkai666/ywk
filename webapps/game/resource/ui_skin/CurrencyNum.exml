@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="currencyNum" width="100" height="30" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="cImage" width="25" height="25" x="3" y="3"/>
+	<e:Label id="cText" text="10000" x="30" y="5" size="22" anchorOffsetX="0" width="66"/>
+</e:Skin>

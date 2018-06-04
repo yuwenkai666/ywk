@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FacilitySkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" />
+    <e:Image width="590" height="880" source="windowUI_json.Staff_bg_png" scale9Grid="69,117,29,31" horizontalCenter="0"
+             verticalCenter="-16" />
+    <e:Image id="closeBtn" width="162" height="63" y="844.21" source="windowUI_json.Menu_zy_13_png" horizontalCenter="0" />
+    <e:Image width="379" height="115" y="12" source="windowUI_json.Menu_title_png" horizontalCenter="0.5" />
+    <e:Image width="89" height="49" y="30" horizontalCenter="0.5" source="windowUI_json.Equip_title_png" />
+    <e:Scroller width="514" height="650" y="160" anchorOffsetY="0" horizontalCenter="0">
+        <e:Group width="514" height="650">
+            <e:List id="listFacility" width="514" x="0" y="0">
+                <e:layout>
+                    <e:VerticalLayout verticalAlign="top" />
+                </e:layout>
+            </e:List>
+        </e:Group>
+    </e:Scroller>
+</e:Skin>

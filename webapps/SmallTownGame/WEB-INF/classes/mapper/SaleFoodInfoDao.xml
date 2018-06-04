@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.SaleFoodInfoDao">
+
+	<!-- 根据uid，获取所有的用户记录 -->
+	<select id="getSaleFoodInfo" parameterType="java.lang.Integer"
+		resultType="com.muzhi.model.SaleFoodInfo">
+		select *
+		from salefoodinfo
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+
+	<!-- 根据uid，index获取单条的用户记录 -->
+	<select id="getOneSaleFoodInfo" parameterType="java.lang.Integer"
+		resultType="com.muzhi.model.SaleFoodInfo">
+		select *
+		from salefoodinfo
+		where id = #{id,jdbcType=INTEGER}
+		and `index`=#{index,jdbcType=INTEGER}
+	</select>
+
+	<!-- 更新一条用户记录 -->
+	<update id="updateSaleFoodInfo" parameterType="com.muzhi.model.SaleFoodInfo">
+		update salefoodinfo set
+		<include refid="saleFoodInfoValue"></include>
+		where id = #{id,jdbcType=INTEGER}
+		and `index`=#{index,jdbcType=INTEGER}
+	</update>
+
+	<!-- 删除一条用户记录 -->
+	<delete id="deleteSaleFoodInfo">
+		delete from salefoodinfo
+		where id =
+		#{id,jdbcType=INTEGER}
+		and `index`=#{index,jdbcType=INTEGER}
+	</delete>
+
+	<!--插入一条记录 -->
+	<insert id="insertSaleFoodInfo" parameterType="com.muzhi.model.SaleFoodInfo">
+		insert into salefoodinfo (
+		<include refid="saleFoodInfoParam"></include>
+		)
+		VALUES
+		(#{id},#{cookbookId},#{index},#{roleId},
+		#{cookbookLevel},#{isdiscount},#{isriseprice},
+		#{iscompliment},#{refusenumber},#{currentprice},
+		#{sellcount})
+		<!-- ON DUPLICATE KEY UPDATE -->
+	</insert>
+
+	<!-- 获取已有的记录数 -->
+	<select id="getCount" resultType="java.lang.Integer">
+		select count(*) from
+		salefoodinfo
+	</select>
+
+	<!-- 用户表所有参数 -->
+	<sql id="saleFoodInfoParam">
+		id,
+		cookbookId,
+		`index`,
+		roleId,
+		cookbookLevel,
+		isdiscount,
+		isriseprice,
+		iscompliment,
+		refusenumber,
+		currentprice,
+		sellcount
+	</sql>
+
+	<sql id="saleFoodInfoValue">
+		cookbookId= #{cookbookId},
+		`index`= #{index},
+		roleId= #{roleId},
+		cookbookLevel= #{cookbookLevel},
+		isdiscount= #{isdiscount},
+		isriseprice= #{isriseprice},
+		iscompliment= #{iscompliment},
+		refusenumber= #{refusenumber},
+		currentprice= #{currentprice},
+		sellcount= #{sellcount}
+	</sql>
+
+</mapper>

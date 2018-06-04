@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.SignboardDao">
+	<!-- <resultMap id="user" type="com.muzhi.model.User">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="gold" jdbcType="INTEGER" property="gold" />
+		<result column="love" jdbcType="INTEGER" property="love" />
+		<result column="exp" jdbcType="INTEGER" property="exp" />
+		<result column="level" jdbcType="INTEGER" property="level" />
+		<result column="intimacy" jdbcType="INTEGER" property="intimacy" />
+		<result column="diamond" jdbcType="INTEGER" property="diamond" />
+		<result column="strength" jdbcType="INTEGER" property="strength" />
+		<result column="isMaked" jdbcType="INTEGER" property="isMaked" />
+	</resultMap> -->
+
+	<!-- 根据uid，获取一条用户记录 -->
+	<select id="getSignboard" parameterType="java.lang.Integer"
+		resultType="com.muzhi.model.Signboard">
+		select *
+		from signboard
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<!-- 更新一条用户记录 -->
+	<update id="updateSignboard" parameterType="com.muzhi.model.Signboard">
+		update signboard set
+			<include refid="userValue"></include>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	
+	<!--插入记录  -->
+    <insert id="insertSignboard" parameterType="com.muzhi.model.Signboard">
+		insert into signboard(
+			<include refid="userParam"></include>
+		) values (
+			#{id}, #{level}, #{fame}
+		)
+	</insert>
+	<!-- 用户表所有参数 -->
+	<sql id="userParam">
+	    id,
+		level,
+		fame
+	</sql>
+	
+	<sql id="userValue">
+		level = #{level},
+		fame = #{fame}
+	</sql>
+
+</mapper>

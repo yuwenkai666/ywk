@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MenuSureSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="closeRect" width="640" height="1400" x="0" y="0" fillAlpha="0.5"/>
+	<e:Label id="closeTip" text="点击空白处关闭" y="922.86" size="26" fontFamily="SimHei" anchorOffsetX="0" anchorOffsetY="0" height="26" width="182" textColor="0xCBCBCB" touchEnabled="false" horizontalCenter="6"/>
+	<e:Image width="640" height="348" source="hallUI.mai_bg_png" y="246" x="0"/>
+	<e:Label id="foodName" text="意大利面" x="371" y="262.37" size="32" fontFamily="SimHei" textColor="0x743100" anchorOffsetX="0" width="216" anchorOffsetY="0" height="58" textAlign="center" verticalAlign="middle"/>
+	<e:Image id="foodNowImgBg" width="155" height="155" x="368" y="330"/>
+	<e:Image id="foodNowImg" width="155" height="155" x="368" y="330"/>
+	<e:Image id="customerImg" width="212" height="329" x="45" y="256" source=""/>
+	<e:Image id="talkBackImage" width="247" height="99" x="52" y="145.37" source="hallUI.mai_07_png" anchorOffsetX="0"/>
+	<e:Image id="commendBtn" width="94" height="128" x="533" y="343.37" source="hallUI.mai_01_png"/>
+	<e:Image id="foodCommendImgBg" width="63" height="63" touchEnabled="false" x="549" y="371"/>
+	<e:Image id="foodCommendImg" width="63" height="63" touchEnabled="false" anchorOffsetX="0" anchorOffsetY="0" x="549" y="371"/>
+	<e:Label id="foodCommendNum" text="-0" x="575" y="439" textColor="0x743100" size="22" anchorOffsetX="0" width="35" textAlign="center" bold="true"/>
+	<e:Image width="67" height="51" x="338" y="508.37" source="hallUI.currency8_png"/>
+	<e:Label id="payMoney" text="1234567" x="400" y="503.37" anchorOffsetX="0" width="193" anchorOffsetY="0" height="61" size="44" verticalAlign="middle" textAlign="center" textColor="0x8b3b00" bold="true"/>
+	<e:Image id="discountBtn" width="146" height="93" x="70" y="626.37" source="hallUI.mai_02_png"/>
+	<e:Image id="advanceBtn" width="146" height="93" x="259" y="626.37" source="hallUI.mai_03_png"/>
+	<e:Image id="flatterBtn" width="146" height="93" x="447" y="624.37" source="hallUI.mai_04_png"/>
+	<e:Image id="refuseBtn" width="186" height="106" x="133" y="748" source="hallUI.mai_05_png"/>
+	<e:Image id="sellBtn" width="186" height="106" x="371" y="748" source="hallUI.mai_06_png"/>
+	<e:Label id="discountNum" text="+10" x="123" y="678.37" size="28" anchorOffsetX="0" width="78" textAlign="center" bold="true" textColor="0x000000"/>
+	<e:Label id="advanceNum" text="+10" x="306" y="678.37" size="28" anchorOffsetX="0" width="78" textAlign="center" bold="true" textColor="0x000000"/>
+	<e:Label id="flatterAddNum" text="10" x="487" y="676.37" size="28" anchorOffsetX="0" width="38" textAlign="right" height="28" bold="true" textColor="0x000000"/>
+	<e:Label id="flatterCutNum" text="/-10" x="527" y="676.37" size="28" anchorOffsetX="0" width="59" textAlign="left" height="28" bold="true" textColor="0x000000"/>
+	<e:Label id="refuseNum" text="+10" x="203" y="812" size="28" textColor="0x900000" anchorOffsetX="0" width="56" textAlign="center" height="28" bold="true"/>
+	<e:Label id="sellNum" text="+10" x="440" y="812" size="28" anchorOffsetX="0" width="59" textAlign="center" height="28" textColor="0x006b2c" bold="true"/>
+	<e:Label id="talkTxt" text="Label" x="57" y="168" anchorOffsetX="0" width="234" textAlign="center" size="26" fontFamily="SimHei" textColor="0x070707"/>
+	<e:Image id="makeBtn" width="186" height="106" x="371" y="748" anchorOffsetX="0" anchorOffsetY="0" source="hallUI.mai_08_png"/>
+</e:Skin>

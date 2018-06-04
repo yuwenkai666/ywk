@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="blingbling" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="BG" width="640" height="1008" verticalCenter="0" horizontalCenter="0" scaleY="0"/>
+	<e:Rect id="eyeKuang" width="300" height="200" fillColor="0xff0000" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image id="eyeMask" width="280" height="124" horizontalCenter="0" verticalCenter="0" scaleY="0" source="InterfaceUI_json.tuoyuan_png"/>
+	<e:Image id="eyeMask0" width="280" height="124" horizontalCenter="0" verticalCenter="0" scaleY="0" source="InterfaceUI_json.tuoyuan_png"/>
+	<e:Image id="eyeMask1" width="280" height="124" horizontalCenter="0" verticalCenter="0" scaleY="0" source="InterfaceUI_json.tuoyuan_png"/>
+	<e:Rect id="eyeBai" width="120" height="120" fillColor="0xffffff" ellipseWidth="200" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0"/>
+	<e:Rect id="eyeBall" width="35" height="35" x="283" ellipseWidth="40" verticalCenter="0"/>
+</e:Skin>

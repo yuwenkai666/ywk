@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HireSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" />
+    <e:Image width="590" height="812" source="windowUI_json.Deta_bg_png" scale9Grid="73,265,444,19" horizontalCenter="0"
+             verticalCenter="43" />
+    <e:Image id="hireSelect1" width="110" height="47" y="336.64" source="windowUI_json.Hire_tab2_01_png" x="140" />
+    <e:Image id="hireSelect2" width="110" height="47" y="336.64" source="windowUI_json.Hire_tab1_01_png" x="265" />
+    <e:Image id="hireSelect3" width="110" height="47" y="336.64" source="windowUI_json.Hire_tab3_01_png" x="390" />
+    <e:Image id="closeBtn" width="162" height="63" y="871.97" horizontalCenter="0" source="windowUI_json.Deta_back_png" />
+    <e:Image width="461" height="287" y="46.97" horizontalCenter="0.5" source="windowUI_json.Hire_title_png" />
+    <e:Scroller width="508" height="440" y="402.34" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+        <e:Group width="508" height="440">
+            <e:List id="listHire" width="508" x="0" y="0">
+                <e:layout>
+                    <e:VerticalLayout verticalAlign="top" />
+                </e:layout>
+            </e:List>
+        </e:Group>
+    </e:Scroller>
+</e:Skin>

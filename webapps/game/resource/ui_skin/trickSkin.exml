@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="trickSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5" />
+	<e:Image width="594" height="536" source="InterfaceUI_json.daoluan_01_png" y="198.64"  horizontalCenter="0"/>
+	<e:Label text="※选中推荐玩家，点击屏幕进行捣乱操作" y="688.64" fontFamily="SimHei" size="26" textColor="0xb05b00" horizontalCenter="-0.5"  anchorOffsetX="0" width="483" textAlign="center"/>
+	<e:Group width="498" height="318" y="355" x="71">
+		<e:List id="listTrick1" y="0" width="498" height="143" x="0" >
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="left" verticalAlign=""/>
+			</e:layout>
+		</e:List>
+		<e:List id="listTrick2" y="159" width="498" height="159" x="0" scaleX="1" scaleY="1">
+			<e:layout>
+			<e:HorizontalLayout horizontalAlign="left" verticalAlign=""/>
+			</e:layout>
+		</e:List>
+	</e:Group>
+	<e:Image id="closeBtn" source="InterfaceUI_json.dongtai_02_png" x="553" y="265.64" />
+</e:Skin>

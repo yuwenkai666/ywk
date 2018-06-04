@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.RoleDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.Role">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="seat_index" jdbcType="INTEGER" property="seatIndex" />
+    <result column="role_type" jdbcType="INTEGER" property="roleType" />
+    <result column="cookbook_id" jdbcType="INTEGER" property="cookbookId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="shop_type" jdbcType="INTEGER" property="shopType" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from role
+    where id = #{id,jdbcType=INTEGER}
+      and user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.Role">
+    insert into role (id, user_id, name, 
+      seat_index, role_type, cookbook_id, 
+      create_time, state, shop_type
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{seatIndex,jdbcType=INTEGER}, #{roleType,jdbcType=INTEGER}, #{cookbookId,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{state,jdbcType=INTEGER},#{shopType,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.Role">
+    update role
+    set 
+      id = #{id,jdbcType=INTEGER},
+   	  name = #{name,jdbcType=VARCHAR},
+      role_type = #{roleType,jdbcType=INTEGER},
+      cookbook_id = #{cookbookId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=INTEGER},
+      shop_type = #{shopType,jdbcType=INTEGER}
+    where seat_index = #{seatIndex,jdbcType=INTEGER}
+      and user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select id, user_id, name, seat_index, role_type, cookbook_id, create_time, state, 
+    random_type,shop_type
+    from role
+    where id = #{id,jdbcType=INTEGER}
+      and user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_id, name, seat_index, role_type, cookbook_id, create_time, state, 
+    shop_type
+    from role
+  </select>
+  <select id="selectByUserid"  resultMap="BaseResultMap">
+    select id, user_id, name, seat_index, role_type, cookbook_id, create_time, state, 
+    shop_type
+    from role
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+</mapper>

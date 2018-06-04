@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="StaffListSkin" width="120" height="155" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="IconBtn" width="120" height="155" x="0" y="0">
+		<e:Image width="118" height="118" y="2" source="windowUI_json.Staff_head_png" scaleX="1" scaleY="1" x="1"/>
+		<e:Image id="Icon" width="118" height="118" source="{data.staffIcon}" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="1" y="2"/>
+		<e:Label id="staffTxt" text="{data.staffTxt}" anchorOffsetX="0" width="126" textAlign="center" horizontalCenter="0" bottom="0" size="18" fontFamily="SimHei" bold="true" stroke="2" strokeColor="0x005684" height="18" x="-3" y="137" scaleX="1" scaleY="1"/>
+		<e:Rect id="IconMask" width="104" height="104" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" ellipseWidth="37" ellipseHeight="31" x="8" y="9"/>
+		<e:Group id="levelGroup" width="66" height="54" x="4" y="65.6" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image width="47" height="47" y="0.8700000000000045" source="windowUI_json.Staff_head_01_png" x="3.96" scaleX="1" scaleY="1"/>
+			<e:Label x="-20.04" y="24.870000000000005" size="16" width="80" height="16" text="{data.level}" textAlign="center" bold="true" textColor="0x934900" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

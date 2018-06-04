@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DynamicListSkin" width="454" height="75" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label text="{data.dynamicText}" x="0" y="0" height="60" anchorOffsetX="0" width="332" size="26" textColor="0x7c2f00" fontFamily="SimHei" verticalAlign="middle" textAlign="left"/>
+	<e:Image id="operateBtn" width="94" height="32" x="345" y="14" source="{data.buttonImg}"/>
+</e:Skin>

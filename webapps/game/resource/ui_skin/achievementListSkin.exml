@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="achievementListSkin" width="486" height="140" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="line" source="InterfaceUI_json.renwu_03_png" x="0" y="0"/>
+	<e:Image width="102" height="102" x="23" y="12" source="{data.beijing}"/>
+	<e:Label x="141" y="16" anchorOffsetX="0" width="200" anchorOffsetY="0" height="92" size="26" textColor="0x7D2F00" fontFamily="SimHei" text="{data.achievementText}" textAlign="center" verticalAlign="middle"/>
+	<e:Image source="InterfaceUI_json.dongtai_02_png" x="37" y="26"/>
+	<e:Image id="getBtn" source="InterfaceUI_json.renwu_04_png" x="347" verticalCenter="-14"/>
+	<e:Image id="uncomplete" x="347" verticalCenter="-14" source="InterfaceUI_json.renwu_08_png"/>
+	<e:Image id="complete" width="94" height="88" x="365" verticalCenter="-17" source="InterfaceUI_json.renwu_07_png"/>
+</e:Skin>

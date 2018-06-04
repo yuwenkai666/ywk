@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="farm" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="topGroup" width="583" height="120" x="51" y="359" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="image1" width="40" height="40" x="129" y="8" scaleX="1" scaleY="1"/>
+		<e:Image id="image2" width="40" height="40" x="370" y="8" scaleX="1" scaleY="1"/>
+		<e:Label id="text1" text="Label" x="71" y="66" anchorOffsetX="0" width="159" textAlign="center" textColor="0x9000e3" size="27" scaleX="1" scaleY="1"/>
+		<e:Label id="text2" text="Label" x="310.5" y="66" width="159" textAlign="center" textColor="0x9000e3" size="27" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group id="bottomGroup" width="574" height="102" x="99" y="764" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="cimage1" width="40" height="40" x="30" y="14" scaleX="1" scaleY="1"/>
+		<e:Image id="cimage2" width="40" height="40" x="287" y="14" scaleX="1" scaleY="1"/>
+		<e:Label id="ctext1" text="Label" x="75" y="24" textColor="0xab5000" anchorOffsetX="0" width="204" size="27" scaleX="1" scaleY="1"/>
+		<e:Label id="ctext2" text="Label" x="337" y="24" textColor="0xab5000" anchorOffsetX="0" width="230" size="27" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

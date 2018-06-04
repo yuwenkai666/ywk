@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="shareSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Rect width="640" height="1320" x="0" y="0" fillAlpha="0.5" />
+    <e:Image width="586" height="464" y="83.37" horizontalCenter="0" source="InterfaceUI_json.fenxiang_09_png" />
+    <e:Image width="589" height="309" y="610.37" horizontalCenter="0.5" source="InterfaceUI_json.fenxiang_01_png" />
+    <e:Image id="closeBtn" source="InterfaceUI_json.dongtai_02_png" x="553" y="58.37" />
+    <e:Label text="选择分享方式" y="625.37" horizontalCenter="0" textColor="0x7c2f00" textAlign="center" fontFamily="SimHei" />
+    <e:Label text="Label" x="204" y="345.37" />
+    <e:Image width="95" height="79" y="187.37" horizontalCenter="0.5"  source="InterfaceUI_json.fenxiang_01_png"/>
+    <e:Label id="shareText" text="" y="301.37" anchorOffsetX="0" width="452" anchorOffsetY="0" height="144"
+             horizontalCenter="0" textColor="0x7c2f00" size="44" fontFamily="SimHei" textAlign="center" />
+    <e:Image id="shareBtn" width="148" height="51" y="483.37" source="InterfaceUI_json.fenxiang_02_png" horizontalCenter="0" />
+    <e:Group width="510" height="182" x="64" y="679.37" anchorOffsetX="0" anchorOffsetY="0">
+        <e:Image width="82" height="84" scaleX="1" scaleY="1" top="0" left="0" source="InterfaceUI_json.fenxiang_03_png" />
+        <e:Image width="82" height="84" scaleX="1" scaleY="1" x="106" top="0" source="InterfaceUI_json.fenxiang_04_png" />
+        <e:Image width="82" height="84" scaleX="1" scaleY="1" x="214" top="0" source="InterfaceUI_json.fenxiang_05_png" />
+        <e:Image width="82" height="84" scaleX="1" scaleY="1" x="320" top="0" source="InterfaceUI_json.fenxiang_06_png" />
+        <e:Image width="82" height="84" scaleX="1" scaleY="1" top="0" right="0" source="InterfaceUI_json.fenxiang_07_png" />
+        <e:Image width="82" height="84" scaleX="1" scaleY="1" bottom="0" left="0" source="InterfaceUI_json.fenxiang_08_png" />
+    </e:Group>
+</e:Skin>

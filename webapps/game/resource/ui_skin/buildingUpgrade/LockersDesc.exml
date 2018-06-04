@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LockersDesc" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="topGroup" width="443" height="135" x="93" y="356.12" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="image1" width="50" height="40" x="38" verticalCenter="-37.5" source="hallUI.currency4_png"/>
+		<e:Image id="image2" width="50" height="40" x="122.5" verticalCenter="-39.5" source="hallUI.currency5_png"/>
+		<e:Image id="image3" width="50" height="40" x="207" verticalCenter="-39.5" source="hallUI.currency8_png"/>
+		<e:Image id="image4" width="50" height="40" x="291.5" verticalCenter="-39.5" source="hallUI.currency6_png"/>
+		<e:Image id="image5" width="50" height="40" x="376" verticalCenter="-39.5" source="hallUI.currency3_png"/>
+		<e:Label id="text1" text="Label" y="81" width="269" textAlign="center" anchorOffsetX="0" textColor="0x9000E3" size="27" scaleX="1" scaleY="1" horizontalCenter="0"/>
+	</e:Group>
+	<e:Group id="bottomGroup" width="443" height="152" x="103" y="742.12" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image id="cimage1" width="50" height="40" x="39" verticalCenter="-20" source="hallUI.currency4_png"/>
+		<e:Image id="cimage2" width="50" height="40" x="123.5" verticalCenter="-20" source="hallUI.currency5_png"/>
+		<e:Image id="cimage3" width="50" height="40" x="208" verticalCenter="-20" source="hallUI.currency8_png"/>
+		<e:Image id="cimage4" width="50" height="40" x="292.5" verticalCenter="-20" source="hallUI.currency6_png"/>
+		<e:Image id="cimage5" width="50" height="40" x="377" verticalCenter="-20" source="hallUI.currency3_png"/>
+		<e:Label id="ctext1" text="Label" y="96" anchorOffsetX="0" width="263" textColor="0xAB5000" size="27" textAlign="center" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

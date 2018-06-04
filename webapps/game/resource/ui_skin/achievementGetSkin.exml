@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="achievementGetSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" strokeAlpha="0.5" fillAlpha="0.8"/>
+	<e:Image width="174" height="49" y="132" source="InterfaceUI_json.chengjiu_02_png" horizontalCenter="0"/>
+	<e:Image id="sureBtn" width="148" height="51" y="706" horizontalCenter="0" source="InterfaceUI_json.chengjiu_03_png"/>
+	<e:Group id="RewardOne" width="180" height="180" x="18.55" y="237">
+		<e:Group id="RewardOneShow" width="180" height="180" x="0" y="0" anchorOffsetX="-10" anchorOffsetY="-10">
+		</e:Group>
+		<e:Image id="RewardOneIcon" width="76" height="57" source="hallUI.currency4_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="RewardOneStar1" width="13" height="14.44" x="116.5" y="70" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="6.5" anchorOffsetY="7.22"/>
+		<e:Image id="RewardOneStar2" width="27" height="30" x="52" y="77.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="13.5" anchorOffsetY="15"/>
+		<e:Image id="RewardOneStar3" width="7" height="7.78" x="116" y="108.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="3.5" anchorOffsetY="3.89"/>
+		<e:Label id="RewardOneText" text="X1000" y="142.5" scaleX="1" scaleY="1" horizontalCenter="0" width="180" bold="true" size="32" fontFamily="Arial" textAlign="center"/>
+	</e:Group>
+	<e:Group id="RewardTwo" width="180" height="180" x="227.79" y="237">
+		<e:Group id="RewardTwoShow" width="180" height="180" x="0" y="0" anchorOffsetX="-10" anchorOffsetY="-10"/>
+		<e:Image id="RewardTwoIcon" width="76" height="57" source="hallUI.currency4_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="RewardTwoStar1" width="13" height="14.44" x="116.5" y="70" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="6.5" anchorOffsetY="7.22"/>
+		<e:Image id="RewardTwoStar2" width="27" height="30" x="52" y="77.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="13.5" anchorOffsetY="15"/>
+		<e:Image id="RewardTwoStar3" width="7" height="7.78" x="116" y="108.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="3.5" anchorOffsetY="3.89"/>
+		<e:Label id="RewardTwoText" text="X1000" y="142.5" scaleX="1" scaleY="1" horizontalCenter="0" width="180" bold="true" size="32" fontFamily="Arial" textAlign="center"/>
+	</e:Group>
+	<e:Group id="RewardThree" width="180" height="180" x="435.51" y="237">
+		<e:Group id="RewardThreeShow" width="180" height="180" x="0" y="0" anchorOffsetX="-10" anchorOffsetY="-10"/>
+		<e:Image id="RewardThreeIcon" width="76" height="57" source="hallUI.currency4_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="RewardThreeStar1" width="13" height="14.44" x="116.5" y="70" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="6.5" anchorOffsetY="7.22"/>
+		<e:Image id="RewardThreeStar2" width="27" height="30" x="52" y="77.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="13.5" anchorOffsetY="15"/>
+		<e:Image id="RewardThreeStar3" width="7" height="7.78" x="116" y="108.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="3.5" anchorOffsetY="3.89"/>
+		<e:Label id="RewardThreeText" text="X1000" y="142.5" scaleX="1" scaleY="1" horizontalCenter="0" width="180" bold="true" size="32" fontFamily="Arial" textAlign="center"/>
+	</e:Group>
+	<e:Group id="RewardFour" width="180" height="180" y="456" x="123.97">
+		<e:Group id="RewardFourShow" width="180" height="180" x="0" y="0" anchorOffsetX="-10" anchorOffsetY="-10"/>
+		<e:Image id="RewardFourIcon" width="76" height="57" source="hallUI.currency4_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="RewardFourStar1" width="13" height="14.44" x="116.5" y="70" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="6.5" anchorOffsetY="7.22"/>
+		<e:Image id="RewardFourStar2" width="27" height="30" x="52" y="77.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="13.5" anchorOffsetY="15"/>
+		<e:Image id="RewardFourStar3" width="7" height="7.78" x="116" y="108.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="3.5" anchorOffsetY="3.89"/>
+		<e:Label id="RewardFourText" text="X1000" y="142.5" scaleX="1" scaleY="1" horizontalCenter="0" width="180" bold="true" size="32" fontFamily="Arial" textAlign="center"/>
+	</e:Group>
+	<e:Group id="RewardFive" width="180" height="180" y="456" x="344.15">
+		<e:Group id="RewardFiveShow" width="180" height="180" x="0" y="0" anchorOffsetX="-10" anchorOffsetY="-10"/>
+		<e:Image id="RewardFiveIcon" width="76" height="57" source="hallUI.currency4_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="RewardFiveStar1" width="13" height="14.44" x="116.5" y="70" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="6.5" anchorOffsetY="7.22"/>
+		<e:Image id="RewardFiveStar2" width="27" height="30" x="52" y="77.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="13.5" anchorOffsetY="15"/>
+		<e:Image id="RewardFiveStar3" width="7" height="7.78" x="116" y="108.5" source="InterfaceUI_json.chengjiu_04_png" anchorOffsetX="3.5" anchorOffsetY="3.89"/>
+		<e:Label id="RewardFiveText" text="X1000" y="142.5" scaleX="1" scaleY="1" horizontalCenter="0" width="180" bold="true" size="32" fontFamily="Arial" textAlign="center"/>
+	</e:Group>
+</e:Skin>

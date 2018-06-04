@@ -1,0 +1,8 @@
+{
+    "version": 1.06,
+    "baseUrl1": "http://119.29.117.51/SmallTownGameNew/baseUrl/",
+    "baseUrl3": "http://119.29.117.51:8088/SmallTownGame/baseUrl/",
+    "baseUrl4": "http://192.168.100.65:8081/loadbalance/connectServer/",
+    "baseUrl": "http://localhost:8888/SmallTownGame/baseUrl/",
+    "baseUrl2": "http://192.168.100.65:80/SmallTownGameNew/baseUrl/"
+}

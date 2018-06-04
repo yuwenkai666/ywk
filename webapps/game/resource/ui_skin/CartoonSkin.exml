@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CartoonSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillColor="0xffffff"/>
+	<e:Image id="cartoon1" width="212" height="158" x="60" y="24" source="base.mh1_png"/>
+	<e:Image id="cartoon2" width="534" height="296" y="168.32" horizontalCenter="-3" source="base.mh2_png"/>
+	<e:Image id="cartoon3" width="288" height="286" x="304" y="22.67" source="base.mh3_png"/>
+	<e:Image id="cartoon4" width="560" height="269" y="465.71" source="base.mh4_png" horizontalCenter="0"/>
+	<e:Image id="cartoon5" width="262" height="275" x="-262" y="457" source="base.mh5_png"/>
+	<e:Image id="cartoon6" width="268" height="290" x="640" y="464.33" source="base.mh6_png"/>
+	<e:Image id="cartoon7" width="550" height="299" y="453.69" source="base.mh7_png" horizontalCenter="0"/>
+	<e:Image id="cartoon8" width="559" height="215" y="760.36" source="base.mh8_png" x="41"/>
+	<e:Image id="cartoon9" width="472" height="221" y="757.36" source="base.mh9_png" x="84"/>
+	<e:Image id="skipBtn" width="141" height="44" x="473" y="949" source="base.mh10_png"/>
+</e:Skin>

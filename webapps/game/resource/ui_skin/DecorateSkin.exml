@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewFile" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5"/>
+	<e:Image width="600" height="927.27" source="windowUI_json.order_bg_png" scale9Grid="65,64,18,21" horizontalCenter="0" verticalCenter="13.5" anchorOffsetY="0"/>
+	<e:Image width="48" height="36" x="219.33" y="123.41" source="windowUI_json.Decorate_zy_03_png"/>
+	<e:Label id="currentStrength" text="豪华度 1999" x="267.33" y="128.41" size="26" fontFamily="SimHei" bold="true" textColor="0xff6639"/>
+	<e:Image id="menuSelect1" width="62" height="68" y="182.93" x="62" source="windowUI_json.Decorate_tab1_02_png"/>
+	<e:Image id="menuSelect2" width="62" height="68" y="268" x="62" source="windowUI_json.Decorate_tab2_01_png"/>
+	<e:Image id="menuSelect3" width="62" height="68" y="353" x="62" source="windowUI_json.Decorate_tab3_01_png"/>
+	<e:Image id="menuSelect4" width="62" height="68" y="438" x="62" source="windowUI_json.Decorate_tab4_01_png"/>
+	<e:Image id="menuSelect5" width="62" height="68" y="524" x="62" source="windowUI_json.Decorate_tab5_01_png"/>
+	<e:Image id="menuSelect6" width="62" height="68" y="609" x="62" source="windowUI_json.Decorate_tab6_01_png"/>
+	<e:Image id="menuSelect7" width="62" height="68" y="694" x="62" source="windowUI_json.Decorate_tab7_01_png"/>
+	<e:Image id="menuSelect8" width="62" height="68" y="779.25" x="62" source="windowUI_json.Decorate_tab8_01_png"/>
+	<e:Image id="menuSelect9" width="62" height="68" y="793.45" x="61.91" source="windowUI_json.Decorate_tab9_01_png" visible="false"/>
+	<e:Rect width="455.33" height="713.64" y="166.42" anchorOffsetY="0" anchorOffsetX="0" ellipseWidth="44" fillColor="0x82bbda" x="122"/>
+	<e:Image id="closeRect" width="162" height="63" y="900.05" source="windowUI_json.Menu_zy_13_png" horizontalCenter="0"/>
+	<e:Image width="379" height="115" y="13.54" source="windowUI_json.Menu_title_png" horizontalCenter="0.5"/>
+	<e:Image width="89" height="50" y="28.51" horizontalCenter="0.5" source="windowUI_json.Decorate_title_png"/>
+	<e:Scroller id="decorateScroll" height="700" width="450" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" x="125" y="176">
+		<e:Group id="decorateGroup" height="700" x="60" y="0" touchThrough="true" width="450" anchorOffsetX="0">
+		<e:List id="listDecorate" width="438" y="0" x="6">
+			<e:layout>
+				<e:VerticalLayout verticalAlign="top"/>
+			</e:layout>
+		</e:List>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.OrderFoodDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.OrderFood">
+    <id column="order_id" jdbcType="INTEGER" property="orderId" />
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="tid" jdbcType="INTEGER" property="tid" />
+    <result column="foodId" jdbcType="INTEGER" property="foodid" />
+    <result column="foodName" jdbcType="VARCHAR" property="foodname" />
+    <result column="foodLogo" jdbcType="VARCHAR" property="foodlogo" />
+    <result column="foodLevel" jdbcType="INTEGER" property="foodlevel" />
+    <result column="foodType" jdbcType="INTEGER" property="foodtype" />
+    <result column="foodQualify" jdbcType="INTEGER" property="foodqualify" />
+    <result column="makeTime" jdbcType="INTEGER" property="maketime" />
+    <result column="metarial" jdbcType="VARCHAR" property="metarial" />
+    <result column="strength" jdbcType="INTEGER" property="strength" />
+    <result column="price" jdbcType="INTEGER" property="price" />
+    <result column="uuid" jdbcType="VARCHAR" property="uuid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    order_id, id, tid, foodId, foodName, foodLogo, foodLevel, foodType, foodQualify, 
+    makeTime, metarial, strength, price, uuid
+  </sql>
+  <select id="selectByObject" parameterType="java.util.List" resultMap="BaseResultMap">
+  	select 
+    <include refid="Base_Column_List" />
+    from order_food
+    where uuid in (
+    <foreach collection="uuidList" item="item" separator="," index="index">
+    	#{item}
+    </foreach>
+    )
+    <!-- <where>
+    	<if test="tid != null">
+        tid = #{tid,jdbcType=INTEGER}
+      </if>
+      <if test="foodid != null">
+        foodId = #{foodid,jdbcType=INTEGER}
+      </if>
+      <if test="foodname != null">
+        foodName = #{foodname,jdbcType=VARCHAR}
+      </if>
+      <if test="foodlogo != null">
+        foodLogo = #{foodlogo,jdbcType=VARCHAR}
+      </if>
+      <if test="foodlevel != null">
+        foodLevel = #{foodlevel,jdbcType=INTEGER}
+      </if>
+      <if test="foodtype != null">
+        foodType = #{foodtype,jdbcType=INTEGER}
+      </if>
+      <if test="foodqualify != null">
+        foodQualify = #{foodqualify,jdbcType=INTEGER}
+      </if>
+      <if test="maketime != null">
+        makeTime = #{maketime,jdbcType=INTEGER}
+      </if>
+      <if test="metarial != null">
+        metarial = #{metarial,jdbcType=VARCHAR}
+      </if>
+      <if test="strength != null">
+        strength = #{strength,jdbcType=INTEGER}
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=INTEGER}
+      </if>
+      <if test="uuid != null">
+        uuid = #{uuid,jdbcType=VARCHAR}
+      </if>
+    </where> -->
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.muzhi.model.OrderFoodKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from order_food
+    where order_id = #{orderId,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.muzhi.model.OrderFoodKey">
+    delete from order_food
+    where order_id = #{orderId,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertList" parameterType="java.util.List">
+  	insert into order_food (order_id, id, tid, 
+      foodId, foodName, foodLogo, 
+      foodLevel, foodType, foodQualify, 
+      makeTime, metarial, strength, 
+      price, uuid)
+    values
+    <foreach collection="recordList" item="item" separator=",">
+    (#{item.orderId,jdbcType=INTEGER}, #{item.id,jdbcType=INTEGER}, #{item.tid,jdbcType=INTEGER}, 
+      #{item.foodid,jdbcType=INTEGER}, #{item.foodname,jdbcType=VARCHAR}, #{item.foodlogo,jdbcType=VARCHAR}, 
+      #{item.foodlevel,jdbcType=INTEGER}, #{item.foodtype,jdbcType=INTEGER}, #{item.foodqualify,jdbcType=INTEGER}, 
+      #{item.maketime,jdbcType=INTEGER}, #{item.metarial,jdbcType=VARCHAR}, #{item.strength,jdbcType=INTEGER}, 
+      #{item.price,jdbcType=INTEGER}, #{item.uuid,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+  <insert id="insert" parameterType="com.muzhi.model.OrderFood">
+    insert into order_food (order_id, id, tid, 
+      foodId, foodName, foodLogo, 
+      foodLevel, foodType, foodQualify, 
+      makeTime, metarial, strength, 
+      price, uuid)
+    values (#{orderId,jdbcType=INTEGER}, #{id,jdbcType=INTEGER}, #{tid,jdbcType=INTEGER}, 
+      #{foodid,jdbcType=INTEGER}, #{foodname,jdbcType=VARCHAR}, #{foodlogo,jdbcType=VARCHAR}, 
+      #{foodlevel,jdbcType=INTEGER}, #{foodtype,jdbcType=INTEGER}, #{foodqualify,jdbcType=INTEGER}, 
+      #{maketime,jdbcType=INTEGER}, #{metarial,jdbcType=VARCHAR}, #{strength,jdbcType=INTEGER}, 
+      #{price,jdbcType=INTEGER}, #{uuid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.OrderFood">
+    insert into order_food
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tid != null">
+        tid,
+      </if>
+      <if test="foodid != null">
+        foodId,
+      </if>
+      <if test="foodname != null">
+        foodName,
+      </if>
+      <if test="foodlogo != null">
+        foodLogo,
+      </if>
+      <if test="foodlevel != null">
+        foodLevel,
+      </if>
+      <if test="foodtype != null">
+        foodType,
+      </if>
+      <if test="foodqualify != null">
+        foodQualify,
+      </if>
+      <if test="maketime != null">
+        makeTime,
+      </if>
+      <if test="metarial != null">
+        metarial,
+      </if>
+      <if test="strength != null">
+        strength,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="uuid != null">
+        uuid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null">
+        #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="foodid != null">
+        #{foodid,jdbcType=INTEGER},
+      </if>
+      <if test="foodname != null">
+        #{foodname,jdbcType=VARCHAR},
+      </if>
+      <if test="foodlogo != null">
+        #{foodlogo,jdbcType=VARCHAR},
+      </if>
+      <if test="foodlevel != null">
+        #{foodlevel,jdbcType=INTEGER},
+      </if>
+      <if test="foodtype != null">
+        #{foodtype,jdbcType=INTEGER},
+      </if>
+      <if test="foodqualify != null">
+        #{foodqualify,jdbcType=INTEGER},
+      </if>
+      <if test="maketime != null">
+        #{maketime,jdbcType=INTEGER},
+      </if>
+      <if test="metarial != null">
+        #{metarial,jdbcType=VARCHAR},
+      </if>
+      <if test="strength != null">
+        #{strength,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null">
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.OrderFood">
+    update order_food
+    <set>
+      <if test="tid != null">
+        tid = #{tid,jdbcType=INTEGER},
+      </if>
+      <if test="foodid != null">
+        foodId = #{foodid,jdbcType=INTEGER},
+      </if>
+      <if test="foodname != null">
+        foodName = #{foodname,jdbcType=VARCHAR},
+      </if>
+      <if test="foodlogo != null">
+        foodLogo = #{foodlogo,jdbcType=VARCHAR},
+      </if>
+      <if test="foodlevel != null">
+        foodLevel = #{foodlevel,jdbcType=INTEGER},
+      </if>
+      <if test="foodtype != null">
+        foodType = #{foodtype,jdbcType=INTEGER},
+      </if>
+      <if test="foodqualify != null">
+        foodQualify = #{foodqualify,jdbcType=INTEGER},
+      </if>
+      <if test="maketime != null">
+        makeTime = #{maketime,jdbcType=INTEGER},
+      </if>
+      <if test="metarial != null">
+        metarial = #{metarial,jdbcType=VARCHAR},
+      </if>
+      <if test="strength != null">
+        strength = #{strength,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null">
+        uuid = #{uuid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where order_id = #{orderId,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.OrderFood">
+    update order_food
+    set tid = #{tid,jdbcType=INTEGER},
+      foodId = #{foodid,jdbcType=INTEGER},
+      foodName = #{foodname,jdbcType=VARCHAR},
+      foodLogo = #{foodlogo,jdbcType=VARCHAR},
+      foodLevel = #{foodlevel,jdbcType=INTEGER},
+      foodType = #{foodtype,jdbcType=INTEGER},
+      foodQualify = #{foodqualify,jdbcType=INTEGER},
+      makeTime = #{maketime,jdbcType=INTEGER},
+      metarial = #{metarial,jdbcType=VARCHAR},
+      strength = #{strength,jdbcType=INTEGER},
+      price = #{price,jdbcType=INTEGER},
+      uuid = #{uuid,jdbcType=VARCHAR}
+    where order_id = #{orderId,jdbcType=INTEGER}
+      and id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

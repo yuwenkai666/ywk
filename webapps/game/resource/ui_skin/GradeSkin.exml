@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GradeSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="1631e82cd80"/>
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5"/>
+	<e:Image width="600" height="890" source="windowUI_json.order_bg_png" scale9Grid="65,64,18,21" horizontalCenter="0" verticalCenter="23" anchorOffsetY="0"/>
+	<e:Image width="379" height="115" y="46.87" source="windowUI_json.Menu_title_png" horizontalCenter="0.5"/>
+	<e:Image id="levelIcon" width="240" height="240" y="183.56" anchorOffsetX="0" anchorOffsetY="0" source="windowUI_json.rate_lv_6_png" horizontalCenter="0"/>
+	<e:Image id="closeBtn" width="162" height="63" y="893.99" source="windowUI_json.Menu_zy_13_png" horizontalCenter="0"/>
+	<e:Image id="star1" width="71" height="75" y="251.21" x="89" source="windowUI_json.rate_zy_02_png"/>
+	<e:Image id="star2" width="71" height="75" y="178.21" x="176" source="windowUI_json.rate_zy_02_png"/>
+	<e:Image id="star3" width="71" height="75" y="137.21" source="windowUI_json.rate_zy_02_png" x="285"/>
+	<e:Image id="star4" width="71" height="75" y="178.21" x="395" source="windowUI_json.rate_zy_02_png"/>
+	<e:Image id="star5" width="71" height="75" y="248.18" x="479" source="windowUI_json.rate_zy_02_png"/>
+	<e:Rect width="486.55" height="393.7" y="482.6" anchorOffsetY="0" anchorOffsetX="0" ellipseWidth="44" fillColor="0x74adcd" horizontalCenter="0"/>
+	<e:Label id="MaxLevelTip" text="经过你不懈的努力，原来破败的小店终于得到全球食客的认可，成为世界顶级餐厅。" textAlign="center" width="467" horizontalCenter="0.5" verticalCenter="132" textColor="0x000000" strokeColor="0x020202" visible="false"/>
+	<e:Scroller width="463.49" height="364.7" y="493.96" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Group>
+			<e:List id="listGrade" width="463" y="0" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:layout>
+				<e:VerticalLayout verticalAlign="top"/>
+				</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+	<e:Group id="isComplete" width="276" height="70" x="185.03" y="405.58">
+		<e:Image id="updataBtn" width="276" height="70" y="0" source="windowUI_json.rate_zy_03_png" x="0" scaleX="1" scaleY="1"/>
+		<e:Image id="updataIcon" width="53" height="40" x="94" y="15" source="hallUI.currency8_png" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="false" scaleX="1" scaleY="1"/>
+		<e:Label id="updataNum" text="100" x="138" y="20" bold="true" textColor="0xc15200" stroke="2" strokeColor="0xffffff" anchorOffsetX="0" width="129" textAlign="center" height="30" touchEnabled="false" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Label id="noComplete" text="任务（0/5）" y="421.61" size="36" textColor="0xc15200" horizontalCenter="0.5" bold="true" fontFamily="SimHei"/>
+	<e:Label id="gradeTitle" text="米其林评级" y="63.18" size="42" fontFamily="SimHei" bold="true" stroke="3" strokeColor="0xad3100" anchorOffsetX="0" horizontalCenter="2" width="284" textAlign="center"/>
+</e:Skin>

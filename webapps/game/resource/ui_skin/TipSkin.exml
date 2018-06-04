@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="StealTipSkin" width="640" height="1008" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1400" x="0" y="0" fillAlpha="0.5"/>
+	<e:Image width="586" height="464" verticalCenter="0" source="InterfaceUI_json.fenxiang_09_png" horizontalCenter="0"/>
+	<e:Image id="sureBtn" width="148" height="51" y="665.9" source="InterfaceUI_json.shengj_02_png" horizontalCenter="-113"/>
+	<e:Label id="title" text="吧台" y="286" size="32" textColor="0x7C2F00" fontFamily="SimHei" x="193" anchorOffsetX="0" width="235" textAlign="center" bold="true"/>
+	<e:Label id="contant" text="是否开放吧台" size="32" textColor="0x7C2F00" fontFamily="SimHei" x="115" anchorOffsetY="0" height="146" verticalAlign="middle" anchorOffsetX="0" width="441" textAlign="center" verticalCenter="-27"/>
+	<e:Image id="closeBtn" width="148" height="51" y="663.9" horizontalCenter="105" source="InterfaceUI_json.closeBtn_png"/>
+</e:Skin>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzhi.dao.RefreshManagerDao">
+  <resultMap id="BaseResultMap" type="com.muzhi.model.RefreshManager">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+    <result column="totle_num" jdbcType="INTEGER" property="totleNum" />
+    <result column="currency_id" jdbcType="INTEGER" property="currencyId" />
+    <result column="currency_num" jdbcType="INTEGER" property="currencyNum" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, num, totle_num, currency_id, currency_num
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from refresh_manager
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from refresh_manager
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.muzhi.model.RefreshManager">
+    insert into refresh_manager (id, num, totle_num, 
+      currency_id, currency_num)
+    values (#{id,jdbcType=INTEGER}, #{num,jdbcType=INTEGER}, #{totleNum,jdbcType=INTEGER}, 
+      #{currencyId,jdbcType=INTEGER}, #{currencyNum,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.muzhi.model.RefreshManager">
+    insert into refresh_manager
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="num != null">
+        num,
+      </if>
+      <if test="totleNum != null">
+        totle_num,
+      </if>
+      <if test="currencyId != null">
+        currency_id,
+      </if>
+      <if test="currencyNum != null">
+        currency_num,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="num != null">
+        #{num,jdbcType=INTEGER},
+      </if>
+      <if test="totleNum != null">
+        #{totleNum,jdbcType=INTEGER},
+      </if>
+      <if test="currencyId != null">
+        #{currencyId,jdbcType=INTEGER},
+      </if>
+      <if test="currencyNum != null">
+        #{currencyNum,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.muzhi.model.RefreshManager">
+    update refresh_manager
+    <set>
+      <if test="num != null">
+        num = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="totleNum != null">
+        totle_num = #{totleNum,jdbcType=INTEGER},
+      </if>
+      <if test="currencyId != null">
+        currency_id = #{currencyId,jdbcType=INTEGER},
+      </if>
+      <if test="currencyNum != null">
+        currency_num = #{currencyNum,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.muzhi.model.RefreshManager">
+    update refresh_manager
+    set num = #{num,jdbcType=INTEGER},
+      totle_num = #{totleNum,jdbcType=INTEGER},
+      currency_id = #{currencyId,jdbcType=INTEGER},
+      currency_num = #{currencyNum,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
